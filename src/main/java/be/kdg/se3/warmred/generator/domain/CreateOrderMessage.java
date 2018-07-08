@@ -1,6 +1,8 @@
 package be.kdg.se3.warmred.generator.domain;
 
 
+import be.kdg.se3.warmred.generator.domain.dto.CreateOrderMessageDto;
+
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import java.util.Map;
@@ -21,6 +23,13 @@ public class CreateOrderMessage implements Message{
         this.customerId = customerId;
         this.price = price;
         this.items = items;
+    }
+
+    public CreateOrderMessage(CreateOrderMessageDto dto) {
+        this.orderId = dto.getOrderId();
+        this.customerId = dto.getCustomerId();
+        this.price = dto.getPrice();
+        this.items = dto.getItems();
     }
 
     public int getOrderId() {

@@ -3,6 +3,7 @@ package be.kdg.se3.warmred.generator.adapters;
 import be.kdg.se3.warmred.generator.domain.CommunicationException;
 import be.kdg.se3.warmred.generator.domain.Message;
 import be.kdg.se3.warmred.generator.domain.MessageOutputService;
+import be.kdg.se3.warmred.generator.domain.dto.Dto;
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.ConnectionFactory;
@@ -47,6 +48,7 @@ public class RabbitMQ implements MessageOutputService {
                 autoDelete - queue is deleted when last consumer unsubscribes
              */
             channel.queueDeclare(queueName, false, false, false, null);
+            logger.info("RabbitMQ initialized");
 
         } catch (NoSuchAlgorithmException e) {
             logger.error("RabbitMQ connection initialization failed because of a 'NoSuchAlgorithmException' ");
@@ -68,6 +70,7 @@ public class RabbitMQ implements MessageOutputService {
         try {
             channel.close();
             connection.close();
+            logger.info("Channel and connection from RabbitMQ closed");
         } catch (TimeoutException e) {
             logger.error("RabbitMQ shutdown failed because of a 'TimeoutException' ");
             throw new CommunicationException("Could not close connection to RabbitMQ", e);
@@ -82,9 +85,29 @@ public class RabbitMQ implements MessageOutputService {
         String formattedMessage;
         try {
             initialize();
+            logger.info("Sending a Message object");
             formattedMessage = messageFormatter.format(message);
             logger.info("Pushing message: " + formattedMessage);
             channel.basicPublish("", queueName, null, formattedMessage.getBytes());
+            shutdown();
+        } catch (IOException e) {
+            logger.error("Failed to send message to the queue");
+            throw new CommunicationException("Could not send message to queue", e);
+        } catch (FormatterException e) {
+            logger.error("Could not send the message because an error occurred while formatting the message");
+        }
+    }
+
+    @Override
+    public void sendMessage(Dto dto) throws CommunicationException {
+        String formattedMessage;
+        try {
+            initialize();
+            logger.info("Sending a DTO");
+            formattedMessage = messageFormatter.format(dto);
+            logger.info("Pushing message: " + formattedMessage);
+            channel.basicPublish("", queueName, null, formattedMessage.getBytes());
+            shutdown();
         } catch (IOException e) {
             logger.error("Failed to send message to the queue");
             throw new CommunicationException("Could not send message to queue", e);
@@ -97,6 +120,7 @@ public class RabbitMQ implements MessageOutputService {
         try {
             initialize();
             channel.basicPublish("", queueName, null, body.getBytes());
+            shutdown();
         } catch (CommunicationException | IOException e) {
             e.printStackTrace();
         }
