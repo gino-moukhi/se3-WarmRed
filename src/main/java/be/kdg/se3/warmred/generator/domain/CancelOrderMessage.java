@@ -27,4 +27,11 @@ public class CancelOrderMessage implements Message{
     public void setOrderId(int orderId) {
         this.orderId = orderId;
     }
+
+    @Override
+    public String toString() {
+        return "CancelOrderMessage{" +
+                "orderId=" + orderId +
+                '}';
+    }
 }
