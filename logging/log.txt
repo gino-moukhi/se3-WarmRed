@@ -1,1062 +1,512 @@
-0    [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - The message to format is of type:'CreateOrderMessage'
-31   [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Pushing message: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<createOrderMessage>
-    <orderId>1000000</orderId>
-    <customerId>1282514</customerId>
-    <price>20</price>
-    <items>
-        <entry>
-            <key>1059252</key>
-            <value>2</value>
-        </entry>
-        <entry>
-            <key>1157412</key>
-            <value>3</value>
-        </entry>
-        <entry>
-            <key>1808724</key>
-            <value>4</value>
-        </entry>
-    </items>
-</createOrderMessage>
-
-1214 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - The message to format is of type:'CreateOrderMessage'
-1219 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Pushing message: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<createOrderMessage>
-    <orderId>1000001</orderId>
-    <customerId>1632702</customerId>
-    <price>64</price>
-    <items>
-        <entry>
-            <key>1836557</key>
-            <value>2</value>
-        </entry>
-        <entry>
-            <key>1808724</key>
-            <value>5</value>
-        </entry>
-    </items>
-</createOrderMessage>
-
-2400 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - The message to format is of type:'CreateOrderMessage'
-2406 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Pushing message: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<createOrderMessage>
-    <orderId>1000002</orderId>
-    <customerId>1853337</customerId>
-    <price>49</price>
-    <items>
-        <entry>
-            <key>1160221</key>
-            <value>1</value>
-        </entry>
-    </items>
-</createOrderMessage>
-
-3575 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - The message to format is of type:'CreateOrderMessage'
-3580 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Pushing message: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<createOrderMessage>
-    <orderId>1000003</orderId>
-    <customerId>1126068</customerId>
-    <price>15</price>
-    <items>
-        <entry>
-            <key>1611286</key>
-            <value>1</value>
-        </entry>
-    </items>
-</createOrderMessage>
-
-4744 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - The message to format is of type:'CreateOrderMessage'
-4750 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Pushing message: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<createOrderMessage>
-    <orderId>1000004</orderId>
-    <customerId>1282514</customerId>
-    <price>61</price>
-    <items>
-        <entry>
-            <key>1836557</key>
-            <value>4</value>
-        </entry>
-    </items>
-</createOrderMessage>
-
-0    [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - RabbitMQ initialized
-1    [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - The message to format is of type:'CreateOrderMessage'
-29   [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Pushing message: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<createOrderMessage>
-    <orderId>1000000</orderId>
-    <customerId>1319766</customerId>
-    <price>42</price>
-    <items>
-        <entry>
-            <key>1822607</key>
-            <value>3</value>
-        </entry>
-    </items>
-</createOrderMessage>
-
-77   [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Channel and connection from RabbitMQ closed
-1217 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - RabbitMQ initialized
-1217 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - The message to format is of type:'CreateOrderMessage'
-1222 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Pushing message: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<createOrderMessage>
-    <orderId>1000001</orderId>
-    <customerId>1974679</customerId>
-    <price>31</price>
-    <items>
-        <entry>
-            <key>1064737</key>
-            <value>2</value>
-        </entry>
-        <entry>
-            <key>1424173</key>
-            <value>5</value>
-        </entry>
-    </items>
-</createOrderMessage>
-
-1267 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Channel and connection from RabbitMQ closed
-2399 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - RabbitMQ initialized
-2399 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - The message to format is of type:'CreateOrderMessage'
-2401 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Pushing message: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<createOrderMessage>
-    <orderId>1000002</orderId>
-    <customerId>1974679</customerId>
-    <price>35</price>
-    <items>
-        <entry>
-            <key>1896335</key>
-            <value>5</value>
-        </entry>
-    </items>
-</createOrderMessage>
-
-2446 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Channel and connection from RabbitMQ closed
-3573 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - RabbitMQ initialized
-3573 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - The message to format is of type:'CreateOrderMessage'
-3575 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Pushing message: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<createOrderMessage>
-    <orderId>1000003</orderId>
-    <customerId>1700589</customerId>
-    <price>21</price>
-    <items>
-        <entry>
-            <key>1896335</key>
-            <value>1</value>
-        </entry>
-    </items>
-</createOrderMessage>
-
-3615 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Channel and connection from RabbitMQ closed
-4756 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - RabbitMQ initialized
-4756 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - The message to format is of type:'CreateOrderMessage'
-4762 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Pushing message: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<createOrderMessage>
-    <orderId>1000004</orderId>
-    <customerId>1865676</customerId>
-    <price>36</price>
-    <items>
-        <entry>
-            <key>1424173</key>
-            <value>5</value>
-        </entry>
-    </items>
-</createOrderMessage>
-
-4801 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Channel and connection from RabbitMQ closed
-1    [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - RabbitMQ initialized
-1    [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - The message to format is of type:'CancelOrderMessage'
-30   [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Pushing message: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<cancelOrderMessage>
-    <orderId>1000000</orderId>
-</cancelOrderMessage>
-
-85   [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Channel and connection from RabbitMQ closed
-0    [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - RabbitMQ initialized
-0    [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - The message to format is of type:'CreateOrderMessage'
-34   [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Pushing message: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<createOrderMessage>
-    <orderId>1000000</orderId>
-    <customerId>1000101</customerId>
-    <price>69</price>
-    <items>
-        <entry>
-            <key>1000002</key>
-            <value>4</value>
-        </entry>
-        <entry>
-            <key>1000001</key>
-            <value>3</value>
-        </entry>
-        <entry>
-            <key>1000000</key>
-            <value>2</value>
-        </entry>
-    </items>
-</createOrderMessage>
-
-80   [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Channel and connection from RabbitMQ closed
-0    [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - RabbitMQ initialized
-0    [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Sending a DTO
-0    [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - Formatting a DTO to an XML string
-0    [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - The message to format is of type:'CreateOrderMessageDto'
-32   [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Pushing message: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+0    [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CreateOrderMessage{orderId=1000000, customerId=1505414, price=44, items={1140532=5}}
+208  [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - RabbitMQ initialized
+208  [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Sending a DTO
+208  [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - Formatting a DTO to an XML string
+208  [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - The message to format is of type:'CreateOrderMessageDto'
+239  [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Pushing message: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <createOrderMessageDto>
     <orderId>1000000</orderId>
-    <customerId>1000101</customerId>
-    <price>69</price>
+    <customerId>1505414</customerId>
+    <price>44</price>
     <items>
         <entry>
-            <key>1000002</key>
-            <value>4</value>
-        </entry>
-        <entry>
-            <key>1000001</key>
-            <value>3</value>
-        </entry>
-        <entry>
-            <key>1000000</key>
-            <value>2</value>
-        </entry>
-    </items>
-</createOrderMessageDto>
-
-75   [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Channel and connection from RabbitMQ closed
-0    [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - RabbitMQ initialized
-1    [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Sending a DTO
-1    [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - Formatting a DTO to an XML string
-1    [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - The message to format is of type:'CreateOrderMessageDto'
-37   [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Pushing message: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<createOrderMessageDto>
-    <orderId>1000000</orderId>
-    <customerId>1605922</customerId>
-    <price>57</price>
-    <items>
-        <entry>
-            <key>1866345</key>
-            <value>2</value>
-        </entry>
-        <entry>
-            <key>1347874</key>
-            <value>5</value>
-        </entry>
-        <entry>
-            <key>1066283</key>
+            <key>1140532</key>
             <value>5</value>
         </entry>
     </items>
 </createOrderMessageDto>
 
-81   [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Channel and connection from RabbitMQ closed
-1207 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - RabbitMQ initialized
-1207 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Sending a DTO
-1207 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - Formatting a DTO to an XML string
-1207 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - The message to format is of type:'CreateOrderMessageDto'
-1209 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Pushing message: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+286  [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Channel and connection from RabbitMQ closed
+1287 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CreateOrderMessage{orderId=1000001, customerId=1081961, price=54, items={1406309=1, 1839748=3}}
+1424 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - RabbitMQ initialized
+1424 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Sending a DTO
+1424 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - Formatting a DTO to an XML string
+1424 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - The message to format is of type:'CreateOrderMessageDto'
+1431 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Pushing message: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <createOrderMessageDto>
     <orderId>1000001</orderId>
-    <customerId>1418755</customerId>
-    <price>47</price>
+    <customerId>1081961</customerId>
+    <price>54</price>
     <items>
         <entry>
-            <key>1227729</key>
-            <value>4</value>
-        </entry>
-        <entry>
-            <key>1839525</key>
-            <value>3</value>
-        </entry>
-        <entry>
-            <key>1066283</key>
-            <value>3</value>
-        </entry>
-    </items>
-</createOrderMessageDto>
-
-1245 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Channel and connection from RabbitMQ closed
-2367 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - RabbitMQ initialized
-2368 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Sending a DTO
-2368 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - Formatting a DTO to an XML string
-2368 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - The message to format is of type:'CreateOrderMessageDto'
-2375 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Pushing message: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<createOrderMessageDto>
-    <orderId>1000002</orderId>
-    <customerId>1840054</customerId>
-    <price>41</price>
-    <items>
-        <entry>
-            <key>1066283</key>
-            <value>3</value>
-        </entry>
-        <entry>
-            <key>1116586</key>
-            <value>3</value>
-        </entry>
-        <entry>
-            <key>1263004</key>
-            <value>3</value>
-        </entry>
-    </items>
-</createOrderMessageDto>
-
-2412 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Channel and connection from RabbitMQ closed
-3584 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - RabbitMQ initialized
-3584 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Sending a DTO
-3584 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - Formatting a DTO to an XML string
-3584 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - The message to format is of type:'CreateOrderMessageDto'
-3586 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Pushing message: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<createOrderMessageDto>
-    <orderId>1000003</orderId>
-    <customerId>1181280</customerId>
-    <price>58</price>
-    <items>
-        <entry>
-            <key>1146396</key>
-            <value>3</value>
-        </entry>
-        <entry>
-            <key>1263004</key>
-            <value>5</value>
-        </entry>
-    </items>
-</createOrderMessageDto>
-
-3628 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Channel and connection from RabbitMQ closed
-4770 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - RabbitMQ initialized
-4770 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Sending a DTO
-4770 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - Formatting a DTO to an XML string
-4771 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - The message to format is of type:'CreateOrderMessageDto'
-4776 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Pushing message: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<createOrderMessageDto>
-    <orderId>1000004</orderId>
-    <customerId>1477259</customerId>
-    <price>43</price>
-    <items>
-        <entry>
-            <key>1688160</key>
+            <key>1406309</key>
             <value>1</value>
         </entry>
         <entry>
-            <key>1045971</key>
-            <value>5</value>
+            <key>1839748</key>
+            <value>3</value>
         </entry>
     </items>
 </createOrderMessageDto>
 
-4817 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Channel and connection from RabbitMQ closed
-5939 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - RabbitMQ initialized
-5939 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Sending a DTO
-5939 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - Formatting a DTO to an XML string
-5939 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - The message to format is of type:'CancelOrderMessageDto'
-5942 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Pushing message: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<cancelOrderMessageDto>
+1469 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Channel and connection from RabbitMQ closed
+2469 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CreateOrderMessage{orderId=1000002, customerId=1769743, price=67, items={1843772=2, 1115920=4, 1624990=3, 1495051=2}}
+2599 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - RabbitMQ initialized
+2599 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Sending a DTO
+2599 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - Formatting a DTO to an XML string
+2599 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - The message to format is of type:'CreateOrderMessageDto'
+2604 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Pushing message: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<createOrderMessageDto>
     <orderId>1000002</orderId>
-</cancelOrderMessageDto>
-
-5978 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Channel and connection from RabbitMQ closed
-7120 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - RabbitMQ initialized
-7120 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Sending a DTO
-7120 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - Formatting a DTO to an XML string
-7120 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - The message to format is of type:'CreateOrderMessageDto'
-7122 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Pushing message: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<createOrderMessageDto>
-    <orderId>1000006</orderId>
-    <customerId>1821448</customerId>
-    <price>25</price>
-    <items>
-        <entry>
-            <key>1866345</key>
-            <value>2</value>
-        </entry>
-        <entry>
-            <key>1801630</key>
-            <value>4</value>
-        </entry>
-        <entry>
-            <key>1146396</key>
-            <value>2</value>
-        </entry>
-    </items>
-</createOrderMessageDto>
-
-7164 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Channel and connection from RabbitMQ closed
-8298 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - RabbitMQ initialized
-8298 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Sending a DTO
-8298 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - Formatting a DTO to an XML string
-8298 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - The message to format is of type:'CreateOrderMessageDto'
-8305 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Pushing message: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<createOrderMessageDto>
-    <orderId>1000007</orderId>
-    <customerId>1418755</customerId>
-    <price>32</price>
-    <items>
-        <entry>
-            <key>1347874</key>
-            <value>4</value>
-        </entry>
-        <entry>
-            <key>1366639</key>
-            <value>4</value>
-        </entry>
-    </items>
-</createOrderMessageDto>
-
-8345 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Channel and connection from RabbitMQ closed
-9483 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - RabbitMQ initialized
-9483 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Sending a DTO
-9483 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - Formatting a DTO to an XML string
-9483 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - The message to format is of type:'CreateOrderMessageDto'
-9485 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Pushing message: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<createOrderMessageDto>
-    <orderId>1000008</orderId>
-    <customerId>1605922</customerId>
+    <customerId>1769743</customerId>
     <price>67</price>
     <items>
         <entry>
-            <key>1209371</key>
-            <value>5</value>
-        </entry>
-    </items>
-</createOrderMessageDto>
-
-9530 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Channel and connection from RabbitMQ closed
-10668 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - RabbitMQ initialized
-10668 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Sending a DTO
-10668 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - Formatting a DTO to an XML string
-10668 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - The message to format is of type:'CreateOrderMessageDto'
-10674 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Pushing message: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<createOrderMessageDto>
-    <orderId>1000009</orderId>
-    <customerId>1181280</customerId>
-    <price>48</price>
-    <items>
-        <entry>
-            <key>1227729</key>
-            <value>1</value>
-        </entry>
-        <entry>
-            <key>1886692</key>
-            <value>3</value>
-        </entry>
-        <entry>
-            <key>1045971</key>
-            <value>4</value>
-        </entry>
-        <entry>
-            <key>1263004</key>
-            <value>4</value>
-        </entry>
-    </items>
-</createOrderMessageDto>
-
-10715 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Channel and connection from RabbitMQ closed
-0    [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CreateOrderMessage{orderId=1000000, customerId=1128759, price=25, items={1462803=3, 1852442=5}}
-504  [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CreateOrderMessage{orderId=1000001, customerId=1128759, price=98, items={1940444=5, 1886121=3, 1123626=5}}
-1004 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CreateOrderMessage{orderId=1000002, customerId=1797402, price=80, items={1852442=5, 1376890=4}}
-1504 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CreateOrderMessage{orderId=1000003, customerId=1975616, price=97, items={1417654=2, 1123626=2, 1376890=1}}
-2005 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CreateOrderMessage{orderId=1000004, customerId=1247599, price=73, items={1940444=2, 1886121=1}}
-2510 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - ITEMS TO CANCEL: CancelOrderMessage{orderId=1000001}
-2510 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CreateOrderMessage{orderId=1000005, customerId=1082907, price=54, items={1274179=1, 1462803=1}}
-3010 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - ITEMS TO CANCEL: CancelOrderMessage{orderId=1000001}
-3010 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CreateOrderMessage{orderId=1000006, customerId=1155458, price=58, items={1417654=4, 1962425=1, 1852442=1}}
-3511 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - TIME TO SEND MESSAGE
-3511 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - ID: 1000001
-3511 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CURRENT INDEX: 1000007
-3512 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CreateOrderMessage{orderId=1000007, customerId=1910636, price=83, items={1886121=4, 1852442=1, 1755248=4, 1376890=5}}
-4012 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CreateOrderMessage{orderId=1000008, customerId=1082907, price=21, items={1962425=5}}
-4513 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CreateOrderMessage{orderId=1000009, customerId=1465791, price=30, items={1962425=3}}
-5013 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - TIME TO SEND MESSAGE
-5013 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - ID: 1000002
-5013 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CURRENT INDEX: 1000010
-5014 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CreateOrderMessage{orderId=1000010, customerId=1128759, price=57, items={1962425=4, 1345291=2}}
-5515 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CreateOrderMessage{orderId=1000011, customerId=1155458, price=41, items={1758011=2}}
-6016 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CreateOrderMessage{orderId=1000012, customerId=1888845, price=30, items={1962425=5, 1462803=5, 1852442=5}}
-6516 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CreateOrderMessage{orderId=1000013, customerId=1534657, price=64, items={1417654=1, 1462803=2, 1852442=3}}
-7017 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CreateOrderMessage{orderId=1000014, customerId=1975616, price=10, items={1758011=5, 1507079=2, 1376890=5}}
-7517 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - ITEMS TO CANCEL: CancelOrderMessage{orderId=1000010}
-7517 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CreateOrderMessage{orderId=1000015, customerId=1381009, price=47, items={1274179=1, 1345291=1}}
-8017 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - TIME TO SEND MESSAGE
-8017 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - ID: 1000010
-8017 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CURRENT INDEX: 1000016
-8017 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CreateOrderMessage{orderId=1000016, customerId=1118331, price=64, items={1311797=4, 1507079=3, 1886121=5, 1345291=2}}
-8518 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CreateOrderMessage{orderId=1000017, customerId=1155458, price=14, items={1274179=5, 1962425=1}}
-9018 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CreateOrderMessage{orderId=1000018, customerId=1534657, price=72, items={1758011=1, 1886121=5}}
-9518 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CreateOrderMessage{orderId=1000019, customerId=1118331, price=80, items={1417654=4}}
-0    [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CreateOrderMessage{orderId=1000000, customerId=1386860, price=45, items={1124119=3, 1717476=2}}
-502  [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CreateOrderMessage{orderId=1000001, customerId=1496528, price=84, items={1082112=2, 1352492=1}}
-1003 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CreateOrderMessage{orderId=1000002, customerId=1567396, price=69, items={1381589=4, 1082112=1}}
-1503 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CreateOrderMessage{orderId=1000003, customerId=1126477, price=94, items={1352492=4, 1717476=5}}
-2003 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CreateOrderMessage{orderId=1000004, customerId=1697002, price=87, items={1562007=5, 1963276=2, 1013165=3}}
-2508 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CancelOrderMessage{orderId=1000002}
-2509 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - ITEMS TO CANCEL: CancelOrderMessage{orderId=1000002}
-2509 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CreateOrderMessage{orderId=1000005, customerId=1126477, price=92, items={1352492=4}}
-3009 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - ITEMS TO CANCEL: CancelOrderMessage{orderId=1000002}
-3009 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CreateOrderMessage{orderId=1000006, customerId=1567396, price=69, items={1381589=1, 1049175=4, 1717476=5}}
-3510 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - ITEMS TO CANCEL: CancelOrderMessage{orderId=1000002}
-3510 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CreateOrderMessage{orderId=1000007, customerId=1496528, price=80, items={1352492=5}}
-4011 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - TIME TO SEND MESSAGE
-4011 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - ID: 1000002
-4011 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CURRENT INDEX: 1000008
-4012 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CreateOrderMessage{orderId=1000008, customerId=1496528, price=90, items={1562007=2}}
-4512 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CreateOrderMessage{orderId=1000009, customerId=1074484, price=16, items={1978914=1}}
-5013 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CancelOrderMessage{orderId=1000008}
-5013 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - ITEMS TO CANCEL: CancelOrderMessage{orderId=1000008}
-5013 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CreateOrderMessage{orderId=1000010, customerId=1074484, price=34, items={1381589=5, 1717476=3}}
-5513 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - ITEMS TO CANCEL: CancelOrderMessage{orderId=1000008}
-5513 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CreateOrderMessage{orderId=1000011, customerId=1126477, price=26, items={1963276=2}}
-6014 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - ITEMS TO CANCEL: CancelOrderMessage{orderId=1000008}
-6014 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CreateOrderMessage{orderId=1000012, customerId=1567396, price=78, items={1124119=3, 1049175=3}}
-6515 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - ITEMS TO CANCEL: CancelOrderMessage{orderId=1000008}
-6515 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CreateOrderMessage{orderId=1000013, customerId=1697002, price=69, items={1562007=1, 1082112=3, 1579122=5}}
-7015 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - TIME TO SEND MESSAGE
-7015 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - ID: 1000008
-7015 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CURRENT INDEX: 1000014
-7015 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CreateOrderMessage{orderId=1000014, customerId=1126477, price=57, items={1123947=5}}
-7516 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CancelOrderMessage{orderId=1000001}
-7516 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - TIME TO SEND MESSAGE
-7516 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - ID: 1000001
-7516 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CURRENT INDEX: 1000015
-7517 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CreateOrderMessage{orderId=1000015, customerId=1074484, price=57, items={1381589=4, 1123947=2}}
-8018 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CreateOrderMessage{orderId=1000016, customerId=1205570, price=23, items={1562007=4, 1504909=4}}
-8519 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CreateOrderMessage{orderId=1000017, customerId=1090773, price=45, items={1082112=5, 1049175=4, 1717476=3}}
-9019 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CreateOrderMessage{orderId=1000018, customerId=1496528, price=52, items={1963276=2, 1986599=5}}
-9520 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CreateOrderMessage{orderId=1000019, customerId=1074484, price=64, items={1013165=3, 1352492=3, 1986599=1}}
-0    [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CreateOrderMessage{orderId=1000000, customerId=1961612, price=19, items={1657520=4}}
-241  [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - RabbitMQ initialized
-241  [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Sending a DTO
-241  [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - Formatting a DTO to an XML string
-241  [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - The message to format is of type:'CreateOrderMessageDto'
-442  [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Pushing message: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<createOrderMessageDto>
-    <orderId>1000000</orderId>
-    <customerId>1961612</customerId>
-    <price>19</price>
-    <items>
-        <entry>
-            <key>1657520</key>
-            <value>4</value>
-        </entry>
-    </items>
-</createOrderMessageDto>
-
-487  [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Channel and connection from RabbitMQ closed
-1487 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CreateOrderMessage{orderId=1000001, customerId=1180432, price=43, items={1568325=3, 1346800=2, 1480275=4}}
-1619 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - RabbitMQ initialized
-1619 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Sending a DTO
-1619 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - Formatting a DTO to an XML string
-1619 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - The message to format is of type:'CreateOrderMessageDto'
-1625 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Pushing message: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<createOrderMessageDto>
-    <orderId>1000001</orderId>
-    <customerId>1180432</customerId>
-    <price>43</price>
-    <items>
-        <entry>
-            <key>1568325</key>
-            <value>3</value>
-        </entry>
-        <entry>
-            <key>1346800</key>
+            <key>1843772</key>
             <value>2</value>
         </entry>
         <entry>
-            <key>1480275</key>
-            <value>4</value>
-        </entry>
-    </items>
-</createOrderMessageDto>
-
-1666 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Channel and connection from RabbitMQ closed
-2667 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CreateOrderMessage{orderId=1000002, customerId=1961612, price=50, items={1222040=3, 1224605=5}}
-2810 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - RabbitMQ initialized
-2810 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Sending a DTO
-2810 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - Formatting a DTO to an XML string
-2810 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - The message to format is of type:'CreateOrderMessageDto'
-2814 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Pushing message: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<createOrderMessageDto>
-    <orderId>1000002</orderId>
-    <customerId>1961612</customerId>
-    <price>50</price>
-    <items>
-        <entry>
-            <key>1222040</key>
-            <value>3</value>
-        </entry>
-        <entry>
-            <key>1224605</key>
-            <value>5</value>
-        </entry>
-    </items>
-</createOrderMessageDto>
-
-2856 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Channel and connection from RabbitMQ closed
-3857 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CreateOrderMessage{orderId=1000003, customerId=1209321, price=87, items={1855868=3, 1199795=1, 1200523=3, 1494652=3}}
-3988 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - RabbitMQ initialized
-3989 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Sending a DTO
-3989 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - Formatting a DTO to an XML string
-3989 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - The message to format is of type:'CreateOrderMessageDto'
-3994 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Pushing message: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<createOrderMessageDto>
-    <orderId>1000003</orderId>
-    <customerId>1209321</customerId>
-    <price>87</price>
-    <items>
-        <entry>
-            <key>1855868</key>
-            <value>3</value>
-        </entry>
-        <entry>
-            <key>1199795</key>
-            <value>1</value>
-        </entry>
-        <entry>
-            <key>1200523</key>
-            <value>3</value>
-        </entry>
-        <entry>
-            <key>1494652</key>
-            <value>3</value>
-        </entry>
-    </items>
-</createOrderMessageDto>
-
-4035 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Channel and connection from RabbitMQ closed
-5036 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CreateOrderMessage{orderId=1000004, customerId=1169151, price=48, items={1568325=3, 1200523=4, 1728005=1}}
-5165 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - RabbitMQ initialized
-5165 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Sending a DTO
-5165 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - Formatting a DTO to an XML string
-5165 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - The message to format is of type:'CreateOrderMessageDto'
-5167 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Pushing message: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<createOrderMessageDto>
-    <orderId>1000004</orderId>
-    <customerId>1169151</customerId>
-    <price>48</price>
-    <items>
-        <entry>
-            <key>1568325</key>
-            <value>3</value>
-        </entry>
-        <entry>
-            <key>1200523</key>
+            <key>1115920</key>
             <value>4</value>
         </entry>
         <entry>
-            <key>1728005</key>
-            <value>1</value>
-        </entry>
-    </items>
-</createOrderMessageDto>
-
-5206 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Channel and connection from RabbitMQ closed
-6211 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CancelOrderMessage{orderId=1000003}
-6211 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - ITEMS TO CANCEL: CancelOrderMessage{orderId=1000003}
-6211 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CreateOrderMessage{orderId=1000005, customerId=1961612, price=86, items={1160333=3, 1786102=5}}
-6339 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - RabbitMQ initialized
-6339 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Sending a DTO
-6339 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - Formatting a DTO to an XML string
-6339 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - The message to format is of type:'CreateOrderMessageDto'
-6347 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Pushing message: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<createOrderMessageDto>
-    <orderId>1000005</orderId>
-    <customerId>1961612</customerId>
-    <price>86</price>
-    <items>
-        <entry>
-            <key>1160333</key>
+            <key>1624990</key>
             <value>3</value>
         </entry>
         <entry>
-            <key>1786102</key>
-            <value>5</value>
+            <key>1495051</key>
+            <value>2</value>
         </entry>
     </items>
 </createOrderMessageDto>
 
-6386 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Channel and connection from RabbitMQ closed
-7388 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - TIME TO SEND MESSAGE
-7388 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - ID: 1000003
-7388 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CURRENT INDEX: 1000006
-7520 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - RabbitMQ initialized
-7520 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Sending a DTO
-7521 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - Formatting a DTO to an XML string
-7521 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - The message to format is of type:'CancelOrderMessageDto'
-7522 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Pushing message: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<cancelOrderMessageDto>
-    <orderId>1000003</orderId>
-</cancelOrderMessageDto>
-
-7565 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Channel and connection from RabbitMQ closed
-7566 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CreateOrderMessage{orderId=1000006, customerId=1349738, price=20, items={1539855=1, 1160333=5}}
-7693 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - RabbitMQ initialized
-7693 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Sending a DTO
-7693 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - Formatting a DTO to an XML string
-7693 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - The message to format is of type:'CreateOrderMessageDto'
-7695 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Pushing message: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+2646 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Channel and connection from RabbitMQ closed
+3647 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CreateOrderMessage{orderId=1000003, customerId=1988350, price=20, items={1839748=5, 1436024=4, 1278044=1}}
+3788 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - RabbitMQ initialized
+3788 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Sending a DTO
+3788 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - Formatting a DTO to an XML string
+3788 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - The message to format is of type:'CreateOrderMessageDto'
+3791 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Pushing message: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <createOrderMessageDto>
-    <orderId>1000006</orderId>
-    <customerId>1349738</customerId>
+    <orderId>1000003</orderId>
+    <customerId>1988350</customerId>
     <price>20</price>
     <items>
         <entry>
-            <key>1539855</key>
-            <value>1</value>
+            <key>1839748</key>
+            <value>5</value>
         </entry>
         <entry>
-            <key>1160333</key>
+            <key>1436024</key>
+            <value>4</value>
+        </entry>
+        <entry>
+            <key>1278044</key>
+            <value>1</value>
+        </entry>
+    </items>
+</createOrderMessageDto>
+
+3830 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Channel and connection from RabbitMQ closed
+4830 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CreateOrderMessage{orderId=1000004, customerId=1479674, price=83, items={1543324=2, 1013088=1}}
+4958 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - RabbitMQ initialized
+4958 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Sending a DTO
+4958 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - Formatting a DTO to an XML string
+4958 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - The message to format is of type:'CreateOrderMessageDto'
+4964 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Pushing message: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<createOrderMessageDto>
+    <orderId>1000004</orderId>
+    <customerId>1479674</customerId>
+    <price>83</price>
+    <items>
+        <entry>
+            <key>1543324</key>
+            <value>2</value>
+        </entry>
+        <entry>
+            <key>1013088</key>
+            <value>1</value>
+        </entry>
+    </items>
+</createOrderMessageDto>
+
+5008 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Channel and connection from RabbitMQ closed
+6015 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CancelOrderMessage{orderId=1000001}
+6015 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - TIME TO SEND MESSAGE
+6015 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - ID: 1000001
+6015 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CURRENT INDEX: 1000005
+6145 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - RabbitMQ initialized
+6145 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Sending a DTO
+6145 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - Formatting a DTO to an XML string
+6145 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - The message to format is of type:'CancelOrderMessageDto'
+6147 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Pushing message: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<cancelOrderMessageDto>
+    <orderId>1000001</orderId>
+</cancelOrderMessageDto>
+
+6189 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Channel and connection from RabbitMQ closed
+6193 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CreateOrderMessage{orderId=1000005, customerId=1249549, price=98, items={1792258=3, 1436024=3, 1013088=4}}
+6326 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - RabbitMQ initialized
+6326 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Sending a DTO
+6326 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - Formatting a DTO to an XML string
+6326 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - The message to format is of type:'CreateOrderMessageDto'
+6328 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Pushing message: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<createOrderMessageDto>
+    <orderId>1000005</orderId>
+    <customerId>1249549</customerId>
+    <price>98</price>
+    <items>
+        <entry>
+            <key>1792258</key>
+            <value>3</value>
+        </entry>
+        <entry>
+            <key>1436024</key>
+            <value>3</value>
+        </entry>
+        <entry>
+            <key>1013088</key>
+            <value>4</value>
+        </entry>
+    </items>
+</createOrderMessageDto>
+
+6371 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Channel and connection from RabbitMQ closed
+7372 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CreateOrderMessage{orderId=1000006, customerId=1819498, price=69, items={1492759=5, 1452190=2}}
+7504 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - RabbitMQ initialized
+7504 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Sending a DTO
+7504 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - Formatting a DTO to an XML string
+7504 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - The message to format is of type:'CreateOrderMessageDto'
+7509 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Pushing message: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<createOrderMessageDto>
+    <orderId>1000006</orderId>
+    <customerId>1819498</customerId>
+    <price>69</price>
+    <items>
+        <entry>
+            <key>1492759</key>
+            <value>5</value>
+        </entry>
+        <entry>
+            <key>1452190</key>
+            <value>2</value>
+        </entry>
+    </items>
+</createOrderMessageDto>
+
+7549 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Channel and connection from RabbitMQ closed
+8550 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CreateOrderMessage{orderId=1000007, customerId=1249549, price=92, items={1839748=3, 1543324=1}}
+8688 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - RabbitMQ initialized
+8688 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Sending a DTO
+8688 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - Formatting a DTO to an XML string
+8688 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - The message to format is of type:'CreateOrderMessageDto'
+8690 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Pushing message: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<createOrderMessageDto>
+    <orderId>1000007</orderId>
+    <customerId>1249549</customerId>
+    <price>92</price>
+    <items>
+        <entry>
+            <key>1839748</key>
+            <value>3</value>
+        </entry>
+        <entry>
+            <key>1543324</key>
+            <value>1</value>
+        </entry>
+    </items>
+</createOrderMessageDto>
+
+8730 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Channel and connection from RabbitMQ closed
+9735 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CreateOrderMessage{orderId=1000008, customerId=1424877, price=81, items={1147651=2, 1140532=4, 1543324=5, 1302524=4}}
+9862 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - RabbitMQ initialized
+9862 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Sending a DTO
+9862 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - Formatting a DTO to an XML string
+9862 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - The message to format is of type:'CreateOrderMessageDto'
+9865 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Pushing message: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<createOrderMessageDto>
+    <orderId>1000008</orderId>
+    <customerId>1424877</customerId>
+    <price>81</price>
+    <items>
+        <entry>
+            <key>1147651</key>
+            <value>2</value>
+        </entry>
+        <entry>
+            <key>1140532</key>
+            <value>4</value>
+        </entry>
+        <entry>
+            <key>1543324</key>
+            <value>5</value>
+        </entry>
+        <entry>
+            <key>1302524</key>
+            <value>4</value>
+        </entry>
+    </items>
+</createOrderMessageDto>
+
+9906 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Channel and connection from RabbitMQ closed
+10907 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CreateOrderMessage{orderId=1000009, customerId=1333432, price=88, items={1510189=4}}
+11029 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - RabbitMQ initialized
+11030 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Sending a DTO
+11030 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - Formatting a DTO to an XML string
+11030 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - The message to format is of type:'CreateOrderMessageDto'
+11034 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Pushing message: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<createOrderMessageDto>
+    <orderId>1000009</orderId>
+    <customerId>1333432</customerId>
+    <price>88</price>
+    <items>
+        <entry>
+            <key>1510189</key>
+            <value>4</value>
+        </entry>
+    </items>
+</createOrderMessageDto>
+
+11073 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Channel and connection from RabbitMQ closed
+12075 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CancelOrderMessage{orderId=1000009}
+12075 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - ITEMS TO CANCEL: CancelOrderMessage{orderId=1000009}
+12075 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CreateOrderMessage{orderId=1000010, customerId=1045716, price=14, items={1140532=5, 1982388=5}}
+12203 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - RabbitMQ initialized
+12203 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Sending a DTO
+12203 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - Formatting a DTO to an XML string
+12204 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - The message to format is of type:'CreateOrderMessageDto'
+12210 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Pushing message: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<createOrderMessageDto>
+    <orderId>1000010</orderId>
+    <customerId>1045716</customerId>
+    <price>14</price>
+    <items>
+        <entry>
+            <key>1140532</key>
+            <value>5</value>
+        </entry>
+        <entry>
+            <key>1982388</key>
             <value>5</value>
         </entry>
     </items>
 </createOrderMessageDto>
 
-7753 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Channel and connection from RabbitMQ closed
-8755 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CreateOrderMessage{orderId=1000007, customerId=1444494, price=50, items={1568325=5}}
-8884 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - RabbitMQ initialized
-8884 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Sending a DTO
-8884 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - Formatting a DTO to an XML string
-8884 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - The message to format is of type:'CreateOrderMessageDto'
-8889 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Pushing message: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+12250 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Channel and connection from RabbitMQ closed
+13251 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - ITEMS TO CANCEL: CancelOrderMessage{orderId=1000009}
+13251 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CreateOrderMessage{orderId=1000011, customerId=1479674, price=31, items={1636386=3}}
+13383 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - RabbitMQ initialized
+13383 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Sending a DTO
+13383 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - Formatting a DTO to an XML string
+13383 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - The message to format is of type:'CreateOrderMessageDto'
+13388 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Pushing message: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <createOrderMessageDto>
-    <orderId>1000007</orderId>
-    <customerId>1444494</customerId>
+    <orderId>1000011</orderId>
+    <customerId>1479674</customerId>
+    <price>31</price>
+    <items>
+        <entry>
+            <key>1636386</key>
+            <value>3</value>
+        </entry>
+    </items>
+</createOrderMessageDto>
+
+13426 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Channel and connection from RabbitMQ closed
+14428 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - TIME TO SEND MESSAGE
+14428 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - ID: 1000009
+14428 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CURRENT INDEX: 1000012
+14554 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - RabbitMQ initialized
+14554 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Sending a DTO
+14554 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - Formatting a DTO to an XML string
+14554 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - The message to format is of type:'CancelOrderMessageDto'
+14556 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Pushing message: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<cancelOrderMessageDto>
+    <orderId>1000009</orderId>
+</cancelOrderMessageDto>
+
+14598 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Channel and connection from RabbitMQ closed
+14599 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CreateOrderMessage{orderId=1000012, customerId=1424877, price=77, items={1792258=1, 1510189=3}}
+14728 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - RabbitMQ initialized
+14728 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Sending a DTO
+14728 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - Formatting a DTO to an XML string
+14728 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - The message to format is of type:'CreateOrderMessageDto'
+14732 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Pushing message: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<createOrderMessageDto>
+    <orderId>1000012</orderId>
+    <customerId>1424877</customerId>
+    <price>77</price>
+    <items>
+        <entry>
+            <key>1792258</key>
+            <value>1</value>
+        </entry>
+        <entry>
+            <key>1510189</key>
+            <value>3</value>
+        </entry>
+    </items>
+</createOrderMessageDto>
+
+14772 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Channel and connection from RabbitMQ closed
+15773 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CreateOrderMessage{orderId=1000013, customerId=1081961, price=50, items={1436024=1, 1278044=2}}
+15908 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - RabbitMQ initialized
+15909 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Sending a DTO
+15909 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - Formatting a DTO to an XML string
+15909 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - The message to format is of type:'CreateOrderMessageDto'
+15912 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Pushing message: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<createOrderMessageDto>
+    <orderId>1000013</orderId>
+    <customerId>1081961</customerId>
     <price>50</price>
     <items>
         <entry>
-            <key>1568325</key>
-            <value>5</value>
-        </entry>
-    </items>
-</createOrderMessageDto>
-
-8932 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Channel and connection from RabbitMQ closed
-9937 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CreateOrderMessage{orderId=1000008, customerId=1024301, price=48, items={1855868=1, 1735153=1}}
-10076 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - RabbitMQ initialized
-10076 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Sending a DTO
-10076 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - Formatting a DTO to an XML string
-10076 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - The message to format is of type:'CreateOrderMessageDto'
-10083 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Pushing message: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<createOrderMessageDto>
-    <orderId>1000008</orderId>
-    <customerId>1024301</customerId>
-    <price>48</price>
-    <items>
-        <entry>
-            <key>1855868</key>
+            <key>1436024</key>
             <value>1</value>
         </entry>
         <entry>
-            <key>1735153</key>
-            <value>1</value>
-        </entry>
-    </items>
-</createOrderMessageDto>
-
-10126 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Channel and connection from RabbitMQ closed
-11126 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CreateOrderMessage{orderId=1000009, customerId=1024301, price=97, items={1568325=4, 1222040=3, 1494652=4, 1735153=2}}
-11258 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - RabbitMQ initialized
-11258 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Sending a DTO
-11258 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - Formatting a DTO to an XML string
-11258 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - The message to format is of type:'CreateOrderMessageDto'
-11262 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Pushing message: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<createOrderMessageDto>
-    <orderId>1000009</orderId>
-    <customerId>1024301</customerId>
-    <price>97</price>
-    <items>
-        <entry>
-            <key>1568325</key>
-            <value>4</value>
-        </entry>
-        <entry>
-            <key>1222040</key>
-            <value>3</value>
-        </entry>
-        <entry>
-            <key>1494652</key>
-            <value>4</value>
-        </entry>
-        <entry>
-            <key>1735153</key>
+            <key>1278044</key>
             <value>2</value>
         </entry>
     </items>
 </createOrderMessageDto>
 
-11299 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Channel and connection from RabbitMQ closed
-12300 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CancelOrderMessage{orderId=1000006}
-12300 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - TIME TO SEND MESSAGE
-12300 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - ID: 1000006
-12300 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CURRENT INDEX: 1000010
-12437 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - RabbitMQ initialized
-12437 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Sending a DTO
-12437 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - Formatting a DTO to an XML string
-12437 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - The message to format is of type:'CancelOrderMessageDto'
-12442 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Pushing message: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<cancelOrderMessageDto>
-    <orderId>1000006</orderId>
-</cancelOrderMessageDto>
-
-12482 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Channel and connection from RabbitMQ closed
-12483 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CreateOrderMessage{orderId=1000010, customerId=1638339, price=39, items={1160333=2}}
-12616 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - RabbitMQ initialized
-12616 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Sending a DTO
-12616 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - Formatting a DTO to an XML string
-12616 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - The message to format is of type:'CreateOrderMessageDto'
-12620 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Pushing message: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<createOrderMessageDto>
-    <orderId>1000010</orderId>
-    <customerId>1638339</customerId>
-    <price>39</price>
-    <items>
-        <entry>
-            <key>1160333</key>
-            <value>2</value>
-        </entry>
-    </items>
-</createOrderMessageDto>
-
-12656 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Channel and connection from RabbitMQ closed
-13657 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CreateOrderMessage{orderId=1000011, customerId=1025712, price=41, items={1266869=1, 1222040=4}}
-13797 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - RabbitMQ initialized
-13797 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Sending a DTO
-13798 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - Formatting a DTO to an XML string
-13798 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - The message to format is of type:'CreateOrderMessageDto'
-13808 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Pushing message: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<createOrderMessageDto>
-    <orderId>1000011</orderId>
-    <customerId>1025712</customerId>
-    <price>41</price>
-    <items>
-        <entry>
-            <key>1266869</key>
-            <value>1</value>
-        </entry>
-        <entry>
-            <key>1222040</key>
-            <value>4</value>
-        </entry>
-    </items>
-</createOrderMessageDto>
-
-13847 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Channel and connection from RabbitMQ closed
-14847 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CreateOrderMessage{orderId=1000012, customerId=1053751, price=15, items={1726780=3, 1786102=3}}
-14975 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - RabbitMQ initialized
-14975 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Sending a DTO
-14976 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - Formatting a DTO to an XML string
-14976 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - The message to format is of type:'CreateOrderMessageDto'
-14981 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Pushing message: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<createOrderMessageDto>
-    <orderId>1000012</orderId>
-    <customerId>1053751</customerId>
-    <price>15</price>
-    <items>
-        <entry>
-            <key>1726780</key>
-            <value>3</value>
-        </entry>
-        <entry>
-            <key>1786102</key>
-            <value>3</value>
-        </entry>
-    </items>
-</createOrderMessageDto>
-
-15023 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Channel and connection from RabbitMQ closed
-16023 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CreateOrderMessage{orderId=1000013, customerId=1340491, price=78, items={1199795=5, 1160333=3, 1786102=4}}
-16169 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - RabbitMQ initialized
-16169 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Sending a DTO
-16169 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - Formatting a DTO to an XML string
-16169 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - The message to format is of type:'CreateOrderMessageDto'
-16176 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Pushing message: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<createOrderMessageDto>
-    <orderId>1000013</orderId>
-    <customerId>1340491</customerId>
-    <price>78</price>
-    <items>
-        <entry>
-            <key>1199795</key>
-            <value>5</value>
-        </entry>
-        <entry>
-            <key>1160333</key>
-            <value>3</value>
-        </entry>
-        <entry>
-            <key>1786102</key>
-            <value>4</value>
-        </entry>
-    </items>
-</createOrderMessageDto>
-
-16220 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Channel and connection from RabbitMQ closed
-17222 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CreateOrderMessage{orderId=1000014, customerId=1025712, price=29, items={1735153=4, 1508138=5, 1728005=3}}
-17349 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - RabbitMQ initialized
-17349 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Sending a DTO
-17349 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - Formatting a DTO to an XML string
-17349 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - The message to format is of type:'CreateOrderMessageDto'
-17355 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Pushing message: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+15950 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Channel and connection from RabbitMQ closed
+16951 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CreateOrderMessage{orderId=1000014, customerId=1479674, price=25, items={1406309=2}}
+17068 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - RabbitMQ initialized
+17068 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Sending a DTO
+17068 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - Formatting a DTO to an XML string
+17068 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - The message to format is of type:'CreateOrderMessageDto'
+17074 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Pushing message: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <createOrderMessageDto>
     <orderId>1000014</orderId>
-    <customerId>1025712</customerId>
-    <price>29</price>
+    <customerId>1479674</customerId>
+    <price>25</price>
     <items>
         <entry>
-            <key>1735153</key>
-            <value>4</value>
-        </entry>
-        <entry>
-            <key>1508138</key>
-            <value>5</value>
-        </entry>
-        <entry>
-            <key>1728005</key>
-            <value>3</value>
+            <key>1406309</key>
+            <value>2</value>
         </entry>
     </items>
 </createOrderMessageDto>
 
-17397 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Channel and connection from RabbitMQ closed
-18399 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CancelOrderMessage{orderId=1000004}
-18399 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - TIME TO SEND MESSAGE
-18399 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - ID: 1000004
-18399 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CURRENT INDEX: 1000015
-18538 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - RabbitMQ initialized
-18538 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Sending a DTO
-18538 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - Formatting a DTO to an XML string
-18538 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - The message to format is of type:'CancelOrderMessageDto'
-18543 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Pushing message: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+17116 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Channel and connection from RabbitMQ closed
+18118 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CancelOrderMessage{orderId=1000004}
+18118 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - TIME TO SEND MESSAGE
+18118 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - ID: 1000004
+18118 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CURRENT INDEX: 1000015
+18248 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - RabbitMQ initialized
+18248 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Sending a DTO
+18248 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - Formatting a DTO to an XML string
+18248 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - The message to format is of type:'CancelOrderMessageDto'
+18250 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Pushing message: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <cancelOrderMessageDto>
     <orderId>1000004</orderId>
 </cancelOrderMessageDto>
 
-18584 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Channel and connection from RabbitMQ closed
-18584 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CreateOrderMessage{orderId=1000015, customerId=1024301, price=76, items={1480275=5, 1539855=1}}
-18704 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - RabbitMQ initialized
-18704 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Sending a DTO
-18704 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - Formatting a DTO to an XML string
-18704 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - The message to format is of type:'CreateOrderMessageDto'
-18711 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Pushing message: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+18289 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Channel and connection from RabbitMQ closed
+18290 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CreateOrderMessage{orderId=1000015, customerId=1212439, price=27, items={1452190=2}}
+18407 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - RabbitMQ initialized
+18407 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Sending a DTO
+18407 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - Formatting a DTO to an XML string
+18407 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - The message to format is of type:'CreateOrderMessageDto'
+18411 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Pushing message: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <createOrderMessageDto>
     <orderId>1000015</orderId>
-    <customerId>1024301</customerId>
-    <price>76</price>
+    <customerId>1212439</customerId>
+    <price>27</price>
     <items>
         <entry>
-            <key>1480275</key>
-            <value>5</value>
-        </entry>
-        <entry>
-            <key>1539855</key>
-            <value>1</value>
+            <key>1452190</key>
+            <value>2</value>
         </entry>
     </items>
 </createOrderMessageDto>
 
-18751 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Channel and connection from RabbitMQ closed
-19752 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CreateOrderMessage{orderId=1000016, customerId=1209321, price=29, items={1855868=3, 1266869=3, 1508138=3}}
-19874 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - RabbitMQ initialized
-19874 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Sending a DTO
-19874 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - Formatting a DTO to an XML string
-19874 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - The message to format is of type:'CreateOrderMessageDto'
-19878 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Pushing message: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+18453 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Channel and connection from RabbitMQ closed
+19455 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CreateOrderMessage{orderId=1000016, customerId=1482268, price=33, items={1452190=2}}
+19585 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - RabbitMQ initialized
+19585 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Sending a DTO
+19585 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - Formatting a DTO to an XML string
+19585 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - The message to format is of type:'CreateOrderMessageDto'
+19592 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Pushing message: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <createOrderMessageDto>
     <orderId>1000016</orderId>
-    <customerId>1209321</customerId>
-    <price>29</price>
+    <customerId>1482268</customerId>
+    <price>33</price>
     <items>
         <entry>
-            <key>1855868</key>
-            <value>3</value>
-        </entry>
-        <entry>
-            <key>1266869</key>
-            <value>3</value>
-        </entry>
-        <entry>
-            <key>1508138</key>
-            <value>3</value>
+            <key>1452190</key>
+            <value>2</value>
         </entry>
     </items>
 </createOrderMessageDto>
 
-19919 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Channel and connection from RabbitMQ closed
-20919 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CreateOrderMessage{orderId=1000017, customerId=1077958, price=56, items={1570736=1, 1222040=4, 1735153=1, 1160333=5}}
-21046 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - RabbitMQ initialized
-21046 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Sending a DTO
-21046 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - Formatting a DTO to an XML string
-21046 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - The message to format is of type:'CreateOrderMessageDto'
-21049 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Pushing message: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+19629 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Channel and connection from RabbitMQ closed
+20629 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CreateOrderMessage{orderId=1000017, customerId=1694651, price=75, items={1406309=1, 1843772=1, 1115920=2, 1147651=5}}
+20769 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - RabbitMQ initialized
+20769 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Sending a DTO
+20769 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - Formatting a DTO to an XML string
+20769 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - The message to format is of type:'CreateOrderMessageDto'
+20772 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Pushing message: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <createOrderMessageDto>
     <orderId>1000017</orderId>
-    <customerId>1077958</customerId>
-    <price>56</price>
+    <customerId>1694651</customerId>
+    <price>75</price>
     <items>
         <entry>
-            <key>1570736</key>
+            <key>1406309</key>
             <value>1</value>
         </entry>
         <entry>
-            <key>1222040</key>
-            <value>4</value>
-        </entry>
-        <entry>
-            <key>1735153</key>
+            <key>1843772</key>
             <value>1</value>
         </entry>
         <entry>
-            <key>1160333</key>
+            <key>1115920</key>
+            <value>2</value>
+        </entry>
+        <entry>
+            <key>1147651</key>
             <value>5</value>
         </entry>
     </items>
 </createOrderMessageDto>
 
-21090 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Channel and connection from RabbitMQ closed
-22091 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CreateOrderMessage{orderId=1000018, customerId=1684422, price=89, items={1199795=5, 1568325=3, 1346800=1, 1224605=4}}
-22222 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - RabbitMQ initialized
-22222 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Sending a DTO
-22223 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - Formatting a DTO to an XML string
-22223 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - The message to format is of type:'CreateOrderMessageDto'
-22226 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Pushing message: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+20811 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Channel and connection from RabbitMQ closed
+21811 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CreateOrderMessage{orderId=1000018, customerId=1505414, price=74, items={1495051=3}}
+21937 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - RabbitMQ initialized
+21937 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Sending a DTO
+21937 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - Formatting a DTO to an XML string
+21937 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - The message to format is of type:'CreateOrderMessageDto'
+21939 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Pushing message: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <createOrderMessageDto>
     <orderId>1000018</orderId>
-    <customerId>1684422</customerId>
-    <price>89</price>
+    <customerId>1505414</customerId>
+    <price>74</price>
     <items>
         <entry>
-            <key>1199795</key>
+            <key>1495051</key>
+            <value>3</value>
+        </entry>
+    </items>
+</createOrderMessageDto>
+
+21981 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Channel and connection from RabbitMQ closed
+22982 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CreateOrderMessage{orderId=1000019, customerId=1694651, price=65, items={1452190=5, 1792258=4, 1278044=2}}
+23110 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - RabbitMQ initialized
+23111 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Sending a DTO
+23111 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - Formatting a DTO to an XML string
+23111 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - The message to format is of type:'CreateOrderMessageDto'
+23115 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Pushing message: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<createOrderMessageDto>
+    <orderId>1000019</orderId>
+    <customerId>1694651</customerId>
+    <price>65</price>
+    <items>
+        <entry>
+            <key>1452190</key>
             <value>5</value>
         </entry>
         <entry>
-            <key>1568325</key>
-            <value>3</value>
-        </entry>
-        <entry>
-            <key>1346800</key>
-            <value>1</value>
-        </entry>
-        <entry>
-            <key>1224605</key>
+            <key>1792258</key>
             <value>4</value>
         </entry>
-    </items>
-</createOrderMessageDto>
-
-22275 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Channel and connection from RabbitMQ closed
-23275 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - CreateOrderMessage{orderId=1000019, customerId=1226309, price=100, items={1346800=1}}
-23413 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - RabbitMQ initialized
-23413 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Sending a DTO
-23413 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - Formatting a DTO to an XML string
-23413 [main] INFO  be.kdg.se3.warmred.generator.adapters.XmlMessageFormatter  - The message to format is of type:'CreateOrderMessageDto'
-23420 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Pushing message: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<createOrderMessageDto>
-    <orderId>1000019</orderId>
-    <customerId>1226309</customerId>
-    <price>100</price>
-    <items>
         <entry>
-            <key>1346800</key>
-            <value>1</value>
+            <key>1278044</key>
+            <value>2</value>
         </entry>
     </items>
 </createOrderMessageDto>
 
-23459 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Channel and connection from RabbitMQ closed
+23152 [main] INFO  be.kdg.se3.warmred.generator.adapters.RabbitMQ  - Channel and connection from RabbitMQ closed
