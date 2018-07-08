@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f9609cb0-e1a5-4663-a3b2-98dfdf48177b" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/util/Sleeper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logging/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/logging/log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/generator/domain/CancelOrderMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/generator/domain/CancelOrderMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/be/kdg/se3/warmred/generator/TestGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/be/kdg/se3/warmred/generator/TestGenerator.java" afterDir="false" />
-    </list>
+    <list default="true" id="f9609cb0-e1a5-4663-a3b2-98dfdf48177b" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -59,7 +53,7 @@
       <file leaf-file-name="TestGenerator.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/be/kdg/se3/warmred/generator/TestGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="539">
+            <state relative-caret-position="106">
               <caret line="154" column="32" lean-forward="true" selection-start-line="154" selection-start-column="32" selection-end-line="154" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -991,7 +985,7 @@
       <workItem from="1530884124851" duration="6021000" />
       <workItem from="1530895048039" duration="8901000" />
       <workItem from="1531047133367" duration="15793000" />
-      <workItem from="1531068703230" duration="8581000" />
+      <workItem from="1531068703230" duration="8883000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit with partial package structure, required library and necessary gradle dependencies">
       <created>1530885198683</created>
@@ -1021,13 +1015,24 @@
       <option name="project" value="LOCAL" />
       <updated>1531055231837</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Fully working generator that sends create and cancel messages with all requirements from the pdf. Could still implement a Listener / MessageHandler">
+      <created>1531077787323</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1531077787324</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Recreated logfile with most recent run from complete test method">
+      <created>1531077990870</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1531077990870</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestGenerator_rawTest - 2018.07.08 at 20h 26m 08s.xml">
-      <configuration name="TestGenerator.rawTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="TestGenerator_rawTest - 2018.07.08 at 20h 27m 13s.xml">
       <configuration name="TestGenerator.rawTest" configurationId="JUnit" />
     </history-entry>
@@ -1055,9 +1060,12 @@
     <history-entry file="TestGenerator_TestFullGenerator - 2018.07.08 at 21h 17m 43s.xml">
       <configuration name="TestGenerator.TestFullGenerator" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="TestGenerator_TestFullGenerator - 2018.07.08 at 21h 25m 29s.xml">
+      <configuration name="TestGenerator.TestFullGenerator" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39296000" />
+    <option name="totallyTimeSpent" value="39598000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1072,11 +1080,11 @@
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32837406" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.6110521" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.35494155" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19375" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19375" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32943678" />
       <window_info anchor="right" id="Gradle" order="3" weight="0.17447917" />
@@ -1131,7 +1139,9 @@
     <MESSAGE value="Created a MessageOutputService that can be used by multiple message brokers. implemented 1 broker: RabbitMQ. Created formatting from Message object to xml string (classes are created but not filled). Created a test class with a basic setup for the message broker and a basic send method to test if data gets send to the message queue." />
     <MESSAGE value="Working version of generating CreateOrderMessages. Sending to RabbitMQ works. Dto's are created but not implemented added logging output to console and file. Created test class with testing scenarios (no assertions tho)" />
     <MESSAGE value="Implemented the dto's and a basic CancelOrderMessage. Added functions to formatter and MessageOutputService for usage of those dto's" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented the dto's and a basic CancelOrderMessage. Added functions to formatter and MessageOutputService for usage of those dto's" />
+    <MESSAGE value="Fully working generator that sends create and cancel messages with all requirements from the pdf. Could still implement a Listener / MessageHandler" />
+    <MESSAGE value="Recreated logfile with most recent run from complete test method" />
+    <option name="LAST_COMMIT_MESSAGE" value="Recreated logfile with most recent run from complete test method" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1532,7 +1542,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/be/kdg/se3/warmred/generator/TestGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="539">
+        <state relative-caret-position="106">
           <caret line="154" column="32" lean-forward="true" selection-start-line="154" selection-start-column="32" selection-end-line="154" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
