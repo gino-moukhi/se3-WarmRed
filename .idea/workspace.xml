@@ -1,22 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f9609cb0-e1a5-4663-a3b2-98dfdf48177b" name="Default" comment="Created a MessageOutputService that can be used by multiple message brokers. implemented 1 broker: RabbitMQ. Created formatting from Message object to xml string (classes are created but not filled). Created a test class with a basic setup for the message broker and a basic send method to test if data gets send to the message queue.">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/generator/adapters/FormatterException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/generator/adapters/MessageFormatter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/generator/adapters/RabbitMQ.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/generator/adapters/XmlMessageFormatter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/generator/domain/CancelOrderMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/generator/domain/CommunicationException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/generator/domain/CreateOrderMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/generator/domain/Message.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/generator/domain/MessageOutputService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/be/kdg/se3/warmred/generator/TestGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" afterDir="false" />
+    <list default="true" id="f9609cb0-e1a5-4663-a3b2-98dfdf48177b" name="Default" comment="Working version of generating CreateOrderMessages. Sending to RabbitMQ works. Dto's are created but not implemented added logging output to console and file. Created test class with testing scenarios (no assertions tho)">
+      <change afterPath="$PROJECT_DIR$/logging/log.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/generator/domain/dto/CancelOrderMessageDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/generator/domain/dto/CreateOrderMessageDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/generator/domain/dto/Dto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/generator/domain/CreateOrderMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/generator/domain/CreateOrderMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/be/kdg/se3/warmred/generator/TestGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/be/kdg/se3/warmred/generator/TestGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/log4j.properties" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -66,20 +59,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MessageOutputService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/generator/domain/MessageOutputService.java">
+      <file leaf-file-name="TestGenerator.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/be/kdg/se3/warmred/generator/TestGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="68" selection-start-line="9" selection-start-column="68" selection-end-line="9" selection-end-column="68" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RabbitMQ.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/generator/adapters/RabbitMQ.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="61" column="107" selection-start-line="61" selection-start-column="107" selection-end-line="61" selection-end-column="107" />
+            <state relative-caret-position="-125">
+              <caret line="65" column="16" selection-start-line="65" selection-start-column="16" selection-end-line="65" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -87,11 +71,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestGenerator.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/be/kdg/se3/warmred/generator/TestGenerator.java">
+      <file leaf-file-name="log.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/logging/log.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="29" column="14" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
+            <state>
+              <caret lean-forward="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MessageOutputService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/generator/domain/MessageOutputService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RabbitMQ.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/generator/adapters/RabbitMQ.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-450">
+              <caret line="46" column="51" lean-forward="true" selection-start-line="46" selection-start-column="51" selection-end-line="46" selection-end-column="51" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -102,7 +104,7 @@
       <file leaf-file-name="XmlMessageFormatter.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/generator/adapters/XmlMessageFormatter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
+            <state relative-caret-position="255">
               <caret line="21" column="34" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -111,60 +113,47 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FormatterException.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/generator/adapters/FormatterException.java">
+      <file leaf-file-name="CreateOrderMessage.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/generator/domain/CreateOrderMessage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="5" lean-forward="true" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
+            <state relative-caret-position="-131">
+              <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
               <folding>
-                <element signature="e#146#147#0" expanded="true" />
-                <element signature="e#176#177#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#716#717#0" expanded="true" />
+                <element signature="e#746#747#0" expanded="true" />
+                <element signature="e#1337#1338#0" expanded="true" />
+                <element signature="e#1386#1387#0" expanded="true" />
+                <element signature="e#1431#1432#0" expanded="true" />
+                <element signature="e#1475#1476#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CancelOrderMessage.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/generator/domain/CancelOrderMessage.java">
+      <file leaf-file-name="Dto.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/generator/domain/dto/Dto.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="34">
-              <caret line="2" column="50" selection-start-line="2" selection-start-column="50" selection-end-line="2" selection-end-column="50" />
+              <caret line="2" selection-start-line="2" selection-end-line="2" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CreateOrderMessage.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/generator/domain/CreateOrderMessage.java">
+      <file leaf-file-name="CreateOrderMessageDto.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/generator/domain/dto/CreateOrderMessageDto.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="34">
-              <caret line="2" column="50" selection-start-line="2" selection-start-column="50" selection-end-line="2" selection-end-column="50" />
+              <caret line="2" column="49" selection-start-line="2" selection-start-column="49" selection-end-line="2" selection-end-column="49" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MessageFormatter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/generator/adapters/MessageFormatter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Message.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/generator/domain/Message.java">
+      <file leaf-file-name="CancelOrderMessageDto.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/generator/domain/dto/CancelOrderMessageDto.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="34">
-              <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CommunicationException.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/generator/domain/CommunicationException.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
+              <caret line="2" column="49" selection-start-line="2" selection-start-column="49" selection-end-line="2" selection-end-column="49" />
             </state>
           </provider>
         </entry>
@@ -179,11 +168,16 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>18544</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="Generator-MessageBroker" />
       </map>
     </option>
   </component>
@@ -554,7 +548,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/main/java/m.java" />
-        <option value="$PROJECT_DIR$/src/test/resources/log4j.properties" />
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/generator/domain/CommunicationException.java" />
         <option value="$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/generator/domain/Message.java" />
@@ -562,11 +555,15 @@
         <option value="$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/generator/adapters/MessageFormatter.java" />
         <option value="$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/generator/adapters/XmlMessageFormatter.java" />
         <option value="$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/generator/domain/CancelOrderMessage.java" />
-        <option value="$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/generator/domain/CreateOrderMessage.java" />
         <option value="$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/generator/domain/MessageOutputService.java" />
-        <option value="$PROJECT_DIR$/src/test/java/be/kdg/se3/warmred/generator/TestGenerator.java" />
         <option value="$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/generator/adapters/RabbitMQ.java" />
         <option value="$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/generator/adapters/FormatterException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/generator/domain/dto/CreateOrderMessageDto.java" />
+        <option value="$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/generator/domain/dto/CancelOrderMessageDto.java" />
+        <option value="$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/generator/domain/CreateOrderMessage.java" />
+        <option value="$PROJECT_DIR$/src/test/java/be/kdg/se3/warmred/generator/TestGenerator.java" />
+        <option value="$PROJECT_DIR$/src/test/resources/log4j.properties" />
+        <option value="$PROJECT_DIR$/logging/log.txt" />
       </list>
     </option>
   </component>
@@ -592,12 +589,28 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="WarmRed" type="b2602c69:ProjectViewProjectNode" />
               <item name="WarmRed" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="WarmRed" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WarmRed" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WarmRed" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WarmRed" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="libs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WarmRed" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WarmRed" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="logging" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="WarmRed" type="b2602c69:ProjectViewProjectNode" />
@@ -658,6 +671,17 @@
               <item name="WarmRed" type="b2602c69:ProjectViewProjectNode" />
               <item name="WarmRed" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="warmred" type="462c0819:PsiDirectoryNode" />
+              <item name="generator" type="462c0819:PsiDirectoryNode" />
+              <item name="domain" type="462c0819:PsiDirectoryNode" />
+              <item name="dto" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WarmRed" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WarmRed" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -684,20 +708,12 @@
               <item name="warmred" type="462c0819:PsiDirectoryNode" />
               <item name="generator" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="WarmRed" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WarmRed" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scope" />
       <pane id="PackagesPane" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -730,7 +746,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TestGenerator.testBasicSend">
+  <component name="RunManager" selected="JUnit.TestGenerator.testCreateOrderMessageSendLoop">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
@@ -764,6 +780,52 @@
       <option name="PACKAGE_NAME" value="be.kdg.se3.warmred.generator" />
       <option name="MAIN_CLASS_NAME" value="be.kdg.se3.warmred.generator.TestGenerator" />
       <option name="METHOD_NAME" value="testBasicSend" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="TestGenerator.testCreateOrderMessageSendLoop" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="WarmRed" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="be.kdg.se3.warmred.generator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="be.kdg.se3.warmred.generator" />
+      <option name="MAIN_CLASS_NAME" value="be.kdg.se3.warmred.generator.TestGenerator" />
+      <option name="METHOD_NAME" value="testCreateOrderMessageSendLoop" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="TestGenerator.testCreateorderMessageSend" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="WarmRed" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="be.kdg.se3.warmred.generator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="be.kdg.se3.warmred.generator" />
+      <option name="MAIN_CLASS_NAME" value="be.kdg.se3.warmred.generator.TestGenerator" />
+      <option name="METHOD_NAME" value="testCreateorderMessageSend" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -815,9 +877,13 @@
     <list>
       <item itemvalue="Gradle.WarmRed [build]" />
       <item itemvalue="JUnit.TestGenerator.testBasicSend" />
+      <item itemvalue="JUnit.TestGenerator.testCreateorderMessageSend" />
+      <item itemvalue="JUnit.TestGenerator.testCreateOrderMessageSendLoop" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestGenerator.testCreateOrderMessageSendLoop" />
+        <item itemvalue="JUnit.TestGenerator.testCreateorderMessageSend" />
         <item itemvalue="JUnit.TestGenerator.testBasicSend" />
         <item itemvalue="Gradle.WarmRed [build]" />
       </list>
@@ -834,7 +900,8 @@
       <option name="presentableId" value="Default" />
       <updated>1530884123595</updated>
       <workItem from="1530884124851" duration="6021000" />
-      <workItem from="1530895048039" duration="3888000" />
+      <workItem from="1530895048039" duration="8901000" />
+      <workItem from="1531047133367" duration="2864000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit with partial package structure, required library and necessary gradle dependencies">
       <created>1530885198683</created>
@@ -843,16 +910,50 @@
       <option name="project" value="LOCAL" />
       <updated>1530885198683</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Created a MessageOutputService that can be used by multiple message brokers. implemented 1 broker: RabbitMQ. Created formatting from Message object to xml string (classes are created but not filled). Created a test class with a basic setup for the message broker and a basic send method to test if data gets send to the message queue.">
+      <created>1530898961528</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1530898961528</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestGenerator_testBasicSend - 2018.07.06 at 19h 32m 01s.xml">
-      <configuration name="TestGenerator.testBasicSend" configurationId="JUnit" />
+    <history-entry file="TestGenerator_testCreateOrderMessageSendLoop - 2018.07.06 at 21h 08m 08s.xml">
+      <configuration name="TestGenerator.testCreateOrderMessageSendLoop" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestGenerator_testCreateOrderMessageSendLoop - 2018.07.06 at 21h 08m 54s.xml">
+      <configuration name="TestGenerator.testCreateOrderMessageSendLoop" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestGenerator_testCreateOrderMessageSendLoop - 2018.07.06 at 22h 07m 44s.xml">
+      <configuration name="TestGenerator.testCreateOrderMessageSendLoop" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestGenerator_testCreateOrderMessageSendLoop - 2018.07.06 at 22h 10m 20s.xml">
+      <configuration name="TestGenerator.testCreateOrderMessageSendLoop" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestGenerator_testCreateOrderMessageSendLoop - 2018.07.08 at 13h 02m 50s.xml">
+      <configuration name="TestGenerator.testCreateOrderMessageSendLoop" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestGenerator_testCreateOrderMessageSendLoop - 2018.07.08 at 13h 20m 13s.xml">
+      <configuration name="TestGenerator.testCreateOrderMessageSendLoop" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestGenerator_testCreateOrderMessageSendLoop - 2018.07.08 at 13h 21m 50s.xml">
+      <configuration name="TestGenerator.testCreateOrderMessageSendLoop" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestGenerator_testCreateOrderMessageSendLoop - 2018.07.08 at 13h 22m 41s.xml">
+      <configuration name="TestGenerator.testCreateOrderMessageSendLoop" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestGenerator_testCreateOrderMessageSendLoop - 2018.07.08 at 13h 24m 47s.xml">
+      <configuration name="TestGenerator.testCreateOrderMessageSendLoop" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestGenerator_testCreateOrderMessageSendLoop - 2018.07.08 at 13h 25m 29s.xml">
+      <configuration name="TestGenerator.testCreateOrderMessageSendLoop" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9909000" />
+    <option name="totallyTimeSpent" value="17786000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -860,7 +961,7 @@
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info active="true" anchor="bottom" id="Messages" visible="true" weight="0.32943678" />
+      <window_info active="true" anchor="bottom" id="Messages" order="7" visible="true" weight="0.32943678" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
@@ -868,7 +969,7 @@
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32837406" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32943678" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.35919234" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
@@ -880,13 +981,13 @@
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Build" order="7" weight="0.32943678" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
@@ -925,7 +1026,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit with partial package structure, required library and necessary gradle dependencies" />
     <MESSAGE value="Created a MessageOutputService that can be used by multiple message brokers. implemented 1 broker: RabbitMQ. Created formatting from Message object to xml string (classes are created but not filled). Created a test class with a basic setup for the message broker and a basic send method to test if data gets send to the message queue." />
-    <option name="LAST_COMMIT_MESSAGE" value="Created a MessageOutputService that can be used by multiple message brokers. implemented 1 broker: RabbitMQ. Created formatting from Message object to xml string (classes are created but not filled). Created a test class with a basic setup for the message broker and a basic send method to test if data gets send to the message queue." />
+    <MESSAGE value="Working version of generating CreateOrderMessages. Sending to RabbitMQ works. Dto's are created but not implemented added logging output to console and file. Created test class with testing scenarios (no assertions tho)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Working version of generating CreateOrderMessages. Sending to RabbitMQ works. Dto's are created but not implemented added logging output to console and file. Created test class with testing scenarios (no assertions tho)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -933,6 +1035,91 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/generator/domain/MessageOutputService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="68" selection-start-line="9" selection-start-column="68" selection-end-line="9" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/generator/adapters/RabbitMQ.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="816">
+          <caret line="61" column="107" selection-start-line="61" selection-start-column="107" selection-end-line="61" selection-end-column="107" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/libs/location-service-1.0.jar!/be/kdg/se3/services/orderpicking/LocationServiceProxy.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1224">
+          <caret line="80" column="4" lean-forward="true" selection-start-line="80" selection-start-column="4" selection-end-line="82" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/generator/adapters/FormatterException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/generator/domain/CreateOrderMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="58" selection-start-line="58" selection-end-line="58" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#716#717#0" expanded="true" />
+            <element signature="e#746#747#0" expanded="true" />
+            <element signature="e#1337#1338#0" expanded="true" />
+            <element signature="e#1386#1387#0" expanded="true" />
+            <element signature="e#1431#1432#0" expanded="true" />
+            <element signature="e#1475#1476#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/generator/domain/dto/Dto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/generator/domain/dto/CreateOrderMessageDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="49" selection-start-line="2" selection-start-column="49" selection-end-line="2" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/generator/domain/dto/CancelOrderMessageDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="49" selection-start-line="2" selection-start-column="49" selection-end-line="2" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/generator/adapters/MessageFormatter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/be/kdg/se3/warmred/generator/TestGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1173">
+          <caret line="78" column="32" lean-forward="true" selection-start-line="78" selection-start-column="32" selection-end-line="78" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -988,28 +1175,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/log4j.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="23" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/generator/f.java" />
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="20" column="44" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/generator/adapters/XmlMessageFormatter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="34" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1034,30 +1204,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/generator/domain/CreateOrderMessage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="50" selection-start-line="2" selection-start-column="50" selection-end-line="2" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/generator/domain/MessageOutputService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="68" selection-start-line="9" selection-start-column="68" selection-end-line="9" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/be/kdg/se3/warmred/generator/TestGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="14" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/generator/adapters/MessageFormatter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -1065,23 +1211,104 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/generator/adapters/FormatterException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/generator/domain/MessageOutputService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/libs/location-service-1.0.jar!/be/kdg/se3/services/orderpicking/LocationServiceProxy.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="80" column="4" selection-start-line="80" selection-start-column="4" selection-end-line="82" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/generator/adapters/RabbitMQ.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="61" column="107" selection-start-line="61" selection-start-column="107" selection-end-line="61" selection-end-column="107" />
+        <state relative-caret-position="-450">
+          <caret line="46" column="51" lean-forward="true" selection-start-line="46" selection-start-column="51" selection-end-line="46" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/generator/adapters/FormatterException.java">
+    <entry file="file://$PROJECT_DIR$/src/test/resources/log4j.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="5" lean-forward="true" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
+        <state relative-caret-position="17">
+          <caret line="1" column="38" selection-start-line="1" selection-start-column="38" selection-end-line="1" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/generator/adapters/XmlMessageFormatter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="21" column="34" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
           <folding>
-            <element signature="e#146#147#0" expanded="true" />
-            <element signature="e#176#177#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/generator/domain/dto/CreateOrderMessageDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="49" selection-start-line="2" selection-start-column="49" selection-end-line="2" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/generator/domain/dto/CancelOrderMessageDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="49" selection-start-line="2" selection-start-column="49" selection-end-line="2" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/be/kdg/se3/warmred/generator/TestGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-125">
+          <caret line="65" column="16" selection-start-line="65" selection-start-column="16" selection-end-line="65" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logging/log.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/generator/domain/dto/Dto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/generator/domain/CreateOrderMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-131">
+          <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#716#717#0" expanded="true" />
+            <element signature="e#746#747#0" expanded="true" />
+            <element signature="e#1337#1338#0" expanded="true" />
+            <element signature="e#1386#1387#0" expanded="true" />
+            <element signature="e#1431#1432#0" expanded="true" />
+            <element signature="e#1475#1476#0" expanded="true" />
           </folding>
         </state>
       </provider>
