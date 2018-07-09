@@ -132,13 +132,13 @@ public class TestGenerator {
     public void TestFullGenerator() {
         int amountToTriggerCancel = 5;
         int secondsToTriggerCancel = 3;
-        final int DELAY = 1000;
+        final int DELAY = 500;
         int index = MIN_ID;
 
         fillCustomerList();
         fillProductList();
 
-        for (int i = 0; i < 20; i++) {
+        for (int i = 0; i < 10; i++) {
             sleeper.sleep(DELAY);
             if (i % amountToTriggerCancel == 0 && !orderList.isEmpty()) {
                 CancelOrderMessage cancelOrderMessage = generateRandomCancelOrder(orderList.get(getRandomIntBetweenInclusive(0, orderList.size() - 1)).getOrderId());

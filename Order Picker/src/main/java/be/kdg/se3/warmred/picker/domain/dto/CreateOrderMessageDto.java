@@ -1,7 +1,6 @@
-package be.kdg.se3.warmred.picker.domain;
+package be.kdg.se3.warmred.picker.domain.dto;
 
-
-import be.kdg.se3.warmred.picker.domain.dto.CreateOrderMessageDto;
+import be.kdg.se3.warmred.picker.domain.CreateOrderMessage;
 
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
@@ -9,27 +8,27 @@ import java.util.Map;
 
 @XmlType(propOrder = {"orderId", "customerId", "price", "items"})
 @XmlRootElement
-public class CreateOrderMessage implements Message{
+public class CreateOrderMessageDto implements Dto {
     private int orderId;
     private int customerId;
     private int price;
     private Map<Integer, Integer> items;
 
-    public CreateOrderMessage() {
+    public CreateOrderMessageDto() {
     }
 
-    public CreateOrderMessage(int orderId, int customerId, int price, Map<Integer, Integer> items) {
+    public CreateOrderMessageDto(int orderId, int customerId, int price, Map<Integer, Integer> items) {
         this.orderId = orderId;
         this.customerId = customerId;
         this.price = price;
         this.items = items;
     }
 
-    public CreateOrderMessage(CreateOrderMessageDto dto) {
-        this.orderId = dto.getOrderId();
-        this.customerId = dto.getCustomerId();
-        this.price = dto.getPrice();
-        this.items = dto.getItems();
+    public CreateOrderMessageDto(CreateOrderMessage message) {
+        this.orderId = message.getOrderId();
+        this.customerId = message.getCustomerId();
+        this.price = message.getPrice();
+        this.items = message.getItems();
     }
 
     public int getOrderId() {
@@ -74,7 +73,7 @@ public class CreateOrderMessage implements Message{
 
     @Override
     public String toString() {
-        return "CreateOrderMessage{" +
+        return "CreateOrderMessageDto{" +
                 "orderId=" + orderId +
                 ", customerId=" + customerId +
                 ", price=" + price +

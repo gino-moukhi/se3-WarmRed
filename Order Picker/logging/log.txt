@@ -1,0 +1,68 @@
+0    [main] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - RabbitMQ initialized
+124  [main] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - RabbitMQ initialized
+153  [pool-3-thread-4] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Received message from RabbitMQ queue Internal: Orders
+153  [pool-3-thread-4] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - Formatting an XML string to an DTO object
+178  [pool-3-thread-4] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - ROOTNAME = createOrderMessageDto
+178  [pool-3-thread-4] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - The message to format is of type:'CreateOrderMessageDto'
+237  [pool-3-thread-4] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Ready to do stuff with CreateOrderMessage with id: 1000000
+239  [pool-3-thread-4] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Delivered message to listener
+239  [pool-3-thread-4] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Received message from RabbitMQ queue Internal: Orders
+239  [pool-3-thread-4] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - Formatting an XML string to an DTO object
+240  [pool-3-thread-4] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - ROOTNAME = createOrderMessageDto
+240  [pool-3-thread-4] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - The message to format is of type:'CreateOrderMessageDto'
+243  [pool-3-thread-4] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Ready to do stuff with CreateOrderMessage with id: 1000001
+243  [pool-3-thread-4] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Delivered message to listener
+243  [pool-3-thread-5] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Received message from RabbitMQ queue Internal: Orders
+243  [pool-3-thread-5] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - Formatting an XML string to an DTO object
+244  [pool-3-thread-5] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - ROOTNAME = createOrderMessageDto
+244  [pool-3-thread-5] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - The message to format is of type:'CreateOrderMessageDto'
+246  [pool-3-thread-5] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Ready to do stuff with CreateOrderMessage with id: 1000002
+246  [pool-3-thread-5] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Delivered message to listener
+246  [pool-3-thread-5] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Received message from RabbitMQ queue Internal: Orders
+246  [pool-3-thread-5] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - Formatting an XML string to an DTO object
+247  [pool-3-thread-5] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - ROOTNAME = createOrderMessageDto
+247  [pool-3-thread-5] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - The message to format is of type:'CreateOrderMessageDto'
+249  [pool-3-thread-5] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Ready to do stuff with CreateOrderMessage with id: 1000003
+249  [pool-3-thread-5] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Delivered message to listener
+249  [pool-3-thread-5] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Received message from RabbitMQ queue Internal: Orders
+249  [pool-3-thread-5] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - Formatting an XML string to an DTO object
+250  [pool-3-thread-5] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - ROOTNAME = createOrderMessageDto
+250  [pool-3-thread-5] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - The message to format is of type:'CreateOrderMessageDto'
+252  [pool-3-thread-5] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Ready to do stuff with CreateOrderMessage with id: 1000004
+252  [pool-3-thread-5] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Delivered message to listener
+252  [pool-3-thread-5] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Received message from RabbitMQ queue Internal: Orders
+252  [pool-3-thread-5] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - Formatting an XML string to an DTO object
+253  [pool-3-thread-5] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - ROOTNAME = createOrderMessageDto
+253  [pool-3-thread-5] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - The message to format is of type:'CreateOrderMessageDto'
+256  [pool-3-thread-5] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Ready to do stuff with CreateOrderMessage with id: 1000005
+256  [pool-3-thread-5] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Delivered message to listener
+256  [pool-3-thread-5] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Received message from RabbitMQ queue Internal: Orders
+256  [pool-3-thread-5] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - Formatting an XML string to an DTO object
+257  [pool-3-thread-5] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - ROOTNAME = createOrderMessageDto
+257  [pool-3-thread-5] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - The message to format is of type:'CreateOrderMessageDto'
+260  [pool-3-thread-5] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Ready to do stuff with CreateOrderMessage with id: 1000006
+260  [pool-3-thread-5] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Delivered message to listener
+260  [pool-3-thread-5] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Received message from RabbitMQ queue Internal: Orders
+260  [pool-3-thread-5] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - Formatting an XML string to an DTO object
+261  [pool-3-thread-5] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - ROOTNAME = createOrderMessageDto
+261  [pool-3-thread-5] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - The message to format is of type:'CreateOrderMessageDto'
+263  [pool-3-thread-5] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Ready to do stuff with CreateOrderMessage with id: 1000007
+263  [pool-3-thread-5] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Delivered message to listener
+263  [pool-3-thread-5] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Received message from RabbitMQ queue Internal: Orders
+263  [pool-3-thread-5] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - Formatting an XML string to an DTO object
+264  [pool-3-thread-5] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - ROOTNAME = cancelOrderMessageDto
+264  [pool-3-thread-5] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - The message to format is of type:'CancelOrderMessageDto'
+273  [pool-3-thread-5] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Ready to do stuff with CancelOrderMessage with id: 1000002
+273  [pool-3-thread-5] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Delivered message to listener
+273  [pool-3-thread-5] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Received message from RabbitMQ queue Internal: Orders
+273  [pool-3-thread-5] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - Formatting an XML string to an DTO object
+273  [pool-3-thread-5] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - ROOTNAME = createOrderMessageDto
+273  [pool-3-thread-5] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - The message to format is of type:'CreateOrderMessageDto'
+276  [pool-3-thread-5] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Ready to do stuff with CreateOrderMessage with id: 1000008
+276  [pool-3-thread-5] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Delivered message to listener
+276  [pool-3-thread-5] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Received message from RabbitMQ queue Internal: Orders
+276  [pool-3-thread-5] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - Formatting an XML string to an DTO object
+276  [pool-3-thread-5] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - ROOTNAME = createOrderMessageDto
+277  [pool-3-thread-5] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - The message to format is of type:'CreateOrderMessageDto'
+279  [pool-3-thread-5] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Ready to do stuff with CreateOrderMessage with id: 1000009
+279  [pool-3-thread-5] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Delivered message to listener
