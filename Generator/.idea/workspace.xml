@@ -53,8 +53,8 @@
       <file leaf-file-name="TestGenerator.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/be/kdg/se3/warmred/generator/TestGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="106">
-              <caret line="154" column="32" lean-forward="true" selection-start-line="154" selection-start-column="32" selection-end-line="154" selection-end-column="32" />
+            <state relative-caret-position="344">
+              <caret line="168" column="65" lean-forward="true" selection-start-line="168" selection-start-column="65" selection-end-line="168" selection-end-column="65" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#6701#6702#0" expanded="true" />
@@ -985,7 +985,7 @@
       <workItem from="1530884124851" duration="6021000" />
       <workItem from="1530895048039" duration="8901000" />
       <workItem from="1531047133367" duration="15793000" />
-      <workItem from="1531068703230" duration="8883000" />
+      <workItem from="1531068703230" duration="8986000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit with partial package structure, required library and necessary gradle dependencies">
       <created>1530885198683</created>
@@ -1029,7 +1029,14 @@
       <option name="project" value="LOCAL" />
       <updated>1531077990870</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Recreated logfile with most recent run from complete test method">
+      <created>1531078035772</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1531078035772</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1065,7 +1072,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39598000" />
+    <option name="totallyTimeSpent" value="39701000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1080,7 +1087,7 @@
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32837406" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.35494155" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.35494155" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
@@ -1542,8 +1549,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/be/kdg/se3/warmred/generator/TestGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="154" column="32" lean-forward="true" selection-start-line="154" selection-start-column="32" selection-end-line="154" selection-end-column="32" />
+        <state relative-caret-position="344">
+          <caret line="168" column="65" lean-forward="true" selection-start-line="168" selection-start-column="65" selection-end-line="168" selection-end-column="65" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#6701#6702#0" expanded="true" />
