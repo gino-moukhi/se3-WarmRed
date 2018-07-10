@@ -72,7 +72,6 @@ public class XmlMessageFormatter implements MessageFormatter {
 
         try {
             Unmarshaller unmarshaller;
-            logger.info("ROOTNAME = " + rootName);
             if (rootName.contains("createOrderMessage")) {
                 logger.info("The message to format is of type:'CreateOrderMessageDto'");
                 context = JAXBContext.newInstance(CreateOrderMessageDto.class);

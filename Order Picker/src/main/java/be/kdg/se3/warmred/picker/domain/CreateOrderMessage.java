@@ -5,15 +5,18 @@ import be.kdg.se3.warmred.picker.domain.dto.CreateOrderMessageDto;
 
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
-@XmlType(propOrder = {"orderId", "customerId", "price", "items"})
+@XmlType(propOrder = {"orderId", "customerId", "price", "items", "locationInfoList"})
 @XmlRootElement
 public class CreateOrderMessage implements Message{
     private int orderId;
     private int customerId;
     private int price;
     private Map<Integer, Integer> items;
+    private List<LocationInfo> locationInfoList;
 
     public CreateOrderMessage() {
     }
@@ -23,6 +26,15 @@ public class CreateOrderMessage implements Message{
         this.customerId = customerId;
         this.price = price;
         this.items = items;
+        this.locationInfoList = new ArrayList<>();
+    }
+
+    public CreateOrderMessage(int orderId, int customerId, int price, Map<Integer, Integer> items, List<LocationInfo> locationInfoList) {
+        this.orderId = orderId;
+        this.customerId = customerId;
+        this.price = price;
+        this.items = items;
+        this.locationInfoList = locationInfoList;
     }
 
     public CreateOrderMessage(CreateOrderMessageDto dto) {
@@ -30,6 +42,7 @@ public class CreateOrderMessage implements Message{
         this.customerId = dto.getCustomerId();
         this.price = dto.getPrice();
         this.items = dto.getItems();
+        this.locationInfoList = new ArrayList<>();
     }
 
     public int getOrderId() {
@@ -72,6 +85,22 @@ public class CreateOrderMessage implements Message{
         this.items.remove(productId);
     }
 
+    public List<LocationInfo> getLocationInfoList() {
+        return locationInfoList;
+    }
+
+    public void setLocationInfoList(List<LocationInfo> locationInfoList) {
+        this.locationInfoList = locationInfoList;
+    }
+
+    public void addLocationInfo(LocationInfo info) {
+        locationInfoList.add(info);
+    }
+
+    public void removeLocationInfo(LocationInfo info) {
+        locationInfoList.remove(info);
+    }
+
     @Override
     public String toString() {
         return "CreateOrderMessage{" +
@@ -79,6 +108,7 @@ public class CreateOrderMessage implements Message{
                 ", customerId=" + customerId +
                 ", price=" + price +
                 ", items=" + items +
+                ", locationInfo=" + locationInfoList +
                 '}';
     }
 }
