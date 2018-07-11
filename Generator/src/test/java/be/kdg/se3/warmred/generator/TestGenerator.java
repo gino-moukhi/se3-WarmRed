@@ -177,6 +177,22 @@ public class TestGenerator {
         //orderList.forEach(order -> System.out.println(order.getOrderId()));
     }
 
+    @Test
+    public void testSendErrorId() {
+        try {
+            Map<Integer, Integer> items = new HashMap<>();
+            //items.put(1111111, 1);
+            //items.put(2222222, 2);
+            items.put(999999, 3);
+            //items.put(10000000, 4);
+            CreateOrderMessageDto createOrderMessageDto = new CreateOrderMessageDto(1000002,1000000,100,items);
+            System.out.println(createOrderMessageDto);
+            outputService.sendMessage(createOrderMessageDto);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
 
     private int getRandomIntBetweenInclusive(int min, int max) {
         return this.random.nextInt(max - min + 1) + min;
