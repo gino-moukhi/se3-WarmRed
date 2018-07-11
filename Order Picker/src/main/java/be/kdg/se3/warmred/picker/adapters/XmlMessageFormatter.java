@@ -1,11 +1,9 @@
 package be.kdg.se3.warmred.picker.adapters;
 
-import be.kdg.se3.warmred.picker.domain.CancelOrderMessage;
-import be.kdg.se3.warmred.picker.domain.CreateOrderMessage;
-import be.kdg.se3.warmred.picker.domain.Message;
 import be.kdg.se3.warmred.picker.domain.dto.CancelOrderMessageDto;
 import be.kdg.se3.warmred.picker.domain.dto.CreateOrderMessageDto;
 import be.kdg.se3.warmred.picker.domain.dto.Dto;
+import be.kdg.se3.warmred.picker.domain.dto.ExtraCreateOrderMessageDto;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
@@ -38,7 +36,10 @@ public class XmlMessageFormatter implements MessageFormatter {
             } else if (dto instanceof CancelOrderMessageDto) {
                 logger.info("The message to format is of type:'CancelOrderMessageDto'");
                 context = JAXBContext.newInstance(CancelOrderMessageDto.class);
-            } else {
+            } else if (dto instanceof ExtraCreateOrderMessageDto) {
+                logger.info("The message to format is of type:'ExtraCreateOrderMessageDto'");
+                context = JAXBContext.newInstance(ExtraCreateOrderMessageDto.class);
+            }else {
                 throw new FormatterException("The given instance has not been added to the XmlMessageFormatter");
             }
 
@@ -47,7 +48,7 @@ public class XmlMessageFormatter implements MessageFormatter {
             marshaller.marshal(dto, stringWriter);
             xmlResult = stringWriter.toString();
         } catch (JAXBException e) {
-            logger.error("Something went wrong with the conversion from dto to xml, a JAXB exception occurred");
+            logger.error("Something went wrong with the conversion from dto to xml, a JAXB exception occurred " , e);
         } catch (FormatterException e) {
             logger.error("The given instance has not been added to the XmlMessageFormatter");
         }

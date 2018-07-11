@@ -1,8 +1,12 @@
 package be.kdg.se3.warmred.picker.domain;
 
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+
+@XmlType(propOrder = {"productID", "storageRoom", "hallway", "rack"})
 public class LocationInfo implements Comparable<LocationInfo>{
     private int productID;
-    private char storageRoom;
+    private Character storageRoom;
     private int hallway;
     private int rack;
 
@@ -24,7 +28,8 @@ public class LocationInfo implements Comparable<LocationInfo>{
         this.productID = productID;
     }
 
-    public char getStorageRoom() {
+    @XmlJavaTypeAdapter(CharacterAdapter.class)
+    public Character getStorageRoom() {
         return storageRoom;
     }
 

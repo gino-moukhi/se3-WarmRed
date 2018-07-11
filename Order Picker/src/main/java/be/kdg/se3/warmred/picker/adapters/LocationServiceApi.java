@@ -27,6 +27,7 @@ public class LocationServiceApi implements ApiService {
         try {
             logger.info("Making a call to " + baseUrl + id);
             jsonResponse = locationServiceProxy.get(baseUrl + id);
+
             logger.info("response as json: " + jsonResponse);
             return jsonResponse;
         } catch (IOException e) {

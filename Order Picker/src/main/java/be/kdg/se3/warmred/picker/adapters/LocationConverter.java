@@ -20,6 +20,9 @@ public class LocationConverter implements Converter {
         try {
             logger.info("Converting location info json to location info object");
             result = gson.fromJson(jsonString, LocationInfo.class);
+            if (result.getProductID() == 0) {
+                throw new ConverterException("Json contains different structure than expected: " + result);
+            }
             logger.info("Converted info: " + result.toString());
         } catch (Exception e) {
             throw new ConverterException("Something went wrong while converting json data to LocationInfo");

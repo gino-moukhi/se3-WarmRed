@@ -6,6 +6,7 @@ import be.kdg.se3.warmred.picker.domain.dto.CreateOrderMessageDto;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -15,7 +16,7 @@ public class CreateOrderMessage implements Message{
     private int orderId;
     private int customerId;
     private int price;
-    private Map<Integer, Integer> items;
+    private Map<Integer, Integer> items = new HashMap<>();
     private List<LocationInfo> locationInfoList;
 
     public CreateOrderMessage() {

@@ -132,13 +132,13 @@ public class TestGenerator {
     public void TestFullGenerator() {
         int amountToTriggerCancel = 5;
         int secondsToTriggerCancel = 3;
-        final int DELAY = 500;
+        final int DELAY = 1000;
         int index = MIN_ID;
 
         fillCustomerList();
         fillProductList();
 
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 20; i++) {
             sleeper.sleep(DELAY);
             if (i % amountToTriggerCancel == 0 && !orderList.isEmpty()) {
                 CancelOrderMessage cancelOrderMessage = generateRandomCancelOrder(orderList.get(getRandomIntBetweenInclusive(0, orderList.size() - 1)).getOrderId());
@@ -175,6 +175,22 @@ public class TestGenerator {
             }
         }
         //orderList.forEach(order -> System.out.println(order.getOrderId()));
+    }
+
+    @Test
+    public void testSendErrorId() {
+        try {
+            Map<Integer, Integer> items = new HashMap<>();
+            //items.put(1111111, 1);
+            //items.put(2222222, 2);
+            items.put(999999, 3);
+            //items.put(10000000, 4);
+            CreateOrderMessageDto createOrderMessageDto = new CreateOrderMessageDto(1000002,1000000,100,items);
+            System.out.println(createOrderMessageDto);
+            outputService.sendMessage(createOrderMessageDto);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
 
