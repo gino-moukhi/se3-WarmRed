@@ -7,6 +7,12 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import java.util.Map;
 
+/**
+ * A business entity that represents a create order message
+ *
+ * @author Gino Moukhi
+ * @version 1.0.0
+ */
 @XmlType(propOrder = {"orderId", "customerId", "price", "items"})
 @XmlRootElement
 public class CreateOrderMessage implements Message{

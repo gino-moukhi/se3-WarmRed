@@ -1266,3 +1266,41 @@
 26563 [pool-7-thread-26] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Channel and connection from RabbitMQ closed
 26564 [pool-7-thread-26] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - ITEMS IN THE PRODUCT MAP TOO SEE IF CLEAR CACHE ACTUALLY WORKS: [LocationInfo{productID=1020434, storageRoom=C, hallway=2, rack=19}, LocationInfo{productID=1071435, storageRoom=B, hallway=3, rack=6}, LocationInfo{productID=1128673, storageRoom=C, hallway=3, rack=11}, LocationInfo{productID=1155882, storageRoom=C, hallway=1, rack=11}, LocationInfo{productID=1185752, storageRoom=B, hallway=1, rack=19}, LocationInfo{productID=1217883, storageRoom=A, hallway=3, rack=5}, LocationInfo{productID=1374195, storageRoom=C, hallway=3, rack=5}, LocationInfo{productID=1410361, storageRoom=C, hallway=2, rack=16}, LocationInfo{productID=1441668, storageRoom=A, hallway=3, rack=8}, LocationInfo{productID=1471495, storageRoom=C, hallway=1, rack=6}, LocationInfo{productID=1489218, storageRoom=C, hallway=1, rack=11}, LocationInfo{productID=1597859, storageRoom=A, hallway=3, rack=11}, LocationInfo{productID=1748186, storageRoom=B, hallway=1, rack=13}, LocationInfo{productID=1812061, storageRoom=A, hallway=3, rack=1}, LocationInfo{productID=1821825, storageRoom=C, hallway=2, rack=16}, LocationInfo{productID=1852505, storageRoom=A, hallway=2, rack=10}, LocationInfo{productID=1856938, storageRoom=A, hallway=3, rack=1}, LocationInfo{productID=1867982, storageRoom=C, hallway=3, rack=7}, LocationInfo{productID=1973633, storageRoom=C, hallway=3, rack=1}]
 26564 [pool-7-thread-26] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Delivered message to listener
+0    [main] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - RabbitMQ initialized
+131  [main] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - RabbitMQ initialized
+131  [main] INFO  be.kdg.se3.warmred.picker.domain.TaskScheduler  - Running runnable be.kdg.se3.warmred.picker.domain.MessageHandler$$Lambda$1/2096057945@5b464ce8 at a fixed rate of 60 seconds
+132  [main] INFO  be.kdg.se3.warmred.picker.domain.TaskScheduler  - Running runnable be.kdg.se3.warmred.picker.domain.MessageHandler$$Lambda$2/977993101@19dfb72a at a fixed rate of 120 seconds
+256  [main] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - RabbitMQ initialized
+280  [pool-7-thread-4] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Received message from RabbitMQ queue Internal: Orders
+280  [pool-7-thread-4] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - Formatting an XML string to an DTO object
+296  [pool-7-thread-4] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - The message to format is of type:'CreateOrderMessageDto'
+331  [pool-7-thread-4] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Calling location service for productId: 999999
+332  [pool-7-thread-4] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Calling location service for productId: 1111111
+332  [pool-7-thread-4] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Calling location service for productId: 10000000
+332  [pool-7-thread-4] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Calling location service for productId: 2222222
+333  [pool-7-thread-4] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Product not found in memory cache, calling api service
+333  [pool-7-thread-4] INFO  be.kdg.se3.warmred.picker.adapters.LocationServiceApi  - Making a call to www.services4se3.com/locationservice/999999
+341  [pool-7-thread-4] INFO  be.kdg.se3.warmred.picker.adapters.LocationServiceApi  - response as json: {"error":"Unknown productID","description":"Wrong productID format (< 1000000)"}
+341  [pool-7-thread-4] INFO  be.kdg.se3.warmred.picker.adapters.LocationConverter  - Converting location info json to location info object
+344  [pool-7-thread-4] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Error in the conversion. 
+344  [pool-7-thread-4] WARN  be.kdg.se3.warmred.picker.domain.MessageHandler  - Added order with ID: 1000000 to the list of unprocessed orders
+344  [pool-7-thread-4] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Product not found in memory cache, calling api service
+344  [pool-7-thread-4] INFO  be.kdg.se3.warmred.picker.adapters.LocationServiceApi  - Making a call to www.services4se3.com/locationservice/1111111
+344  [pool-7-thread-4] INFO  be.kdg.se3.warmred.picker.adapters.LocationServiceApi  - response as json: {"error":"Unknown productID","description":"ID 1111111 forced an unknown productID response for testing purposes"}
+344  [pool-7-thread-4] INFO  be.kdg.se3.warmred.picker.adapters.LocationConverter  - Converting location info json to location info object
+344  [pool-7-thread-4] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Error in the conversion. 
+344  [pool-7-thread-4] WARN  be.kdg.se3.warmred.picker.domain.MessageHandler  - Added order with ID: 1000000 to the list of unprocessed orders
+344  [pool-7-thread-4] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Product not found in memory cache, calling api service
+344  [pool-7-thread-4] INFO  be.kdg.se3.warmred.picker.adapters.LocationServiceApi  - Making a call to www.services4se3.com/locationservice/10000000
+344  [pool-7-thread-4] INFO  be.kdg.se3.warmred.picker.adapters.LocationServiceApi  - response as json: {"error":"Unknown productID","description":"Wrong productID format (> 9999999)"}
+344  [pool-7-thread-4] INFO  be.kdg.se3.warmred.picker.adapters.LocationConverter  - Converting location info json to location info object
+344  [pool-7-thread-4] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Error in the conversion. 
+345  [pool-7-thread-4] WARN  be.kdg.se3.warmred.picker.domain.MessageHandler  - Added order with ID: 1000000 to the list of unprocessed orders
+345  [pool-7-thread-4] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Product not found in memory cache, calling api service
+345  [pool-7-thread-4] INFO  be.kdg.se3.warmred.picker.adapters.LocationServiceApi  - Making a call to www.services4se3.com/locationservice/2222222
+345  [pool-7-thread-4] ERROR be.kdg.se3.warmred.picker.adapters.LocationServiceApi  - Could not reach the LocationServiceProxy
+345  [pool-7-thread-4] ERROR be.kdg.se3.warmred.picker.domain.MessageHandler  - Could not reach the api service. 
+345  [pool-7-thread-4] WARN  be.kdg.se3.warmred.picker.domain.MessageHandler  - Added order with ID: 1000000 to the list of unprocessed orders
+345  [pool-7-thread-4] WARN  be.kdg.se3.warmred.picker.domain.MessageHandler  - Order is inside the unprocessed order list
+345  [pool-7-thread-4] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - ITEMS IN THE PRODUCT MAP TOO SEE IF CLEAR CACHE ACTUALLY WORKS: []
+345  [pool-7-thread-4] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Delivered message to listener

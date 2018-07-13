@@ -2,43 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="862b8f26-43e5-4f16-a905-06f2cac68ab9" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/domain/TaskScheduler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Generator/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Generator/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Generator/logging/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Generator/logging/log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Generator/logging/log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Generator/out/production/classes/be/kdg/se3/warmred/generator/adapters/MessageFormatter.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Generator/out/production/classes/be/kdg/se3/warmred/generator/adapters/MessageFormatter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Generator/out/production/classes/be/kdg/se3/warmred/generator/adapters/RabbitMQ.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Generator/out/production/classes/be/kdg/se3/warmred/generator/adapters/RabbitMQ.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Generator/out/production/classes/be/kdg/se3/warmred/generator/adapters/XmlMessageFormatter.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Generator/out/production/classes/be/kdg/se3/warmred/generator/adapters/XmlMessageFormatter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Generator/out/production/classes/be/kdg/se3/warmred/generator/domain/CancelOrderMessage.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Generator/out/production/classes/be/kdg/se3/warmred/generator/domain/CancelOrderMessage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Generator/out/production/classes/be/kdg/se3/warmred/generator/domain/Message.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Generator/out/production/classes/be/kdg/se3/warmred/generator/domain/Message.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Generator/out/production/classes/be/kdg/se3/warmred/generator/domain/MessageOutputService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Generator/out/production/classes/be/kdg/se3/warmred/generator/domain/MessageOutputService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Generator/out/production/classes/be/kdg/se3/warmred/generator/domain/dto/CancelOrderMessageDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Generator/out/production/classes/be/kdg/se3/warmred/generator/domain/dto/CancelOrderMessageDto.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Generator/out/test/classes/be/kdg/se3/warmred/generator/TestGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Generator/out/test/classes/be/kdg/se3/warmred/generator/TestGenerator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Generator/src/main/java/be/kdg/se3/warmred/generator/adapters/FormatterException.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Generator/src/main/java/be/kdg/se3/warmred/generator/adapters/FormatterException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Generator/src/main/java/be/kdg/se3/warmred/generator/adapters/MessageFormatter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Generator/src/main/java/be/kdg/se3/warmred/generator/adapters/MessageFormatter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Generator/src/main/java/be/kdg/se3/warmred/generator/adapters/RabbitMQ.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Generator/src/main/java/be/kdg/se3/warmred/generator/adapters/RabbitMQ.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Generator/src/main/java/be/kdg/se3/warmred/generator/adapters/XmlMessageFormatter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Generator/src/main/java/be/kdg/se3/warmred/generator/adapters/XmlMessageFormatter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Generator/src/main/java/be/kdg/se3/warmred/generator/domain/CancelOrderMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Generator/src/main/java/be/kdg/se3/warmred/generator/domain/CancelOrderMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Generator/src/main/java/be/kdg/se3/warmred/generator/domain/CommunicationException.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Generator/src/main/java/be/kdg/se3/warmred/generator/domain/CommunicationException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Generator/src/main/java/be/kdg/se3/warmred/generator/domain/CreateOrderMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Generator/src/main/java/be/kdg/se3/warmred/generator/domain/CreateOrderMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Generator/src/main/java/be/kdg/se3/warmred/generator/domain/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Generator/src/main/java/be/kdg/se3/warmred/generator/domain/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Generator/src/main/java/be/kdg/se3/warmred/generator/domain/MessageOutputService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Generator/src/main/java/be/kdg/se3/warmred/generator/domain/MessageOutputService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Generator/src/main/java/be/kdg/se3/warmred/generator/domain/dto/CancelOrderMessageDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Generator/src/main/java/be/kdg/se3/warmred/generator/domain/dto/CancelOrderMessageDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Generator/src/main/java/be/kdg/se3/warmred/generator/domain/dto/CreateOrderMessageDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Generator/src/main/java/be/kdg/se3/warmred/generator/domain/dto/CreateOrderMessageDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Generator/src/main/java/be/kdg/se3/warmred/generator/domain/dto/Dto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Generator/src/main/java/be/kdg/se3/warmred/generator/domain/dto/Dto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Generator/src/main/java/be/kdg/se3/warmred/util/Sleeper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Generator/src/main/java/be/kdg/se3/warmred/util/Sleeper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Generator/src/test/java/be/kdg/se3/warmred/generator/TestGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Generator/src/test/java/be/kdg/se3/warmred/generator/TestGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logging/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/logging/log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/adapters/ApiService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/adapters/ApiService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/adapters/Converter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/adapters/Converter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/adapters/ConverterException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/exceptions/ConverterException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/adapters/FormatterException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/exceptions/FormatterException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/adapters/LocationConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/adapters/LocationConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/adapters/LocationServiceApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/adapters/LocationServiceApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/adapters/MessageFormatter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/adapters/MessageFormatter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/adapters/RabbitMQ.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/adapters/RabbitMQ.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/adapters/XmlMessageFormatter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/adapters/XmlMessageFormatter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/domain/AdapterException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/domain/CancelOrderMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/domain/CancelOrderMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/domain/CharacterAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/domain/CharacterAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/domain/CommunicationException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/exceptions/CommunicationException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/domain/CreateOrderMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/domain/CreateOrderMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/domain/LocationInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/domain/LocationInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/domain/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/domain/Message.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/domain/MessageHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/domain/MessageHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/domain/MessageInputService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/domain/MessageInputService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/domain/MessageListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/domain/MessageListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/domain/MessageOutputService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/domain/MessageOutputService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/domain/PickingException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/exceptions/PickingException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/domain/PickingImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/domain/PickingImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/domain/PickingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/domain/PickingService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/domain/PickingType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/domain/PickingType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/domain/dto/CancelOrderMessageDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/domain/dto/CancelOrderMessageDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/domain/dto/CreateOrderMessageDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/domain/dto/CreateOrderMessageDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/domain/dto/Dto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/domain/dto/MessageDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/domain/dto/ExtraCreateOrderMessageDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/domain/dto/ExtraCreateOrderMessageDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/util/Sleeper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/util/Sleeper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/be/kdg/se3/warmred/picker/TestPicker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/be/kdg/se3/warmred/picker/TestPicker.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -57,11 +46,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="LocationConverter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/adapters/LocationConverter.java">
+      <file leaf-file-name="CreateOrderMessage.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/domain/CreateOrderMessage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" selection-start-line="8" selection-end-line="13" selection-end-column="3" />
+            <state relative-caret-position="204">
+              <caret line="12" selection-start-line="12" selection-end-line="17" selection-end-column="3" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -69,20 +58,87 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Converter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/adapters/Converter.java">
+      <file leaf-file-name="CharacterAdapter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/domain/CharacterAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="9" selection-start-line="9" selection-end-line="11" selection-end-column="3" />
+            <state relative-caret-position="102">
+              <caret line="6" column="109" selection-start-line="6" selection-start-column="109" selection-end-line="6" selection-end-column="109" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ApiService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/adapters/ApiService.java">
+      <file leaf-file-name="CreateOrderMessageDto.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/domain/dto/CreateOrderMessageDto.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" selection-start-line="8" selection-end-line="15" selection-end-column="3" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1375#1376#0" expanded="true" />
+                <element signature="e#1405#1406#0" expanded="true" />
+                <element signature="e#1448#1449#0" expanded="true" />
+                <element signature="e#1486#1487#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MessageDto.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/domain/dto/MessageDto.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" selection-start-line="2" selection-end-line="7" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CancelOrderMessageDto.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/domain/dto/CancelOrderMessageDto.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" selection-start-line="6" selection-end-line="13" selection-end-column="3" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Message.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/domain/Message.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" selection-start-line="2" selection-end-line="7" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MessageOutputService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/domain/MessageOutputService.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
-              <caret line="4" selection-start-line="4" selection-end-line="9" selection-end-column="3" />
+              <caret line="5" selection-start-line="5" selection-end-line="10" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Sleeper.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/util/Sleeper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="5" selection-start-line="5" selection-end-line="10" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CancelOrderMessage.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/domain/CancelOrderMessage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" selection-start-line="6" selection-end-line="11" selection-end-column="3" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -92,63 +148,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="34">
               <caret line="2" selection-start-line="2" selection-end-line="7" selection-end-column="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ConverterException.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/exceptions/ConverterException.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="70" selection-start-line="3" selection-start-column="70" selection-end-line="3" selection-end-column="70" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FormatterException.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/exceptions/FormatterException.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="83" selection-start-line="3" selection-start-column="83" selection-end-line="3" selection-end-column="83" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PickingException.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/exceptions/PickingException.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="84" selection-start-line="3" selection-start-column="84" selection-end-line="3" selection-end-column="84" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Sleeper.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/util/Sleeper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="6" column="109" selection-start-line="6" selection-start-column="109" selection-end-line="6" selection-end-column="109" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MessageFormatter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/adapters/MessageFormatter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="7" column="53" selection-start-line="7" selection-start-column="53" selection-end-line="7" selection-end-column="53" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LocationServiceApi.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/adapters/LocationServiceApi.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="91" selection-start-line="10" selection-start-column="91" selection-end-line="10" selection-end-column="91" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -831,7 +830,7 @@
       <workItem from="1531232910334" duration="14467000" />
       <workItem from="1531320221987" duration="9268000" />
       <workItem from="1531484417116" duration="8387000" />
-      <workItem from="1531492850204" duration="1290000" />
+      <workItem from="1531492850204" duration="2868000" />
     </task>
     <task id="LOCAL-00001" summary="Initial package structure">
       <created>1531127424459</created>
@@ -868,7 +867,14 @@
       <option name="project" value="LOCAL" />
       <updated>1531334304303</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Refactored and commented">
+      <created>1531494185966</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1531494185966</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -883,7 +889,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46933000" />
+    <option name="totallyTimeSpent" value="48511000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -943,7 +949,8 @@
     <MESSAGE value="Basic setup to resemble Generator project. Made sure that the order picker can read messages from the message queue. Implemented writing capabilities for writing to second message queue." />
     <MESSAGE value="Added everything from location info except the clear cache at set interval functionality" />
     <MESSAGE value="Picking algorithm, sending picked messages and error handling done." />
-    <option name="LAST_COMMIT_MESSAGE" value="Picking algorithm, sending picked messages and error handling done." />
+    <MESSAGE value="Refactored and commented" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactored and commented" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1060,13 +1067,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/exceptions/AdapterException.java" />
-    <entry file="file://$PROJECT_DIR$/src/test/java/be/kdg/se3/warmred/picker/TestPicker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="35" column="43" lean-forward="true" selection-start-line="35" selection-start-column="43" selection-end-line="35" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/logging/log.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1104,20 +1104,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/domain/MessageOutputService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="6" column="56" selection-start-line="6" selection-start-column="56" selection-end-line="6" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/domain/MessageListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="83" selection-start-line="5" selection-start-column="83" selection-end-line="5" selection-end-column="83" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/domain/MessageInputService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -1135,13 +1121,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/domain/Message.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="7" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/domain/LocationInfo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -1152,40 +1131,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/domain/CreateOrderMessage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" selection-start-line="12" selection-end-line="17" selection-end-column="3" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/domain/CharacterAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="109" selection-start-line="6" selection-start-column="109" selection-end-line="6" selection-end-column="109" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/domain/CancelOrderMessage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" selection-start-line="6" selection-end-line="11" selection-end-column="3" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/domain/dto/MessageDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/domain/dto/ExtraCreateOrderMessageDto.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -1193,57 +1138,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/domain/dto/CreateOrderMessageDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" selection-start-line="8" selection-end-line="15" selection-end-column="3" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1375#1376#0" expanded="true" />
-            <element signature="e#1405#1406#0" expanded="true" />
-            <element signature="e#1448#1449#0" expanded="true" />
-            <element signature="e#1486#1487#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/domain/dto/CancelOrderMessageDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" selection-start-line="9" selection-end-line="9" selection-end-column="97" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/adapters/XmlMessageFormatter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="21" selection-start-line="21" selection-end-line="26" selection-end-column="3" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/adapters/RabbitMQ.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2193">
-          <caret line="129" column="15" selection-start-line="129" selection-start-column="15" selection-end-line="129" selection-end-column="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/adapters/MessageFormatter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="7" column="53" selection-start-line="7" selection-start-column="53" selection-end-line="7" selection-end-column="53" />
         </state>
       </provider>
     </entry>
@@ -1281,24 +1175,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/exceptions/CommunicationException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="7" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/exceptions/ConverterException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="70" selection-start-line="3" selection-start-column="70" selection-end-line="3" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/exceptions/FormatterException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="83" selection-start-line="3" selection-start-column="83" selection-end-line="3" selection-end-column="83" />
         </state>
       </provider>
     </entry>
@@ -1309,10 +1189,137 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/util/Sleeper.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/domain/MessageListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
+          <caret line="5" column="83" selection-start-line="5" selection-start-column="83" selection-end-line="5" selection-end-column="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/be/kdg/se3/warmred/picker/TestPicker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="35" column="43" lean-forward="true" selection-start-line="35" selection-start-column="43" selection-end-line="35" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/exceptions/FormatterException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="7" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/adapters/MessageFormatter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="5" selection-start-line="5" selection-end-line="11" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/adapters/RabbitMQ.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" selection-start-line="16" selection-end-line="23" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/adapters/XmlMessageFormatter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" selection-start-line="21" selection-end-line="26" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/domain/dto/CancelOrderMessageDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" selection-start-line="6" selection-end-line="13" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/domain/dto/CreateOrderMessageDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" selection-start-line="8" selection-end-line="15" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1375#1376#0" expanded="true" />
+            <element signature="e#1405#1406#0" expanded="true" />
+            <element signature="e#1448#1449#0" expanded="true" />
+            <element signature="e#1486#1487#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/domain/dto/MessageDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="7" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/domain/CancelOrderMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" selection-start-line="6" selection-end-line="11" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/exceptions/CommunicationException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="7" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/domain/CharacterAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
           <caret line="6" column="109" selection-start-line="6" selection-start-column="109" selection-end-line="6" selection-end-column="109" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/domain/CreateOrderMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" selection-start-line="12" selection-end-line="17" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/domain/Message.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="7" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/picker/domain/MessageOutputService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="5" selection-start-line="5" selection-end-line="10" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/se3/warmred/util/Sleeper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="5" selection-start-line="5" selection-end-line="10" selection-end-column="3" />
         </state>
       </provider>
     </entry>

@@ -53,19 +53,6 @@ public class TestGenerator {
     }
 
     @Test
-    public void testCreateOrderMessageSend() {
-        try {
-            Map<Integer, Integer> items = new HashMap<>();
-            items.put(MIN_ID, 2);
-            items.put(MIN_ID + 1, 3);
-            items.put(MIN_ID + 2, 4);
-            outputService.sendMessage(new CreateOrderMessage(MIN_ID, MIN_ID + 101, 100, items));
-        } catch (CommunicationException e) {
-            logger.error("Could not send basic create order message to message broker");
-        }
-    }
-
-    @Test
     public void testCreateOrderMessageDtoSend() {
         try {
             Map<Integer, Integer> items = new HashMap<>();
@@ -79,52 +66,11 @@ public class TestGenerator {
     }
 
     @Test
-    public void testCancelOrderMessageSend() {
-        try {
-            outputService.sendMessage(new CancelOrderMessage(MIN_ID));
-        } catch (CommunicationException e) {
-            logger.error("Could not send basic cancel order message to message broker");
-        }
-    }
-
-    @Test
     public void testCancelOrderMessageDtoSend() {
         try {
             outputService.sendMessage(new CancelOrderMessageDto(MIN_ID));
         } catch (CommunicationException e) {
             logger.error("Could not send basic cancel order message dto to message broker");
-        }
-    }
-
-    @Test
-    public void testCreateOrderMessageSendLoop() {
-        try {
-            fillCustomerList();
-            fillProductList();
-
-            for (int i = MIN_ID; i < MIN_ID + 5; i++) {
-                sleeper.sleep(1000);
-                outputService.sendMessage(generateRandomOrder(i));
-                logger.info(generateRandomOrder(i).toString());
-            }
-        } catch (CommunicationException e) {
-            logger.error("Could not send multiple create order messages to message broker");
-        }
-    }
-
-    @Test
-    public void testCreateOrderMessageDtoSendLoop() {
-        try {
-            fillCustomerList();
-            fillProductList();
-
-            for (int i = MIN_ID; i < MIN_ID + 5; i++) {
-                sleeper.sleep(1000);
-                outputService.sendMessage(generateRandomOrderDto(i));
-                logger.info(generateRandomOrderDto(i).toString());
-            }
-        } catch (CommunicationException e) {
-            logger.error("Could not send multiple create order message dto's to message broker");
         }
     }
 
@@ -182,9 +128,9 @@ public class TestGenerator {
         try {
             Map<Integer, Integer> items = new HashMap<>();
             items.put(1111111, 1);
-            //items.put(2222222, 2);
-            //items.put(999999, 3);
-            //items.put(10000000, 4);
+            items.put(2222222, 2);
+            items.put(999999, 3);
+            items.put(10000000, 4);
             CreateOrderMessageDto createOrderMessageDto = new CreateOrderMessageDto(1000000,1000000,100,items);
             System.out.println(createOrderMessageDto);
             outputService.sendMessage(createOrderMessageDto);
@@ -220,18 +166,6 @@ public class TestGenerator {
             order.addItem(productList.get(getRandomIntBetweenInclusive(0, productList.size() - 1)), getRandomIntBetweenInclusive(1, 5));
         }
         orderList.add(order);
-        return order;
-    }
-
-    private CreateOrderMessageDto generateRandomOrderDto(int index) {
-        CreateOrderMessageDto order = new CreateOrderMessageDto();
-        order.setOrderId(index);
-        order.setCustomerId(customerList.get(getRandomIntBetweenInclusive(0, customerList.size() - 1)));
-        order.setPrice(getRandomIntBetweenInclusive(10, 100));
-        order.setItems(new HashMap<>());
-        for (int j = 0; j < getRandomIntBetweenInclusive(1, 4); j++) {
-            order.addItem(productList.get(getRandomIntBetweenInclusive(0, productList.size() - 1)), getRandomIntBetweenInclusive(1, 5));
-        }
         return order;
     }
 
