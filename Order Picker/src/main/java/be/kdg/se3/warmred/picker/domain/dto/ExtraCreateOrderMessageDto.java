@@ -8,9 +8,16 @@ import javax.xml.bind.annotation.XmlType;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * A DTO class like {@link CreateOrderMessageDto} but this one contains {@link LocationInfo} and will be sent to the
+ * outgoing queue (Internal: Logistics)
+ *
+ * @author Gino Moukhi
+ * @version 1.0.0
+ */
 @XmlType(propOrder = {"orderId", "customerId", "price", "items", "locationInfoList"})
 @XmlRootElement
-public class ExtraCreateOrderMessageDto implements Dto {
+public class ExtraCreateOrderMessageDto implements MessageDto {
     private int orderId;
     private int customerId;
     private int price;

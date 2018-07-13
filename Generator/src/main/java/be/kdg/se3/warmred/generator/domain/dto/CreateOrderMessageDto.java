@@ -6,6 +6,14 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import java.util.Map;
 
+/**
+ * A DTO class that is suitable for leaving the application and being put on the message broker.
+ * This class will be used if an order creation is sent/received from the message broker.
+ * See {@link CreateOrderMessage} for the class that is not ready for message broker utilisation.
+ *
+ * @author Gino Moukhi
+ * @version 1.0.0
+ */
 @XmlType(propOrder = {"orderId", "customerId", "price", "items"})
 @XmlRootElement
 public class CreateOrderMessageDto implements Dto {

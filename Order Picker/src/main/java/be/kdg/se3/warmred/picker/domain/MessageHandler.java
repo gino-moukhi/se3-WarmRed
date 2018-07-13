@@ -2,11 +2,12 @@ package be.kdg.se3.warmred.picker.domain;
 
 import be.kdg.se3.warmred.picker.adapters.ApiService;
 import be.kdg.se3.warmred.picker.adapters.Converter;
-import be.kdg.se3.warmred.picker.adapters.ConverterException;
+import be.kdg.se3.warmred.picker.domain.dto.*;
+import be.kdg.se3.warmred.picker.exceptions.CommunicationException;
+import be.kdg.se3.warmred.picker.exceptions.ConverterException;
 import be.kdg.se3.warmred.picker.domain.dto.CancelOrderMessageDto;
-import be.kdg.se3.warmred.picker.domain.dto.CreateOrderMessageDto;
-import be.kdg.se3.warmred.picker.domain.dto.Dto;
-import be.kdg.se3.warmred.picker.domain.dto.ExtraCreateOrderMessageDto;
+import be.kdg.se3.warmred.picker.domain.dto.MessageDto;
+import be.kdg.se3.warmred.picker.exceptions.PickingException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -16,11 +17,17 @@ import java.util.Set;
 import java.util.TreeSet;
 import java.util.concurrent.atomic.AtomicReference;
 
+/**
+ * A service that is responsible for delegating tasks through the system
+ *
+ * @author Gino Moukhi
+ * @version 1.0.0
+ */
 public class MessageHandler implements MessageListener {
-    private Logger logger = LoggerFactory.getLogger(MessageHandler.class);
-    private final int MAX_BUFFER_SIZE = 5;
-    private MessageInputService messageInputService;
-    private MessageOutputService messageOutputService;
+    private final Logger logger = LoggerFactory.getLogger(MessageHandler.class);
+    private TaskScheduler scheduler;
+    private final MessageInputService messageInputService;
+    private final MessageOutputService messageOutputService;
     private ApiService apiService;
     private Converter converter;
     private PickingService pickingService;
@@ -28,6 +35,11 @@ public class MessageHandler implements MessageListener {
     private Set<LocationInfo> productMemoryCache;
     private List<CreateOrderMessage> pickingBuffer;
     private List<CreateOrderMessage> unprocessedOrders;
+    private Runnable taskClearCache;
+    private Runnable taskRetryUnprocessed;
+    private int taskIntervalClearCache;
+    private int taskIntervalRetryUnprocessed;
+    private int maxBufferSize;
 
     public MessageHandler(MessageInputService messageInputService, MessageOutputService messageOutputService) {
         this.messageInputService = messageInputService;
@@ -35,12 +47,16 @@ public class MessageHandler implements MessageListener {
         productMemoryCache = new TreeSet<>();
         pickingBuffer = new ArrayList<>();
         unprocessedOrders = new ArrayList<>();
+        taskClearCache = productMemoryCache::clear;
+        taskRetryUnprocessed = retryUnprocessedOrders();
     }
 
     public void start() {
         try {
             messageInputService.initialize();
             messageOutputService.initialize();
+            scheduler.scheduleAtFixedRate(taskClearCache, taskIntervalClearCache);
+            scheduler.scheduleAtFixedRate(taskRetryUnprocessed, taskIntervalRetryUnprocessed);
         } catch (CommunicationException e) {
             logger.error("Unable to properly start the adapter");
         }
@@ -56,60 +72,18 @@ public class MessageHandler implements MessageListener {
     }
 
     @Override
-    public void onReceive(Dto dtoMessage) {
-        if (dtoMessage instanceof CreateOrderMessageDto) {
-            CreateOrderMessage createOrderMessage = new CreateOrderMessage((CreateOrderMessageDto) dtoMessage);
+    public void onReceive(MessageDto messageDtoMessage) {
+        if (messageDtoMessage instanceof CreateOrderMessageDto) {
+            CreateOrderMessage createOrderMessage = new CreateOrderMessage((CreateOrderMessageDto) messageDtoMessage);
             createOrderMessage.getItems().keySet().forEach(key -> logger.info("Calling location service for productId: " + key));
             // Add location info
-            createOrderMessage.getItems().keySet().forEach(key -> {
-                LocationInfo locationInfo = checkCacheOrCallService(key);
-                if (locationInfo.getProductID() == 0) {
-                    unprocessedOrders.add(createOrderMessage);
-                    logger.warn("Added order with ID: " + createOrderMessage.getOrderId() + " to the list of unprocessed orders");
-                } else {
-                    logger.info("Adding location info to the list. INFO: " + locationInfo.toString());
-                    createOrderMessage.addLocationInfo(locationInfo);
-                    logger.info("Location info in the list of CreateOrderMessage: " + createOrderMessage.getLocationInfoList().toString());
-                }
-            });
+            assignLocationInfo(createOrderMessage);
             //Picking order
-            try {
-                if (!unprocessedOrders.contains(createOrderMessage)) {
-                    if (pickingType.equals(PickingType.SINGLE)) {
-                        logger.info("COMPLETE ORDER BEFORE SINGLE OPTIMIZATION: " + createOrderMessage.toString());
-                        pickingService.optimize(createOrderMessage);
-                        logger.info("COMPLETE ORDER AFTER SINGLE OPTIMIZATION: " + createOrderMessage.toString());
-                        //SEND NEW DATA
-                        messageOutputService.sendMessage(new ExtraCreateOrderMessageDto(createOrderMessage));
-                    } else if (pickingType.equals(PickingType.GROUP)) {
-                        pickingBuffer.add(createOrderMessage);
-                        if (pickingBuffer.size() == MAX_BUFFER_SIZE) {
-                            logger.info("COMPLETE BUFFER BEFORE GROUP OPTIMIZATION: " + pickingBuffer.toString());
-                            pickingService.optimize(pickingBuffer);
-                            logger.info("COMPLETE BUFFER AFTER GROUP OPTIMIZATION: " + pickingBuffer.toString());
-                            for (CreateOrderMessage m : pickingBuffer) {
-                                //SENDING GROUP DATA
-                                messageOutputService.sendMessage(new ExtraCreateOrderMessageDto(m));
-                            }
-                            pickingBuffer.clear();
-                        }
-                    } else {
-                        throw new PickingException("Picking type not found (Should be single or group)");
-                    }
-                } else {
-                    logger.warn("Order is inside the unprocessed order list");
-                }
-            } catch (PickingException e) {
-                logger.error("Something went wrong int the picking optimization");
-            } catch (CommunicationException e) {
-                e.printStackTrace();
-            }
+            assignPickingOrder(createOrderMessage);
 
-
-        } else if (dtoMessage instanceof CancelOrderMessageDto) {
-            CancelOrderMessage cancelOrderMessage = new CancelOrderMessage((CancelOrderMessageDto) dtoMessage);
+        } else if (messageDtoMessage instanceof CancelOrderMessageDto) {
+            CancelOrderMessage cancelOrderMessage = new CancelOrderMessage((CancelOrderMessageDto) messageDtoMessage);
             logger.info("Ready to do stuff with CancelOrderMessage with id: " + cancelOrderMessage.getOrderId());
-            //TODO implement with group buffer, failed order list or other
             pickingBuffer.removeIf(order -> order.getOrderId() == cancelOrderMessage.getOrderId());
             unprocessedOrders.removeIf(order -> order.getOrderId() == cancelOrderMessage.getOrderId());
         } else {
@@ -149,6 +123,38 @@ public class MessageHandler implements MessageListener {
         this.pickingType = pickingType;
     }
 
+    public TaskScheduler getTaskScheduler() {
+        return scheduler;
+    }
+
+    public void setTaskScheduler(TaskScheduler scheduler) {
+        this.scheduler = scheduler;
+    }
+
+    public int getTaskIntervalClearCache() {
+        return taskIntervalClearCache;
+    }
+
+    public void setTaskIntervalClearCache(int taskIntervalClearCache) {
+        this.taskIntervalClearCache = taskIntervalClearCache;
+    }
+
+    public int getTaskIntervalRetryUnprocessed() {
+        return taskIntervalRetryUnprocessed;
+    }
+
+    public void setTaskIntervalRetryUnprocessed(int taskIntervalRetryUnprocessed) {
+        this.taskIntervalRetryUnprocessed = taskIntervalRetryUnprocessed;
+    }
+
+    public int getMaxBufferSize() {
+        return maxBufferSize;
+    }
+
+    public void setMaxBufferSize(int maxBufferSize) {
+        this.maxBufferSize = maxBufferSize;
+    }
+
     private LocationInfo checkCacheOrCallService(int productId) {
         AtomicReference<LocationInfo> infoToReturn = new AtomicReference<>();
         productMemoryCache.forEach(info -> {
@@ -173,5 +179,61 @@ public class MessageHandler implements MessageListener {
             }
         }
         return infoToReturn.get();
+    }
+
+    private void assignLocationInfo(CreateOrderMessage createOrderMessage) {
+        for (int key : createOrderMessage.getItems().keySet()) {
+            LocationInfo locationInfo = checkCacheOrCallService(key);
+            if (locationInfo.getProductID() == 0) {
+                unprocessedOrders.add(createOrderMessage);
+                logger.warn("Added order with ID: " + createOrderMessage.getOrderId() + " to the list of unprocessed orders");
+            } else {
+                logger.info("Adding location info to the list. INFO: " + locationInfo.toString());
+                createOrderMessage.addLocationInfo(locationInfo);
+                logger.info("Location info in the list of CreateOrderMessage: " + createOrderMessage.getLocationInfoList().toString());
+            }
+        }
+    }
+
+    private void assignPickingOrder(CreateOrderMessage createOrderMessage) {
+        try {
+            if (!unprocessedOrders.contains(createOrderMessage)) {
+                if (pickingType.equals(PickingType.SINGLE)) {
+                    logger.info("COMPLETE ORDER BEFORE SINGLE OPTIMIZATION: " + createOrderMessage.toString());
+                    pickingService.optimize(createOrderMessage);
+                    logger.info("COMPLETE ORDER AFTER SINGLE OPTIMIZATION: " + createOrderMessage.toString());
+                    //SEND SINGLE DATA
+                    messageOutputService.sendMessage(new ExtraCreateOrderMessageDto(createOrderMessage));
+                } else if (pickingType.equals(PickingType.GROUP)) {
+                    pickingBuffer.add(createOrderMessage);
+                    if (pickingBuffer.size() == maxBufferSize) {
+                        logger.info("COMPLETE BUFFER BEFORE GROUP OPTIMIZATION: " + pickingBuffer.toString());
+                        pickingService.optimize(pickingBuffer);
+                        logger.info("COMPLETE BUFFER AFTER GROUP OPTIMIZATION: " + pickingBuffer.toString());
+                        //SENDING GROUP DATA
+                        for (CreateOrderMessage m : pickingBuffer) {
+                            messageOutputService.sendMessage(new ExtraCreateOrderMessageDto(m));
+                        }
+                        pickingBuffer.clear();
+                    }
+                } else {
+                    throw new PickingException("Picking type not found (Should be single or group)");
+                }
+            } else {
+                logger.warn("Order is inside the unprocessed order list");
+            }
+            logger.info("ITEMS IN THE PRODUCT MAP TOO SEE IF CLEAR CACHE ACTUALLY WORKS: " + productMemoryCache.toString());
+        } catch (PickingException e) {
+            logger.error("Something went wrong int the picking optimization");
+        } catch (CommunicationException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private Runnable retryUnprocessedOrders() {
+        return () -> unprocessedOrders.forEach(item -> {
+            assignLocationInfo(item);
+            assignPickingOrder(item);
+        });
     }
 }

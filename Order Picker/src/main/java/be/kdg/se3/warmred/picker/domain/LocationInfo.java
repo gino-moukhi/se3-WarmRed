@@ -3,6 +3,13 @@ package be.kdg.se3.warmred.picker.domain;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
+/**
+ * A business entity that will take the data from the {@link be.kdg.se3.services.orderpicking.LocationServiceProxy}
+ * and put it in this object
+ *
+ * @author Gino Moukhi
+ * @version 1.0.0
+ */
 @XmlType(propOrder = {"productID", "storageRoom", "hallway", "rack"})
 public class LocationInfo implements Comparable<LocationInfo>{
     private int productID;

@@ -1,0 +1,1306 @@
+0    [main] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - RabbitMQ initialized
+119  [main] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - RabbitMQ initialized
+119  [main] INFO  be.kdg.se3.warmred.picker.domain.TaskScheduler  - Running runnable be.kdg.se3.warmred.picker.domain.MessageHandler$$Lambda$1/2096057945@5b464ce8 at a fixed rate of 60 seconds
+119  [main] INFO  be.kdg.se3.warmred.picker.domain.TaskScheduler  - Running runnable be.kdg.se3.warmred.picker.domain.MessageHandler$$Lambda$2/977993101@19dfb72a at a fixed rate of 120 seconds
+247  [main] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - RabbitMQ initialized
+3460 [pool-7-thread-4] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Received message from RabbitMQ queue Internal: Orders
+3462 [pool-7-thread-4] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - Formatting an XML string to an DTO object
+3477 [pool-7-thread-4] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - The message to format is of type:'CreateOrderMessageDto'
+3513 [pool-7-thread-4] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Calling location service for productId: 1128673
+3513 [pool-7-thread-4] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Calling location service for productId: 1185752
+3514 [pool-7-thread-4] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Product not found in memory cache, calling api service
+3514 [pool-7-thread-4] INFO  be.kdg.se3.warmred.picker.adapters.LocationServiceApi  - Making a call to www.services4se3.com/locationservice/1128673
+3626 [pool-7-thread-4] INFO  be.kdg.se3.warmred.picker.adapters.LocationServiceApi  - response as json: {"productID":1128673,"storageRoom":"C","hallway":3,"rack":11}
+3627 [pool-7-thread-4] INFO  be.kdg.se3.warmred.picker.adapters.LocationConverter  - Converting location info json to location info object
+3629 [pool-7-thread-4] INFO  be.kdg.se3.warmred.picker.adapters.LocationConverter  - Converted info: LocationInfo{productID=1128673, storageRoom=C, hallway=3, rack=11}
+3629 [pool-7-thread-4] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Adding location info to the list. INFO: LocationInfo{productID=1128673, storageRoom=C, hallway=3, rack=11}
+3629 [pool-7-thread-4] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Location info in the list of CreateOrderMessage: [LocationInfo{productID=1128673, storageRoom=C, hallway=3, rack=11}]
+3629 [pool-7-thread-4] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Product not found in memory cache, calling api service
+3629 [pool-7-thread-4] INFO  be.kdg.se3.warmred.picker.adapters.LocationServiceApi  - Making a call to www.services4se3.com/locationservice/1185752
+3730 [pool-7-thread-4] INFO  be.kdg.se3.warmred.picker.adapters.LocationServiceApi  - response as json: {"productID":1185752,"storageRoom":"B","hallway":1,"rack":19}
+3730 [pool-7-thread-4] INFO  be.kdg.se3.warmred.picker.adapters.LocationConverter  - Converting location info json to location info object
+3730 [pool-7-thread-4] INFO  be.kdg.se3.warmred.picker.adapters.LocationConverter  - Converted info: LocationInfo{productID=1185752, storageRoom=B, hallway=1, rack=19}
+3730 [pool-7-thread-4] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Adding location info to the list. INFO: LocationInfo{productID=1185752, storageRoom=B, hallway=1, rack=19}
+3730 [pool-7-thread-4] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Location info in the list of CreateOrderMessage: [LocationInfo{productID=1128673, storageRoom=C, hallway=3, rack=11}, LocationInfo{productID=1185752, storageRoom=B, hallway=1, rack=19}]
+3730 [pool-7-thread-4] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - COMPLETE ORDER BEFORE SINGLE OPTIMIZATION: CreateOrderMessage{orderId=1000000, customerId=1816290, price=81, items={1128673=2, 1185752=5}, locationInfo=[LocationInfo{productID=1128673, storageRoom=C, hallway=3, rack=11}, LocationInfo{productID=1185752, storageRoom=B, hallway=1, rack=19}]}
+3731 [pool-7-thread-4] INFO  be.kdg.se3.warmred.picker.domain.PickingImpl  - locationinfo before sort: [LocationInfo{productID=1128673, storageRoom=C, hallway=3, rack=11}, LocationInfo{productID=1185752, storageRoom=B, hallway=1, rack=19}]
+3741 [pool-7-thread-4] INFO  be.kdg.se3.warmred.picker.domain.PickingImpl  - locationinfo after sort: [LocationInfo{productID=1185752, storageRoom=B, hallway=1, rack=19}, LocationInfo{productID=1128673, storageRoom=C, hallway=3, rack=11}]
+3741 [pool-7-thread-4] INFO  be.kdg.se3.warmred.picker.domain.PickingImpl  - items before sort: {1128673=2, 1185752=5}
+3742 [pool-7-thread-4] INFO  be.kdg.se3.warmred.picker.domain.PickingImpl  - items after sort: {1185752=5, 1128673=2}
+3742 [pool-7-thread-4] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - COMPLETE ORDER AFTER SINGLE OPTIMIZATION: CreateOrderMessage{orderId=1000000, customerId=1816290, price=81, items={1185752=5, 1128673=2}, locationInfo=[LocationInfo{productID=1185752, storageRoom=B, hallway=1, rack=19}, LocationInfo{productID=1128673, storageRoom=C, hallway=3, rack=11}]}
+3876 [pool-7-thread-4] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - RabbitMQ initialized
+3876 [pool-7-thread-4] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Sending a DTO
+3877 [pool-7-thread-4] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - Formatting a DTO to an XML string
+3878 [pool-7-thread-4] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - The message to format is of type:'ExtraCreateOrderMessageDto'
+3912 [pool-7-thread-4] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Pushing message: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<extraCreateOrderMessageDto>
+    <orderId>1000000</orderId>
+    <customerId>1816290</customerId>
+    <price>81</price>
+    <items>
+        <entry>
+            <key>1185752</key>
+            <value>5</value>
+        </entry>
+        <entry>
+            <key>1128673</key>
+            <value>2</value>
+        </entry>
+    </items>
+    <locationInfoList>
+        <productID>1185752</productID>
+        <storageRoom>B</storageRoom>
+        <hallway>1</hallway>
+        <rack>19</rack>
+    </locationInfoList>
+    <locationInfoList>
+        <productID>1128673</productID>
+        <storageRoom>C</storageRoom>
+        <hallway>3</hallway>
+        <rack>11</rack>
+    </locationInfoList>
+</extraCreateOrderMessageDto>
+
+3954 [pool-7-thread-4] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Channel and connection from RabbitMQ closed
+3954 [pool-7-thread-4] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - ITEMS IN THE PRODUCT MAP TOO SEE IF CLEAR CACHE ACTUALLY WORKS: [LocationInfo{productID=1128673, storageRoom=C, hallway=3, rack=11}, LocationInfo{productID=1185752, storageRoom=B, hallway=1, rack=19}]
+3954 [pool-7-thread-4] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Delivered message to listener
+4634 [pool-7-thread-5] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Received message from RabbitMQ queue Internal: Orders
+4636 [pool-7-thread-5] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - Formatting an XML string to an DTO object
+4639 [pool-7-thread-5] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - The message to format is of type:'CreateOrderMessageDto'
+4643 [pool-7-thread-5] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Calling location service for productId: 1185752
+4643 [pool-7-thread-5] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Calling location service for productId: 1155882
+4643 [pool-7-thread-5] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Calling location service for productId: 1597859
+4643 [pool-7-thread-5] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Found product in memory cache with ID: 1185752
+4643 [pool-7-thread-5] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Adding location info to the list. INFO: LocationInfo{productID=1185752, storageRoom=B, hallway=1, rack=19}
+4643 [pool-7-thread-5] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Location info in the list of CreateOrderMessage: [LocationInfo{productID=1185752, storageRoom=B, hallway=1, rack=19}]
+4643 [pool-7-thread-5] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Product not found in memory cache, calling api service
+4644 [pool-7-thread-5] INFO  be.kdg.se3.warmred.picker.adapters.LocationServiceApi  - Making a call to www.services4se3.com/locationservice/1155882
+4745 [pool-7-thread-5] INFO  be.kdg.se3.warmred.picker.adapters.LocationServiceApi  - response as json: {"productID":1155882,"storageRoom":"C","hallway":1,"rack":11}
+4745 [pool-7-thread-5] INFO  be.kdg.se3.warmred.picker.adapters.LocationConverter  - Converting location info json to location info object
+4745 [pool-7-thread-5] INFO  be.kdg.se3.warmred.picker.adapters.LocationConverter  - Converted info: LocationInfo{productID=1155882, storageRoom=C, hallway=1, rack=11}
+4745 [pool-7-thread-5] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Adding location info to the list. INFO: LocationInfo{productID=1155882, storageRoom=C, hallway=1, rack=11}
+4745 [pool-7-thread-5] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Location info in the list of CreateOrderMessage: [LocationInfo{productID=1185752, storageRoom=B, hallway=1, rack=19}, LocationInfo{productID=1155882, storageRoom=C, hallway=1, rack=11}]
+4745 [pool-7-thread-5] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Product not found in memory cache, calling api service
+4745 [pool-7-thread-5] INFO  be.kdg.se3.warmred.picker.adapters.LocationServiceApi  - Making a call to www.services4se3.com/locationservice/1597859
+4847 [pool-7-thread-5] INFO  be.kdg.se3.warmred.picker.adapters.LocationServiceApi  - response as json: {"productID":1597859,"storageRoom":"A","hallway":3,"rack":11}
+4848 [pool-7-thread-5] INFO  be.kdg.se3.warmred.picker.adapters.LocationConverter  - Converting location info json to location info object
+4848 [pool-7-thread-5] INFO  be.kdg.se3.warmred.picker.adapters.LocationConverter  - Converted info: LocationInfo{productID=1597859, storageRoom=A, hallway=3, rack=11}
+4848 [pool-7-thread-5] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Adding location info to the list. INFO: LocationInfo{productID=1597859, storageRoom=A, hallway=3, rack=11}
+4848 [pool-7-thread-5] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Location info in the list of CreateOrderMessage: [LocationInfo{productID=1185752, storageRoom=B, hallway=1, rack=19}, LocationInfo{productID=1155882, storageRoom=C, hallway=1, rack=11}, LocationInfo{productID=1597859, storageRoom=A, hallway=3, rack=11}]
+4849 [pool-7-thread-5] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - COMPLETE ORDER BEFORE SINGLE OPTIMIZATION: CreateOrderMessage{orderId=1000001, customerId=1507251, price=78, items={1185752=2, 1155882=4, 1597859=5}, locationInfo=[LocationInfo{productID=1185752, storageRoom=B, hallway=1, rack=19}, LocationInfo{productID=1155882, storageRoom=C, hallway=1, rack=11}, LocationInfo{productID=1597859, storageRoom=A, hallway=3, rack=11}]}
+4849 [pool-7-thread-5] INFO  be.kdg.se3.warmred.picker.domain.PickingImpl  - locationinfo before sort: [LocationInfo{productID=1185752, storageRoom=B, hallway=1, rack=19}, LocationInfo{productID=1155882, storageRoom=C, hallway=1, rack=11}, LocationInfo{productID=1597859, storageRoom=A, hallway=3, rack=11}]
+4849 [pool-7-thread-5] INFO  be.kdg.se3.warmred.picker.domain.PickingImpl  - locationinfo after sort: [LocationInfo{productID=1597859, storageRoom=A, hallway=3, rack=11}, LocationInfo{productID=1185752, storageRoom=B, hallway=1, rack=19}, LocationInfo{productID=1155882, storageRoom=C, hallway=1, rack=11}]
+4849 [pool-7-thread-5] INFO  be.kdg.se3.warmred.picker.domain.PickingImpl  - items before sort: {1185752=2, 1155882=4, 1597859=5}
+4849 [pool-7-thread-5] INFO  be.kdg.se3.warmred.picker.domain.PickingImpl  - items after sort: {1597859=5, 1185752=2, 1155882=4}
+4850 [pool-7-thread-5] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - COMPLETE ORDER AFTER SINGLE OPTIMIZATION: CreateOrderMessage{orderId=1000001, customerId=1507251, price=78, items={1597859=5, 1185752=2, 1155882=4}, locationInfo=[LocationInfo{productID=1597859, storageRoom=A, hallway=3, rack=11}, LocationInfo{productID=1185752, storageRoom=B, hallway=1, rack=19}, LocationInfo{productID=1155882, storageRoom=C, hallway=1, rack=11}]}
+4988 [pool-7-thread-5] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - RabbitMQ initialized
+4988 [pool-7-thread-5] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Sending a DTO
+4988 [pool-7-thread-5] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - Formatting a DTO to an XML string
+4988 [pool-7-thread-5] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - The message to format is of type:'ExtraCreateOrderMessageDto'
+4996 [pool-7-thread-5] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Pushing message: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<extraCreateOrderMessageDto>
+    <orderId>1000001</orderId>
+    <customerId>1507251</customerId>
+    <price>78</price>
+    <items>
+        <entry>
+            <key>1597859</key>
+            <value>5</value>
+        </entry>
+        <entry>
+            <key>1185752</key>
+            <value>2</value>
+        </entry>
+        <entry>
+            <key>1155882</key>
+            <value>4</value>
+        </entry>
+    </items>
+    <locationInfoList>
+        <productID>1597859</productID>
+        <storageRoom>A</storageRoom>
+        <hallway>3</hallway>
+        <rack>11</rack>
+    </locationInfoList>
+    <locationInfoList>
+        <productID>1185752</productID>
+        <storageRoom>B</storageRoom>
+        <hallway>1</hallway>
+        <rack>19</rack>
+    </locationInfoList>
+    <locationInfoList>
+        <productID>1155882</productID>
+        <storageRoom>C</storageRoom>
+        <hallway>1</hallway>
+        <rack>11</rack>
+    </locationInfoList>
+</extraCreateOrderMessageDto>
+
+5033 [pool-7-thread-5] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Channel and connection from RabbitMQ closed
+5033 [pool-7-thread-5] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - ITEMS IN THE PRODUCT MAP TOO SEE IF CLEAR CACHE ACTUALLY WORKS: [LocationInfo{productID=1128673, storageRoom=C, hallway=3, rack=11}, LocationInfo{productID=1155882, storageRoom=C, hallway=1, rack=11}, LocationInfo{productID=1185752, storageRoom=B, hallway=1, rack=19}, LocationInfo{productID=1597859, storageRoom=A, hallway=3, rack=11}]
+5033 [pool-7-thread-5] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Delivered message to listener
+5812 [pool-7-thread-6] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Received message from RabbitMQ queue Internal: Orders
+5813 [pool-7-thread-6] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - Formatting an XML string to an DTO object
+5814 [pool-7-thread-6] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - The message to format is of type:'CreateOrderMessageDto'
+5816 [pool-7-thread-6] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Calling location service for productId: 1748186
+5816 [pool-7-thread-6] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Calling location service for productId: 1217883
+5816 [pool-7-thread-6] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Calling location service for productId: 1185752
+5816 [pool-7-thread-6] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Product not found in memory cache, calling api service
+5816 [pool-7-thread-6] INFO  be.kdg.se3.warmred.picker.adapters.LocationServiceApi  - Making a call to www.services4se3.com/locationservice/1748186
+5916 [pool-7-thread-6] INFO  be.kdg.se3.warmred.picker.adapters.LocationServiceApi  - response as json: {"productID":1748186,"storageRoom":"B","hallway":1,"rack":13}
+5916 [pool-7-thread-6] INFO  be.kdg.se3.warmred.picker.adapters.LocationConverter  - Converting location info json to location info object
+5916 [pool-7-thread-6] INFO  be.kdg.se3.warmred.picker.adapters.LocationConverter  - Converted info: LocationInfo{productID=1748186, storageRoom=B, hallway=1, rack=13}
+5916 [pool-7-thread-6] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Adding location info to the list. INFO: LocationInfo{productID=1748186, storageRoom=B, hallway=1, rack=13}
+5917 [pool-7-thread-6] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Location info in the list of CreateOrderMessage: [LocationInfo{productID=1748186, storageRoom=B, hallway=1, rack=13}]
+5917 [pool-7-thread-6] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Product not found in memory cache, calling api service
+5917 [pool-7-thread-6] INFO  be.kdg.se3.warmred.picker.adapters.LocationServiceApi  - Making a call to www.services4se3.com/locationservice/1217883
+6018 [pool-7-thread-6] INFO  be.kdg.se3.warmred.picker.adapters.LocationServiceApi  - response as json: {"productID":1217883,"storageRoom":"A","hallway":3,"rack":5}
+6019 [pool-7-thread-6] INFO  be.kdg.se3.warmred.picker.adapters.LocationConverter  - Converting location info json to location info object
+6019 [pool-7-thread-6] INFO  be.kdg.se3.warmred.picker.adapters.LocationConverter  - Converted info: LocationInfo{productID=1217883, storageRoom=A, hallway=3, rack=5}
+6019 [pool-7-thread-6] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Adding location info to the list. INFO: LocationInfo{productID=1217883, storageRoom=A, hallway=3, rack=5}
+6019 [pool-7-thread-6] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Location info in the list of CreateOrderMessage: [LocationInfo{productID=1748186, storageRoom=B, hallway=1, rack=13}, LocationInfo{productID=1217883, storageRoom=A, hallway=3, rack=5}]
+6019 [pool-7-thread-6] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Found product in memory cache with ID: 1185752
+6020 [pool-7-thread-6] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Adding location info to the list. INFO: LocationInfo{productID=1185752, storageRoom=B, hallway=1, rack=19}
+6020 [pool-7-thread-6] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Location info in the list of CreateOrderMessage: [LocationInfo{productID=1748186, storageRoom=B, hallway=1, rack=13}, LocationInfo{productID=1217883, storageRoom=A, hallway=3, rack=5}, LocationInfo{productID=1185752, storageRoom=B, hallway=1, rack=19}]
+6020 [pool-7-thread-6] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - COMPLETE ORDER BEFORE SINGLE OPTIMIZATION: CreateOrderMessage{orderId=1000002, customerId=1334084, price=81, items={1748186=4, 1217883=4, 1185752=1}, locationInfo=[LocationInfo{productID=1748186, storageRoom=B, hallway=1, rack=13}, LocationInfo{productID=1217883, storageRoom=A, hallway=3, rack=5}, LocationInfo{productID=1185752, storageRoom=B, hallway=1, rack=19}]}
+6020 [pool-7-thread-6] INFO  be.kdg.se3.warmred.picker.domain.PickingImpl  - locationinfo before sort: [LocationInfo{productID=1748186, storageRoom=B, hallway=1, rack=13}, LocationInfo{productID=1217883, storageRoom=A, hallway=3, rack=5}, LocationInfo{productID=1185752, storageRoom=B, hallway=1, rack=19}]
+6024 [pool-7-thread-6] INFO  be.kdg.se3.warmred.picker.domain.PickingImpl  - locationinfo after sort: [LocationInfo{productID=1217883, storageRoom=A, hallway=3, rack=5}, LocationInfo{productID=1748186, storageRoom=B, hallway=1, rack=13}, LocationInfo{productID=1185752, storageRoom=B, hallway=1, rack=19}]
+6024 [pool-7-thread-6] INFO  be.kdg.se3.warmred.picker.domain.PickingImpl  - items before sort: {1748186=4, 1217883=4, 1185752=1}
+6024 [pool-7-thread-6] INFO  be.kdg.se3.warmred.picker.domain.PickingImpl  - items after sort: {1217883=4, 1748186=4, 1185752=1}
+6024 [pool-7-thread-6] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - COMPLETE ORDER AFTER SINGLE OPTIMIZATION: CreateOrderMessage{orderId=1000002, customerId=1334084, price=81, items={1217883=4, 1748186=4, 1185752=1}, locationInfo=[LocationInfo{productID=1217883, storageRoom=A, hallway=3, rack=5}, LocationInfo{productID=1748186, storageRoom=B, hallway=1, rack=13}, LocationInfo{productID=1185752, storageRoom=B, hallway=1, rack=19}]}
+6159 [pool-7-thread-6] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - RabbitMQ initialized
+6159 [pool-7-thread-6] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Sending a DTO
+6159 [pool-7-thread-6] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - Formatting a DTO to an XML string
+6159 [pool-7-thread-6] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - The message to format is of type:'ExtraCreateOrderMessageDto'
+6163 [pool-7-thread-6] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Pushing message: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<extraCreateOrderMessageDto>
+    <orderId>1000002</orderId>
+    <customerId>1334084</customerId>
+    <price>81</price>
+    <items>
+        <entry>
+            <key>1217883</key>
+            <value>4</value>
+        </entry>
+        <entry>
+            <key>1748186</key>
+            <value>4</value>
+        </entry>
+        <entry>
+            <key>1185752</key>
+            <value>1</value>
+        </entry>
+    </items>
+    <locationInfoList>
+        <productID>1217883</productID>
+        <storageRoom>A</storageRoom>
+        <hallway>3</hallway>
+        <rack>5</rack>
+    </locationInfoList>
+    <locationInfoList>
+        <productID>1748186</productID>
+        <storageRoom>B</storageRoom>
+        <hallway>1</hallway>
+        <rack>13</rack>
+    </locationInfoList>
+    <locationInfoList>
+        <productID>1185752</productID>
+        <storageRoom>B</storageRoom>
+        <hallway>1</hallway>
+        <rack>19</rack>
+    </locationInfoList>
+</extraCreateOrderMessageDto>
+
+6210 [pool-7-thread-6] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Channel and connection from RabbitMQ closed
+6211 [pool-7-thread-6] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - ITEMS IN THE PRODUCT MAP TOO SEE IF CLEAR CACHE ACTUALLY WORKS: [LocationInfo{productID=1128673, storageRoom=C, hallway=3, rack=11}, LocationInfo{productID=1155882, storageRoom=C, hallway=1, rack=11}, LocationInfo{productID=1185752, storageRoom=B, hallway=1, rack=19}, LocationInfo{productID=1217883, storageRoom=A, hallway=3, rack=5}, LocationInfo{productID=1597859, storageRoom=A, hallway=3, rack=11}, LocationInfo{productID=1748186, storageRoom=B, hallway=1, rack=13}]
+6211 [pool-7-thread-6] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Delivered message to listener
+6986 [pool-7-thread-7] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Received message from RabbitMQ queue Internal: Orders
+6986 [pool-7-thread-7] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - Formatting an XML string to an DTO object
+6987 [pool-7-thread-7] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - The message to format is of type:'CreateOrderMessageDto'
+6989 [pool-7-thread-7] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Calling location service for productId: 1471495
+6989 [pool-7-thread-7] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Calling location service for productId: 1071435
+6989 [pool-7-thread-7] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Product not found in memory cache, calling api service
+6989 [pool-7-thread-7] INFO  be.kdg.se3.warmred.picker.adapters.LocationServiceApi  - Making a call to www.services4se3.com/locationservice/1471495
+7089 [pool-7-thread-7] INFO  be.kdg.se3.warmred.picker.adapters.LocationServiceApi  - response as json: {"productID":1471495,"storageRoom":"C","hallway":1,"rack":6}
+7089 [pool-7-thread-7] INFO  be.kdg.se3.warmred.picker.adapters.LocationConverter  - Converting location info json to location info object
+7089 [pool-7-thread-7] INFO  be.kdg.se3.warmred.picker.adapters.LocationConverter  - Converted info: LocationInfo{productID=1471495, storageRoom=C, hallway=1, rack=6}
+7089 [pool-7-thread-7] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Adding location info to the list. INFO: LocationInfo{productID=1471495, storageRoom=C, hallway=1, rack=6}
+7089 [pool-7-thread-7] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Location info in the list of CreateOrderMessage: [LocationInfo{productID=1471495, storageRoom=C, hallway=1, rack=6}]
+7089 [pool-7-thread-7] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Product not found in memory cache, calling api service
+7089 [pool-7-thread-7] INFO  be.kdg.se3.warmred.picker.adapters.LocationServiceApi  - Making a call to www.services4se3.com/locationservice/1071435
+7190 [pool-7-thread-7] INFO  be.kdg.se3.warmred.picker.adapters.LocationServiceApi  - response as json: {"productID":1071435,"storageRoom":"B","hallway":3,"rack":6}
+7190 [pool-7-thread-7] INFO  be.kdg.se3.warmred.picker.adapters.LocationConverter  - Converting location info json to location info object
+7190 [pool-7-thread-7] INFO  be.kdg.se3.warmred.picker.adapters.LocationConverter  - Converted info: LocationInfo{productID=1071435, storageRoom=B, hallway=3, rack=6}
+7190 [pool-7-thread-7] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Adding location info to the list. INFO: LocationInfo{productID=1071435, storageRoom=B, hallway=3, rack=6}
+7190 [pool-7-thread-7] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Location info in the list of CreateOrderMessage: [LocationInfo{productID=1471495, storageRoom=C, hallway=1, rack=6}, LocationInfo{productID=1071435, storageRoom=B, hallway=3, rack=6}]
+7190 [pool-7-thread-7] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - COMPLETE ORDER BEFORE SINGLE OPTIMIZATION: CreateOrderMessage{orderId=1000003, customerId=1208177, price=19, items={1471495=2, 1071435=3}, locationInfo=[LocationInfo{productID=1471495, storageRoom=C, hallway=1, rack=6}, LocationInfo{productID=1071435, storageRoom=B, hallway=3, rack=6}]}
+7190 [pool-7-thread-7] INFO  be.kdg.se3.warmred.picker.domain.PickingImpl  - locationinfo before sort: [LocationInfo{productID=1471495, storageRoom=C, hallway=1, rack=6}, LocationInfo{productID=1071435, storageRoom=B, hallway=3, rack=6}]
+7190 [pool-7-thread-7] INFO  be.kdg.se3.warmred.picker.domain.PickingImpl  - locationinfo after sort: [LocationInfo{productID=1071435, storageRoom=B, hallway=3, rack=6}, LocationInfo{productID=1471495, storageRoom=C, hallway=1, rack=6}]
+7190 [pool-7-thread-7] INFO  be.kdg.se3.warmred.picker.domain.PickingImpl  - items before sort: {1471495=2, 1071435=3}
+7190 [pool-7-thread-7] INFO  be.kdg.se3.warmred.picker.domain.PickingImpl  - items after sort: {1071435=3, 1471495=2}
+7190 [pool-7-thread-7] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - COMPLETE ORDER AFTER SINGLE OPTIMIZATION: CreateOrderMessage{orderId=1000003, customerId=1208177, price=19, items={1071435=3, 1471495=2}, locationInfo=[LocationInfo{productID=1071435, storageRoom=B, hallway=3, rack=6}, LocationInfo{productID=1471495, storageRoom=C, hallway=1, rack=6}]}
+7313 [pool-7-thread-7] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - RabbitMQ initialized
+7313 [pool-7-thread-7] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Sending a DTO
+7313 [pool-7-thread-7] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - Formatting a DTO to an XML string
+7313 [pool-7-thread-7] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - The message to format is of type:'ExtraCreateOrderMessageDto'
+7315 [pool-7-thread-7] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Pushing message: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<extraCreateOrderMessageDto>
+    <orderId>1000003</orderId>
+    <customerId>1208177</customerId>
+    <price>19</price>
+    <items>
+        <entry>
+            <key>1071435</key>
+            <value>3</value>
+        </entry>
+        <entry>
+            <key>1471495</key>
+            <value>2</value>
+        </entry>
+    </items>
+    <locationInfoList>
+        <productID>1071435</productID>
+        <storageRoom>B</storageRoom>
+        <hallway>3</hallway>
+        <rack>6</rack>
+    </locationInfoList>
+    <locationInfoList>
+        <productID>1471495</productID>
+        <storageRoom>C</storageRoom>
+        <hallway>1</hallway>
+        <rack>6</rack>
+    </locationInfoList>
+</extraCreateOrderMessageDto>
+
+7354 [pool-7-thread-7] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Channel and connection from RabbitMQ closed
+7354 [pool-7-thread-7] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - ITEMS IN THE PRODUCT MAP TOO SEE IF CLEAR CACHE ACTUALLY WORKS: [LocationInfo{productID=1071435, storageRoom=B, hallway=3, rack=6}, LocationInfo{productID=1128673, storageRoom=C, hallway=3, rack=11}, LocationInfo{productID=1155882, storageRoom=C, hallway=1, rack=11}, LocationInfo{productID=1185752, storageRoom=B, hallway=1, rack=19}, LocationInfo{productID=1217883, storageRoom=A, hallway=3, rack=5}, LocationInfo{productID=1471495, storageRoom=C, hallway=1, rack=6}, LocationInfo{productID=1597859, storageRoom=A, hallway=3, rack=11}, LocationInfo{productID=1748186, storageRoom=B, hallway=1, rack=13}]
+7354 [pool-7-thread-7] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Delivered message to listener
+8160 [pool-7-thread-8] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Received message from RabbitMQ queue Internal: Orders
+8161 [pool-7-thread-8] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - Formatting an XML string to an DTO object
+8162 [pool-7-thread-8] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - The message to format is of type:'CreateOrderMessageDto'
+8165 [pool-7-thread-8] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Calling location service for productId: 1471495
+8165 [pool-7-thread-8] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Calling location service for productId: 1185752
+8165 [pool-7-thread-8] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Found product in memory cache with ID: 1471495
+8165 [pool-7-thread-8] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Adding location info to the list. INFO: LocationInfo{productID=1471495, storageRoom=C, hallway=1, rack=6}
+8165 [pool-7-thread-8] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Location info in the list of CreateOrderMessage: [LocationInfo{productID=1471495, storageRoom=C, hallway=1, rack=6}]
+8165 [pool-7-thread-8] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Found product in memory cache with ID: 1185752
+8165 [pool-7-thread-8] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Adding location info to the list. INFO: LocationInfo{productID=1185752, storageRoom=B, hallway=1, rack=19}
+8165 [pool-7-thread-8] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Location info in the list of CreateOrderMessage: [LocationInfo{productID=1471495, storageRoom=C, hallway=1, rack=6}, LocationInfo{productID=1185752, storageRoom=B, hallway=1, rack=19}]
+8165 [pool-7-thread-8] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - COMPLETE ORDER BEFORE SINGLE OPTIMIZATION: CreateOrderMessage{orderId=1000004, customerId=1307481, price=62, items={1471495=4, 1185752=2}, locationInfo=[LocationInfo{productID=1471495, storageRoom=C, hallway=1, rack=6}, LocationInfo{productID=1185752, storageRoom=B, hallway=1, rack=19}]}
+8165 [pool-7-thread-8] INFO  be.kdg.se3.warmred.picker.domain.PickingImpl  - locationinfo before sort: [LocationInfo{productID=1471495, storageRoom=C, hallway=1, rack=6}, LocationInfo{productID=1185752, storageRoom=B, hallway=1, rack=19}]
+8165 [pool-7-thread-8] INFO  be.kdg.se3.warmred.picker.domain.PickingImpl  - locationinfo after sort: [LocationInfo{productID=1185752, storageRoom=B, hallway=1, rack=19}, LocationInfo{productID=1471495, storageRoom=C, hallway=1, rack=6}]
+8165 [pool-7-thread-8] INFO  be.kdg.se3.warmred.picker.domain.PickingImpl  - items before sort: {1471495=4, 1185752=2}
+8165 [pool-7-thread-8] INFO  be.kdg.se3.warmred.picker.domain.PickingImpl  - items after sort: {1185752=2, 1471495=4}
+8165 [pool-7-thread-8] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - COMPLETE ORDER AFTER SINGLE OPTIMIZATION: CreateOrderMessage{orderId=1000004, customerId=1307481, price=62, items={1185752=2, 1471495=4}, locationInfo=[LocationInfo{productID=1185752, storageRoom=B, hallway=1, rack=19}, LocationInfo{productID=1471495, storageRoom=C, hallway=1, rack=6}]}
+8299 [pool-7-thread-8] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - RabbitMQ initialized
+8299 [pool-7-thread-8] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Sending a DTO
+8299 [pool-7-thread-8] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - Formatting a DTO to an XML string
+8299 [pool-7-thread-8] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - The message to format is of type:'ExtraCreateOrderMessageDto'
+8301 [pool-7-thread-8] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Pushing message: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<extraCreateOrderMessageDto>
+    <orderId>1000004</orderId>
+    <customerId>1307481</customerId>
+    <price>62</price>
+    <items>
+        <entry>
+            <key>1185752</key>
+            <value>2</value>
+        </entry>
+        <entry>
+            <key>1471495</key>
+            <value>4</value>
+        </entry>
+    </items>
+    <locationInfoList>
+        <productID>1185752</productID>
+        <storageRoom>B</storageRoom>
+        <hallway>1</hallway>
+        <rack>19</rack>
+    </locationInfoList>
+    <locationInfoList>
+        <productID>1471495</productID>
+        <storageRoom>C</storageRoom>
+        <hallway>1</hallway>
+        <rack>6</rack>
+    </locationInfoList>
+</extraCreateOrderMessageDto>
+
+8344 [pool-7-thread-8] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Channel and connection from RabbitMQ closed
+8344 [pool-7-thread-8] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - ITEMS IN THE PRODUCT MAP TOO SEE IF CLEAR CACHE ACTUALLY WORKS: [LocationInfo{productID=1071435, storageRoom=B, hallway=3, rack=6}, LocationInfo{productID=1128673, storageRoom=C, hallway=3, rack=11}, LocationInfo{productID=1155882, storageRoom=C, hallway=1, rack=11}, LocationInfo{productID=1185752, storageRoom=B, hallway=1, rack=19}, LocationInfo{productID=1217883, storageRoom=A, hallway=3, rack=5}, LocationInfo{productID=1471495, storageRoom=C, hallway=1, rack=6}, LocationInfo{productID=1597859, storageRoom=A, hallway=3, rack=11}, LocationInfo{productID=1748186, storageRoom=B, hallway=1, rack=13}]
+8345 [pool-7-thread-8] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Delivered message to listener
+9345 [pool-7-thread-9] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Received message from RabbitMQ queue Internal: Orders
+9345 [pool-7-thread-9] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - Formatting an XML string to an DTO object
+9346 [pool-7-thread-9] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - The message to format is of type:'CancelOrderMessageDto'
+9351 [pool-7-thread-9] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Ready to do stuff with CancelOrderMessage with id: 1000000
+9352 [pool-7-thread-9] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Delivered message to listener
+9516 [pool-7-thread-10] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Received message from RabbitMQ queue Internal: Orders
+9516 [pool-7-thread-10] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - Formatting an XML string to an DTO object
+9517 [pool-7-thread-10] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - The message to format is of type:'CreateOrderMessageDto'
+9521 [pool-7-thread-10] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Calling location service for productId: 1867982
+9522 [pool-7-thread-10] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Calling location service for productId: 1812061
+9522 [pool-7-thread-10] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Calling location service for productId: 1374195
+9522 [pool-7-thread-10] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Calling location service for productId: 1973633
+9522 [pool-7-thread-10] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Product not found in memory cache, calling api service
+9522 [pool-7-thread-10] INFO  be.kdg.se3.warmred.picker.adapters.LocationServiceApi  - Making a call to www.services4se3.com/locationservice/1867982
+9622 [pool-7-thread-10] INFO  be.kdg.se3.warmred.picker.adapters.LocationServiceApi  - response as json: {"productID":1867982,"storageRoom":"C","hallway":3,"rack":7}
+9622 [pool-7-thread-10] INFO  be.kdg.se3.warmred.picker.adapters.LocationConverter  - Converting location info json to location info object
+9622 [pool-7-thread-10] INFO  be.kdg.se3.warmred.picker.adapters.LocationConverter  - Converted info: LocationInfo{productID=1867982, storageRoom=C, hallway=3, rack=7}
+9622 [pool-7-thread-10] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Adding location info to the list. INFO: LocationInfo{productID=1867982, storageRoom=C, hallway=3, rack=7}
+9622 [pool-7-thread-10] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Location info in the list of CreateOrderMessage: [LocationInfo{productID=1867982, storageRoom=C, hallway=3, rack=7}]
+9622 [pool-7-thread-10] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Product not found in memory cache, calling api service
+9622 [pool-7-thread-10] INFO  be.kdg.se3.warmred.picker.adapters.LocationServiceApi  - Making a call to www.services4se3.com/locationservice/1812061
+9723 [pool-7-thread-10] INFO  be.kdg.se3.warmred.picker.adapters.LocationServiceApi  - response as json: {"productID":1812061,"storageRoom":"A","hallway":3,"rack":1}
+9723 [pool-7-thread-10] INFO  be.kdg.se3.warmred.picker.adapters.LocationConverter  - Converting location info json to location info object
+9724 [pool-7-thread-10] INFO  be.kdg.se3.warmred.picker.adapters.LocationConverter  - Converted info: LocationInfo{productID=1812061, storageRoom=A, hallway=3, rack=1}
+9724 [pool-7-thread-10] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Adding location info to the list. INFO: LocationInfo{productID=1812061, storageRoom=A, hallway=3, rack=1}
+9724 [pool-7-thread-10] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Location info in the list of CreateOrderMessage: [LocationInfo{productID=1867982, storageRoom=C, hallway=3, rack=7}, LocationInfo{productID=1812061, storageRoom=A, hallway=3, rack=1}]
+9724 [pool-7-thread-10] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Product not found in memory cache, calling api service
+9724 [pool-7-thread-10] INFO  be.kdg.se3.warmred.picker.adapters.LocationServiceApi  - Making a call to www.services4se3.com/locationservice/1374195
+9824 [pool-7-thread-10] INFO  be.kdg.se3.warmred.picker.adapters.LocationServiceApi  - response as json: {"productID":1374195,"storageRoom":"C","hallway":3,"rack":5}
+9824 [pool-7-thread-10] INFO  be.kdg.se3.warmred.picker.adapters.LocationConverter  - Converting location info json to location info object
+9824 [pool-7-thread-10] INFO  be.kdg.se3.warmred.picker.adapters.LocationConverter  - Converted info: LocationInfo{productID=1374195, storageRoom=C, hallway=3, rack=5}
+9824 [pool-7-thread-10] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Adding location info to the list. INFO: LocationInfo{productID=1374195, storageRoom=C, hallway=3, rack=5}
+9824 [pool-7-thread-10] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Location info in the list of CreateOrderMessage: [LocationInfo{productID=1867982, storageRoom=C, hallway=3, rack=7}, LocationInfo{productID=1812061, storageRoom=A, hallway=3, rack=1}, LocationInfo{productID=1374195, storageRoom=C, hallway=3, rack=5}]
+9824 [pool-7-thread-10] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Product not found in memory cache, calling api service
+9824 [pool-7-thread-10] INFO  be.kdg.se3.warmred.picker.adapters.LocationServiceApi  - Making a call to www.services4se3.com/locationservice/1973633
+9925 [pool-7-thread-10] INFO  be.kdg.se3.warmred.picker.adapters.LocationServiceApi  - response as json: {"productID":1973633,"storageRoom":"C","hallway":3,"rack":1}
+9925 [pool-7-thread-10] INFO  be.kdg.se3.warmred.picker.adapters.LocationConverter  - Converting location info json to location info object
+9925 [pool-7-thread-10] INFO  be.kdg.se3.warmred.picker.adapters.LocationConverter  - Converted info: LocationInfo{productID=1973633, storageRoom=C, hallway=3, rack=1}
+9925 [pool-7-thread-10] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Adding location info to the list. INFO: LocationInfo{productID=1973633, storageRoom=C, hallway=3, rack=1}
+9925 [pool-7-thread-10] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Location info in the list of CreateOrderMessage: [LocationInfo{productID=1867982, storageRoom=C, hallway=3, rack=7}, LocationInfo{productID=1812061, storageRoom=A, hallway=3, rack=1}, LocationInfo{productID=1374195, storageRoom=C, hallway=3, rack=5}, LocationInfo{productID=1973633, storageRoom=C, hallway=3, rack=1}]
+9925 [pool-7-thread-10] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - COMPLETE ORDER BEFORE SINGLE OPTIMIZATION: CreateOrderMessage{orderId=1000005, customerId=1464787, price=36, items={1867982=1, 1812061=2, 1374195=1, 1973633=3}, locationInfo=[LocationInfo{productID=1867982, storageRoom=C, hallway=3, rack=7}, LocationInfo{productID=1812061, storageRoom=A, hallway=3, rack=1}, LocationInfo{productID=1374195, storageRoom=C, hallway=3, rack=5}, LocationInfo{productID=1973633, storageRoom=C, hallway=3, rack=1}]}
+9925 [pool-7-thread-10] INFO  be.kdg.se3.warmred.picker.domain.PickingImpl  - locationinfo before sort: [LocationInfo{productID=1867982, storageRoom=C, hallway=3, rack=7}, LocationInfo{productID=1812061, storageRoom=A, hallway=3, rack=1}, LocationInfo{productID=1374195, storageRoom=C, hallway=3, rack=5}, LocationInfo{productID=1973633, storageRoom=C, hallway=3, rack=1}]
+9925 [pool-7-thread-10] INFO  be.kdg.se3.warmred.picker.domain.PickingImpl  - locationinfo after sort: [LocationInfo{productID=1812061, storageRoom=A, hallway=3, rack=1}, LocationInfo{productID=1973633, storageRoom=C, hallway=3, rack=1}, LocationInfo{productID=1374195, storageRoom=C, hallway=3, rack=5}, LocationInfo{productID=1867982, storageRoom=C, hallway=3, rack=7}]
+9925 [pool-7-thread-10] INFO  be.kdg.se3.warmred.picker.domain.PickingImpl  - items before sort: {1867982=1, 1812061=2, 1374195=1, 1973633=3}
+9925 [pool-7-thread-10] INFO  be.kdg.se3.warmred.picker.domain.PickingImpl  - items after sort: {1812061=2, 1973633=3, 1374195=1, 1867982=1}
+9925 [pool-7-thread-10] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - COMPLETE ORDER AFTER SINGLE OPTIMIZATION: CreateOrderMessage{orderId=1000005, customerId=1464787, price=36, items={1812061=2, 1973633=3, 1374195=1, 1867982=1}, locationInfo=[LocationInfo{productID=1812061, storageRoom=A, hallway=3, rack=1}, LocationInfo{productID=1973633, storageRoom=C, hallway=3, rack=1}, LocationInfo{productID=1374195, storageRoom=C, hallway=3, rack=5}, LocationInfo{productID=1867982, storageRoom=C, hallway=3, rack=7}]}
+10061 [pool-7-thread-10] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - RabbitMQ initialized
+10061 [pool-7-thread-10] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Sending a DTO
+10063 [pool-7-thread-10] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - Formatting a DTO to an XML string
+10063 [pool-7-thread-10] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - The message to format is of type:'ExtraCreateOrderMessageDto'
+10073 [pool-7-thread-10] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Pushing message: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<extraCreateOrderMessageDto>
+    <orderId>1000005</orderId>
+    <customerId>1464787</customerId>
+    <price>36</price>
+    <items>
+        <entry>
+            <key>1812061</key>
+            <value>2</value>
+        </entry>
+        <entry>
+            <key>1973633</key>
+            <value>3</value>
+        </entry>
+        <entry>
+            <key>1374195</key>
+            <value>1</value>
+        </entry>
+        <entry>
+            <key>1867982</key>
+            <value>1</value>
+        </entry>
+    </items>
+    <locationInfoList>
+        <productID>1812061</productID>
+        <storageRoom>A</storageRoom>
+        <hallway>3</hallway>
+        <rack>1</rack>
+    </locationInfoList>
+    <locationInfoList>
+        <productID>1973633</productID>
+        <storageRoom>C</storageRoom>
+        <hallway>3</hallway>
+        <rack>1</rack>
+    </locationInfoList>
+    <locationInfoList>
+        <productID>1374195</productID>
+        <storageRoom>C</storageRoom>
+        <hallway>3</hallway>
+        <rack>5</rack>
+    </locationInfoList>
+    <locationInfoList>
+        <productID>1867982</productID>
+        <storageRoom>C</storageRoom>
+        <hallway>3</hallway>
+        <rack>7</rack>
+    </locationInfoList>
+</extraCreateOrderMessageDto>
+
+10113 [pool-7-thread-10] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Channel and connection from RabbitMQ closed
+10113 [pool-7-thread-10] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - ITEMS IN THE PRODUCT MAP TOO SEE IF CLEAR CACHE ACTUALLY WORKS: [LocationInfo{productID=1071435, storageRoom=B, hallway=3, rack=6}, LocationInfo{productID=1128673, storageRoom=C, hallway=3, rack=11}, LocationInfo{productID=1155882, storageRoom=C, hallway=1, rack=11}, LocationInfo{productID=1185752, storageRoom=B, hallway=1, rack=19}, LocationInfo{productID=1217883, storageRoom=A, hallway=3, rack=5}, LocationInfo{productID=1374195, storageRoom=C, hallway=3, rack=5}, LocationInfo{productID=1471495, storageRoom=C, hallway=1, rack=6}, LocationInfo{productID=1597859, storageRoom=A, hallway=3, rack=11}, LocationInfo{productID=1748186, storageRoom=B, hallway=1, rack=13}, LocationInfo{productID=1812061, storageRoom=A, hallway=3, rack=1}, LocationInfo{productID=1867982, storageRoom=C, hallway=3, rack=7}, LocationInfo{productID=1973633, storageRoom=C, hallway=3, rack=1}]
+10114 [pool-7-thread-10] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Delivered message to listener
+10707 [pool-7-thread-11] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Received message from RabbitMQ queue Internal: Orders
+10707 [pool-7-thread-11] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - Formatting an XML string to an DTO object
+10708 [pool-7-thread-11] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - The message to format is of type:'CreateOrderMessageDto'
+10712 [pool-7-thread-11] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Calling location service for productId: 1217883
+10712 [pool-7-thread-11] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Calling location service for productId: 1821825
+10712 [pool-7-thread-11] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Calling location service for productId: 1020434
+10712 [pool-7-thread-11] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Found product in memory cache with ID: 1217883
+10712 [pool-7-thread-11] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Adding location info to the list. INFO: LocationInfo{productID=1217883, storageRoom=A, hallway=3, rack=5}
+10712 [pool-7-thread-11] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Location info in the list of CreateOrderMessage: [LocationInfo{productID=1217883, storageRoom=A, hallway=3, rack=5}]
+10712 [pool-7-thread-11] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Product not found in memory cache, calling api service
+10712 [pool-7-thread-11] INFO  be.kdg.se3.warmred.picker.adapters.LocationServiceApi  - Making a call to www.services4se3.com/locationservice/1821825
+10813 [pool-7-thread-11] INFO  be.kdg.se3.warmred.picker.adapters.LocationServiceApi  - response as json: {"productID":1821825,"storageRoom":"C","hallway":2,"rack":16}
+10813 [pool-7-thread-11] INFO  be.kdg.se3.warmred.picker.adapters.LocationConverter  - Converting location info json to location info object
+10813 [pool-7-thread-11] INFO  be.kdg.se3.warmred.picker.adapters.LocationConverter  - Converted info: LocationInfo{productID=1821825, storageRoom=C, hallway=2, rack=16}
+10813 [pool-7-thread-11] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Adding location info to the list. INFO: LocationInfo{productID=1821825, storageRoom=C, hallway=2, rack=16}
+10813 [pool-7-thread-11] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Location info in the list of CreateOrderMessage: [LocationInfo{productID=1217883, storageRoom=A, hallway=3, rack=5}, LocationInfo{productID=1821825, storageRoom=C, hallway=2, rack=16}]
+10813 [pool-7-thread-11] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Product not found in memory cache, calling api service
+10813 [pool-7-thread-11] INFO  be.kdg.se3.warmred.picker.adapters.LocationServiceApi  - Making a call to www.services4se3.com/locationservice/1020434
+10913 [pool-7-thread-11] INFO  be.kdg.se3.warmred.picker.adapters.LocationServiceApi  - response as json: {"productID":1020434,"storageRoom":"C","hallway":2,"rack":19}
+10914 [pool-7-thread-11] INFO  be.kdg.se3.warmred.picker.adapters.LocationConverter  - Converting location info json to location info object
+10914 [pool-7-thread-11] INFO  be.kdg.se3.warmred.picker.adapters.LocationConverter  - Converted info: LocationInfo{productID=1020434, storageRoom=C, hallway=2, rack=19}
+10914 [pool-7-thread-11] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Adding location info to the list. INFO: LocationInfo{productID=1020434, storageRoom=C, hallway=2, rack=19}
+10914 [pool-7-thread-11] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Location info in the list of CreateOrderMessage: [LocationInfo{productID=1217883, storageRoom=A, hallway=3, rack=5}, LocationInfo{productID=1821825, storageRoom=C, hallway=2, rack=16}, LocationInfo{productID=1020434, storageRoom=C, hallway=2, rack=19}]
+10914 [pool-7-thread-11] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - COMPLETE ORDER BEFORE SINGLE OPTIMIZATION: CreateOrderMessage{orderId=1000006, customerId=1334084, price=41, items={1217883=1, 1821825=2, 1020434=2}, locationInfo=[LocationInfo{productID=1217883, storageRoom=A, hallway=3, rack=5}, LocationInfo{productID=1821825, storageRoom=C, hallway=2, rack=16}, LocationInfo{productID=1020434, storageRoom=C, hallway=2, rack=19}]}
+10914 [pool-7-thread-11] INFO  be.kdg.se3.warmred.picker.domain.PickingImpl  - locationinfo before sort: [LocationInfo{productID=1217883, storageRoom=A, hallway=3, rack=5}, LocationInfo{productID=1821825, storageRoom=C, hallway=2, rack=16}, LocationInfo{productID=1020434, storageRoom=C, hallway=2, rack=19}]
+10914 [pool-7-thread-11] INFO  be.kdg.se3.warmred.picker.domain.PickingImpl  - locationinfo after sort: [LocationInfo{productID=1217883, storageRoom=A, hallway=3, rack=5}, LocationInfo{productID=1821825, storageRoom=C, hallway=2, rack=16}, LocationInfo{productID=1020434, storageRoom=C, hallway=2, rack=19}]
+10915 [pool-7-thread-11] INFO  be.kdg.se3.warmred.picker.domain.PickingImpl  - items before sort: {1217883=1, 1821825=2, 1020434=2}
+10915 [pool-7-thread-11] INFO  be.kdg.se3.warmred.picker.domain.PickingImpl  - items after sort: {1217883=1, 1821825=2, 1020434=2}
+10915 [pool-7-thread-11] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - COMPLETE ORDER AFTER SINGLE OPTIMIZATION: CreateOrderMessage{orderId=1000006, customerId=1334084, price=41, items={1217883=1, 1821825=2, 1020434=2}, locationInfo=[LocationInfo{productID=1217883, storageRoom=A, hallway=3, rack=5}, LocationInfo{productID=1821825, storageRoom=C, hallway=2, rack=16}, LocationInfo{productID=1020434, storageRoom=C, hallway=2, rack=19}]}
+11038 [pool-7-thread-11] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - RabbitMQ initialized
+11038 [pool-7-thread-11] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Sending a DTO
+11038 [pool-7-thread-11] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - Formatting a DTO to an XML string
+11039 [pool-7-thread-11] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - The message to format is of type:'ExtraCreateOrderMessageDto'
+11045 [pool-7-thread-11] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Pushing message: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<extraCreateOrderMessageDto>
+    <orderId>1000006</orderId>
+    <customerId>1334084</customerId>
+    <price>41</price>
+    <items>
+        <entry>
+            <key>1217883</key>
+            <value>1</value>
+        </entry>
+        <entry>
+            <key>1821825</key>
+            <value>2</value>
+        </entry>
+        <entry>
+            <key>1020434</key>
+            <value>2</value>
+        </entry>
+    </items>
+    <locationInfoList>
+        <productID>1217883</productID>
+        <storageRoom>A</storageRoom>
+        <hallway>3</hallway>
+        <rack>5</rack>
+    </locationInfoList>
+    <locationInfoList>
+        <productID>1821825</productID>
+        <storageRoom>C</storageRoom>
+        <hallway>2</hallway>
+        <rack>16</rack>
+    </locationInfoList>
+    <locationInfoList>
+        <productID>1020434</productID>
+        <storageRoom>C</storageRoom>
+        <hallway>2</hallway>
+        <rack>19</rack>
+    </locationInfoList>
+</extraCreateOrderMessageDto>
+
+11082 [pool-7-thread-11] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Channel and connection from RabbitMQ closed
+11083 [pool-7-thread-11] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - ITEMS IN THE PRODUCT MAP TOO SEE IF CLEAR CACHE ACTUALLY WORKS: [LocationInfo{productID=1020434, storageRoom=C, hallway=2, rack=19}, LocationInfo{productID=1071435, storageRoom=B, hallway=3, rack=6}, LocationInfo{productID=1128673, storageRoom=C, hallway=3, rack=11}, LocationInfo{productID=1155882, storageRoom=C, hallway=1, rack=11}, LocationInfo{productID=1185752, storageRoom=B, hallway=1, rack=19}, LocationInfo{productID=1217883, storageRoom=A, hallway=3, rack=5}, LocationInfo{productID=1374195, storageRoom=C, hallway=3, rack=5}, LocationInfo{productID=1471495, storageRoom=C, hallway=1, rack=6}, LocationInfo{productID=1597859, storageRoom=A, hallway=3, rack=11}, LocationInfo{productID=1748186, storageRoom=B, hallway=1, rack=13}, LocationInfo{productID=1812061, storageRoom=A, hallway=3, rack=1}, LocationInfo{productID=1821825, storageRoom=C, hallway=2, rack=16}, LocationInfo{productID=1867982, storageRoom=C, hallway=3, rack=7}, LocationInfo{productID=1973633, storageRoom=C, hallway=3, rack=1}]
+11083 [pool-7-thread-11] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Delivered message to listener
+11885 [pool-7-thread-12] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Received message from RabbitMQ queue Internal: Orders
+11886 [pool-7-thread-12] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - Formatting an XML string to an DTO object
+11888 [pool-7-thread-12] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - The message to format is of type:'CreateOrderMessageDto'
+11894 [pool-7-thread-12] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Calling location service for productId: 1071435
+11894 [pool-7-thread-12] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Found product in memory cache with ID: 1071435
+11894 [pool-7-thread-12] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Adding location info to the list. INFO: LocationInfo{productID=1071435, storageRoom=B, hallway=3, rack=6}
+11894 [pool-7-thread-12] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Location info in the list of CreateOrderMessage: [LocationInfo{productID=1071435, storageRoom=B, hallway=3, rack=6}]
+11894 [pool-7-thread-12] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - COMPLETE ORDER BEFORE SINGLE OPTIMIZATION: CreateOrderMessage{orderId=1000007, customerId=1508709, price=69, items={1071435=2}, locationInfo=[LocationInfo{productID=1071435, storageRoom=B, hallway=3, rack=6}]}
+11894 [pool-7-thread-12] INFO  be.kdg.se3.warmred.picker.domain.PickingImpl  - locationinfo before sort: [LocationInfo{productID=1071435, storageRoom=B, hallway=3, rack=6}]
+11894 [pool-7-thread-12] INFO  be.kdg.se3.warmred.picker.domain.PickingImpl  - locationinfo after sort: [LocationInfo{productID=1071435, storageRoom=B, hallway=3, rack=6}]
+11894 [pool-7-thread-12] INFO  be.kdg.se3.warmred.picker.domain.PickingImpl  - items before sort: {1071435=2}
+11894 [pool-7-thread-12] INFO  be.kdg.se3.warmred.picker.domain.PickingImpl  - items after sort: {1071435=2}
+11894 [pool-7-thread-12] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - COMPLETE ORDER AFTER SINGLE OPTIMIZATION: CreateOrderMessage{orderId=1000007, customerId=1508709, price=69, items={1071435=2}, locationInfo=[LocationInfo{productID=1071435, storageRoom=B, hallway=3, rack=6}]}
+12021 [pool-7-thread-12] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - RabbitMQ initialized
+12021 [pool-7-thread-12] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Sending a DTO
+12021 [pool-7-thread-12] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - Formatting a DTO to an XML string
+12021 [pool-7-thread-12] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - The message to format is of type:'ExtraCreateOrderMessageDto'
+12027 [pool-7-thread-12] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Pushing message: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<extraCreateOrderMessageDto>
+    <orderId>1000007</orderId>
+    <customerId>1508709</customerId>
+    <price>69</price>
+    <items>
+        <entry>
+            <key>1071435</key>
+            <value>2</value>
+        </entry>
+    </items>
+    <locationInfoList>
+        <productID>1071435</productID>
+        <storageRoom>B</storageRoom>
+        <hallway>3</hallway>
+        <rack>6</rack>
+    </locationInfoList>
+</extraCreateOrderMessageDto>
+
+12063 [pool-7-thread-12] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Channel and connection from RabbitMQ closed
+12063 [pool-7-thread-12] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - ITEMS IN THE PRODUCT MAP TOO SEE IF CLEAR CACHE ACTUALLY WORKS: [LocationInfo{productID=1020434, storageRoom=C, hallway=2, rack=19}, LocationInfo{productID=1071435, storageRoom=B, hallway=3, rack=6}, LocationInfo{productID=1128673, storageRoom=C, hallway=3, rack=11}, LocationInfo{productID=1155882, storageRoom=C, hallway=1, rack=11}, LocationInfo{productID=1185752, storageRoom=B, hallway=1, rack=19}, LocationInfo{productID=1217883, storageRoom=A, hallway=3, rack=5}, LocationInfo{productID=1374195, storageRoom=C, hallway=3, rack=5}, LocationInfo{productID=1471495, storageRoom=C, hallway=1, rack=6}, LocationInfo{productID=1597859, storageRoom=A, hallway=3, rack=11}, LocationInfo{productID=1748186, storageRoom=B, hallway=1, rack=13}, LocationInfo{productID=1812061, storageRoom=A, hallway=3, rack=1}, LocationInfo{productID=1821825, storageRoom=C, hallway=2, rack=16}, LocationInfo{productID=1867982, storageRoom=C, hallway=3, rack=7}, LocationInfo{productID=1973633, storageRoom=C, hallway=3, rack=1}]
+12064 [pool-7-thread-12] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Delivered message to listener
+13077 [pool-7-thread-13] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Received message from RabbitMQ queue Internal: Orders
+13077 [pool-7-thread-13] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - Formatting an XML string to an DTO object
+13077 [pool-7-thread-13] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - The message to format is of type:'CreateOrderMessageDto'
+13080 [pool-7-thread-13] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Calling location service for productId: 1852505
+13080 [pool-7-thread-13] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Calling location service for productId: 1020434
+13080 [pool-7-thread-13] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Calling location service for productId: 1973633
+13080 [pool-7-thread-13] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Product not found in memory cache, calling api service
+13080 [pool-7-thread-13] INFO  be.kdg.se3.warmred.picker.adapters.LocationServiceApi  - Making a call to www.services4se3.com/locationservice/1852505
+13182 [pool-7-thread-13] INFO  be.kdg.se3.warmred.picker.adapters.LocationServiceApi  - response as json: {"productID":1852505,"storageRoom":"A","hallway":2,"rack":10}
+13182 [pool-7-thread-13] INFO  be.kdg.se3.warmred.picker.adapters.LocationConverter  - Converting location info json to location info object
+13182 [pool-7-thread-13] INFO  be.kdg.se3.warmred.picker.adapters.LocationConverter  - Converted info: LocationInfo{productID=1852505, storageRoom=A, hallway=2, rack=10}
+13182 [pool-7-thread-13] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Adding location info to the list. INFO: LocationInfo{productID=1852505, storageRoom=A, hallway=2, rack=10}
+13182 [pool-7-thread-13] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Location info in the list of CreateOrderMessage: [LocationInfo{productID=1852505, storageRoom=A, hallway=2, rack=10}]
+13182 [pool-7-thread-13] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Found product in memory cache with ID: 1020434
+13183 [pool-7-thread-13] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Adding location info to the list. INFO: LocationInfo{productID=1020434, storageRoom=C, hallway=2, rack=19}
+13183 [pool-7-thread-13] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Location info in the list of CreateOrderMessage: [LocationInfo{productID=1852505, storageRoom=A, hallway=2, rack=10}, LocationInfo{productID=1020434, storageRoom=C, hallway=2, rack=19}]
+13183 [pool-7-thread-13] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Found product in memory cache with ID: 1973633
+13183 [pool-7-thread-13] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Adding location info to the list. INFO: LocationInfo{productID=1973633, storageRoom=C, hallway=3, rack=1}
+13183 [pool-7-thread-13] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Location info in the list of CreateOrderMessage: [LocationInfo{productID=1852505, storageRoom=A, hallway=2, rack=10}, LocationInfo{productID=1020434, storageRoom=C, hallway=2, rack=19}, LocationInfo{productID=1973633, storageRoom=C, hallway=3, rack=1}]
+13183 [pool-7-thread-13] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - COMPLETE ORDER BEFORE SINGLE OPTIMIZATION: CreateOrderMessage{orderId=1000008, customerId=1282508, price=71, items={1852505=3, 1020434=3, 1973633=1}, locationInfo=[LocationInfo{productID=1852505, storageRoom=A, hallway=2, rack=10}, LocationInfo{productID=1020434, storageRoom=C, hallway=2, rack=19}, LocationInfo{productID=1973633, storageRoom=C, hallway=3, rack=1}]}
+13183 [pool-7-thread-13] INFO  be.kdg.se3.warmred.picker.domain.PickingImpl  - locationinfo before sort: [LocationInfo{productID=1852505, storageRoom=A, hallway=2, rack=10}, LocationInfo{productID=1020434, storageRoom=C, hallway=2, rack=19}, LocationInfo{productID=1973633, storageRoom=C, hallway=3, rack=1}]
+13183 [pool-7-thread-13] INFO  be.kdg.se3.warmred.picker.domain.PickingImpl  - locationinfo after sort: [LocationInfo{productID=1852505, storageRoom=A, hallway=2, rack=10}, LocationInfo{productID=1020434, storageRoom=C, hallway=2, rack=19}, LocationInfo{productID=1973633, storageRoom=C, hallway=3, rack=1}]
+13183 [pool-7-thread-13] INFO  be.kdg.se3.warmred.picker.domain.PickingImpl  - items before sort: {1852505=3, 1020434=3, 1973633=1}
+13183 [pool-7-thread-13] INFO  be.kdg.se3.warmred.picker.domain.PickingImpl  - items after sort: {1852505=3, 1020434=3, 1973633=1}
+13183 [pool-7-thread-13] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - COMPLETE ORDER AFTER SINGLE OPTIMIZATION: CreateOrderMessage{orderId=1000008, customerId=1282508, price=71, items={1852505=3, 1020434=3, 1973633=1}, locationInfo=[LocationInfo{productID=1852505, storageRoom=A, hallway=2, rack=10}, LocationInfo{productID=1020434, storageRoom=C, hallway=2, rack=19}, LocationInfo{productID=1973633, storageRoom=C, hallway=3, rack=1}]}
+13315 [pool-7-thread-13] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - RabbitMQ initialized
+13315 [pool-7-thread-13] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Sending a DTO
+13315 [pool-7-thread-13] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - Formatting a DTO to an XML string
+13315 [pool-7-thread-13] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - The message to format is of type:'ExtraCreateOrderMessageDto'
+13323 [pool-7-thread-13] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Pushing message: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<extraCreateOrderMessageDto>
+    <orderId>1000008</orderId>
+    <customerId>1282508</customerId>
+    <price>71</price>
+    <items>
+        <entry>
+            <key>1852505</key>
+            <value>3</value>
+        </entry>
+        <entry>
+            <key>1020434</key>
+            <value>3</value>
+        </entry>
+        <entry>
+            <key>1973633</key>
+            <value>1</value>
+        </entry>
+    </items>
+    <locationInfoList>
+        <productID>1852505</productID>
+        <storageRoom>A</storageRoom>
+        <hallway>2</hallway>
+        <rack>10</rack>
+    </locationInfoList>
+    <locationInfoList>
+        <productID>1020434</productID>
+        <storageRoom>C</storageRoom>
+        <hallway>2</hallway>
+        <rack>19</rack>
+    </locationInfoList>
+    <locationInfoList>
+        <productID>1973633</productID>
+        <storageRoom>C</storageRoom>
+        <hallway>3</hallway>
+        <rack>1</rack>
+    </locationInfoList>
+</extraCreateOrderMessageDto>
+
+13363 [pool-7-thread-13] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Channel and connection from RabbitMQ closed
+13364 [pool-7-thread-13] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - ITEMS IN THE PRODUCT MAP TOO SEE IF CLEAR CACHE ACTUALLY WORKS: [LocationInfo{productID=1020434, storageRoom=C, hallway=2, rack=19}, LocationInfo{productID=1071435, storageRoom=B, hallway=3, rack=6}, LocationInfo{productID=1128673, storageRoom=C, hallway=3, rack=11}, LocationInfo{productID=1155882, storageRoom=C, hallway=1, rack=11}, LocationInfo{productID=1185752, storageRoom=B, hallway=1, rack=19}, LocationInfo{productID=1217883, storageRoom=A, hallway=3, rack=5}, LocationInfo{productID=1374195, storageRoom=C, hallway=3, rack=5}, LocationInfo{productID=1471495, storageRoom=C, hallway=1, rack=6}, LocationInfo{productID=1597859, storageRoom=A, hallway=3, rack=11}, LocationInfo{productID=1748186, storageRoom=B, hallway=1, rack=13}, LocationInfo{productID=1812061, storageRoom=A, hallway=3, rack=1}, LocationInfo{productID=1821825, storageRoom=C, hallway=2, rack=16}, LocationInfo{productID=1852505, storageRoom=A, hallway=2, rack=10}, LocationInfo{productID=1867982, storageRoom=C, hallway=3, rack=7}, LocationInfo{productID=1973633, storageRoom=C, hallway=3, rack=1}]
+13364 [pool-7-thread-13] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Delivered message to listener
+14275 [pool-7-thread-14] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Received message from RabbitMQ queue Internal: Orders
+14275 [pool-7-thread-14] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - Formatting an XML string to an DTO object
+14276 [pool-7-thread-14] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - The message to format is of type:'CreateOrderMessageDto'
+14280 [pool-7-thread-14] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Calling location service for productId: 1441668
+14280 [pool-7-thread-14] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Calling location service for productId: 1597859
+14280 [pool-7-thread-14] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Calling location service for productId: 1973633
+14280 [pool-7-thread-14] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Product not found in memory cache, calling api service
+14280 [pool-7-thread-14] INFO  be.kdg.se3.warmred.picker.adapters.LocationServiceApi  - Making a call to www.services4se3.com/locationservice/1441668
+14380 [pool-7-thread-14] INFO  be.kdg.se3.warmred.picker.adapters.LocationServiceApi  - response as json: {"productID":1441668,"storageRoom":"A","hallway":3,"rack":8}
+14380 [pool-7-thread-14] INFO  be.kdg.se3.warmred.picker.adapters.LocationConverter  - Converting location info json to location info object
+14380 [pool-7-thread-14] INFO  be.kdg.se3.warmred.picker.adapters.LocationConverter  - Converted info: LocationInfo{productID=1441668, storageRoom=A, hallway=3, rack=8}
+14380 [pool-7-thread-14] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Adding location info to the list. INFO: LocationInfo{productID=1441668, storageRoom=A, hallway=3, rack=8}
+14380 [pool-7-thread-14] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Location info in the list of CreateOrderMessage: [LocationInfo{productID=1441668, storageRoom=A, hallway=3, rack=8}]
+14380 [pool-7-thread-14] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Found product in memory cache with ID: 1597859
+14380 [pool-7-thread-14] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Adding location info to the list. INFO: LocationInfo{productID=1597859, storageRoom=A, hallway=3, rack=11}
+14380 [pool-7-thread-14] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Location info in the list of CreateOrderMessage: [LocationInfo{productID=1441668, storageRoom=A, hallway=3, rack=8}, LocationInfo{productID=1597859, storageRoom=A, hallway=3, rack=11}]
+14380 [pool-7-thread-14] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Found product in memory cache with ID: 1973633
+14380 [pool-7-thread-14] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Adding location info to the list. INFO: LocationInfo{productID=1973633, storageRoom=C, hallway=3, rack=1}
+14380 [pool-7-thread-14] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Location info in the list of CreateOrderMessage: [LocationInfo{productID=1441668, storageRoom=A, hallway=3, rack=8}, LocationInfo{productID=1597859, storageRoom=A, hallway=3, rack=11}, LocationInfo{productID=1973633, storageRoom=C, hallway=3, rack=1}]
+14380 [pool-7-thread-14] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - COMPLETE ORDER BEFORE SINGLE OPTIMIZATION: CreateOrderMessage{orderId=1000009, customerId=1464787, price=48, items={1441668=5, 1597859=4, 1973633=3}, locationInfo=[LocationInfo{productID=1441668, storageRoom=A, hallway=3, rack=8}, LocationInfo{productID=1597859, storageRoom=A, hallway=3, rack=11}, LocationInfo{productID=1973633, storageRoom=C, hallway=3, rack=1}]}
+14381 [pool-7-thread-14] INFO  be.kdg.se3.warmred.picker.domain.PickingImpl  - locationinfo before sort: [LocationInfo{productID=1441668, storageRoom=A, hallway=3, rack=8}, LocationInfo{productID=1597859, storageRoom=A, hallway=3, rack=11}, LocationInfo{productID=1973633, storageRoom=C, hallway=3, rack=1}]
+14381 [pool-7-thread-14] INFO  be.kdg.se3.warmred.picker.domain.PickingImpl  - locationinfo after sort: [LocationInfo{productID=1441668, storageRoom=A, hallway=3, rack=8}, LocationInfo{productID=1597859, storageRoom=A, hallway=3, rack=11}, LocationInfo{productID=1973633, storageRoom=C, hallway=3, rack=1}]
+14381 [pool-7-thread-14] INFO  be.kdg.se3.warmred.picker.domain.PickingImpl  - items before sort: {1441668=5, 1597859=4, 1973633=3}
+14381 [pool-7-thread-14] INFO  be.kdg.se3.warmred.picker.domain.PickingImpl  - items after sort: {1441668=5, 1597859=4, 1973633=3}
+14381 [pool-7-thread-14] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - COMPLETE ORDER AFTER SINGLE OPTIMIZATION: CreateOrderMessage{orderId=1000009, customerId=1464787, price=48, items={1441668=5, 1597859=4, 1973633=3}, locationInfo=[LocationInfo{productID=1441668, storageRoom=A, hallway=3, rack=8}, LocationInfo{productID=1597859, storageRoom=A, hallway=3, rack=11}, LocationInfo{productID=1973633, storageRoom=C, hallway=3, rack=1}]}
+14506 [pool-7-thread-14] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - RabbitMQ initialized
+14506 [pool-7-thread-14] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Sending a DTO
+14506 [pool-7-thread-14] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - Formatting a DTO to an XML string
+14506 [pool-7-thread-14] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - The message to format is of type:'ExtraCreateOrderMessageDto'
+14513 [pool-7-thread-14] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Pushing message: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<extraCreateOrderMessageDto>
+    <orderId>1000009</orderId>
+    <customerId>1464787</customerId>
+    <price>48</price>
+    <items>
+        <entry>
+            <key>1441668</key>
+            <value>5</value>
+        </entry>
+        <entry>
+            <key>1597859</key>
+            <value>4</value>
+        </entry>
+        <entry>
+            <key>1973633</key>
+            <value>3</value>
+        </entry>
+    </items>
+    <locationInfoList>
+        <productID>1441668</productID>
+        <storageRoom>A</storageRoom>
+        <hallway>3</hallway>
+        <rack>8</rack>
+    </locationInfoList>
+    <locationInfoList>
+        <productID>1597859</productID>
+        <storageRoom>A</storageRoom>
+        <hallway>3</hallway>
+        <rack>11</rack>
+    </locationInfoList>
+    <locationInfoList>
+        <productID>1973633</productID>
+        <storageRoom>C</storageRoom>
+        <hallway>3</hallway>
+        <rack>1</rack>
+    </locationInfoList>
+</extraCreateOrderMessageDto>
+
+14562 [pool-7-thread-14] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Channel and connection from RabbitMQ closed
+14563 [pool-7-thread-14] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - ITEMS IN THE PRODUCT MAP TOO SEE IF CLEAR CACHE ACTUALLY WORKS: [LocationInfo{productID=1020434, storageRoom=C, hallway=2, rack=19}, LocationInfo{productID=1071435, storageRoom=B, hallway=3, rack=6}, LocationInfo{productID=1128673, storageRoom=C, hallway=3, rack=11}, LocationInfo{productID=1155882, storageRoom=C, hallway=1, rack=11}, LocationInfo{productID=1185752, storageRoom=B, hallway=1, rack=19}, LocationInfo{productID=1217883, storageRoom=A, hallway=3, rack=5}, LocationInfo{productID=1374195, storageRoom=C, hallway=3, rack=5}, LocationInfo{productID=1441668, storageRoom=A, hallway=3, rack=8}, LocationInfo{productID=1471495, storageRoom=C, hallway=1, rack=6}, LocationInfo{productID=1597859, storageRoom=A, hallway=3, rack=11}, LocationInfo{productID=1748186, storageRoom=B, hallway=1, rack=13}, LocationInfo{productID=1812061, storageRoom=A, hallway=3, rack=1}, LocationInfo{productID=1821825, storageRoom=C, hallway=2, rack=16}, LocationInfo{productID=1852505, storageRoom=A, hallway=2, rack=10}, LocationInfo{productID=1867982, storageRoom=C, hallway=3, rack=7}, LocationInfo{productID=1973633, storageRoom=C, hallway=3, rack=1}]
+14563 [pool-7-thread-14] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Delivered message to listener
+15448 [pool-7-thread-15] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Received message from RabbitMQ queue Internal: Orders
+15448 [pool-7-thread-15] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - Formatting an XML string to an DTO object
+15448 [pool-7-thread-15] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - The message to format is of type:'CreateOrderMessageDto'
+15452 [pool-7-thread-15] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Calling location service for productId: 1748186
+15452 [pool-7-thread-15] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Calling location service for productId: 1185752
+15452 [pool-7-thread-15] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Calling location service for productId: 1071435
+15452 [pool-7-thread-15] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Found product in memory cache with ID: 1748186
+15452 [pool-7-thread-15] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Adding location info to the list. INFO: LocationInfo{productID=1748186, storageRoom=B, hallway=1, rack=13}
+15452 [pool-7-thread-15] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Location info in the list of CreateOrderMessage: [LocationInfo{productID=1748186, storageRoom=B, hallway=1, rack=13}]
+15452 [pool-7-thread-15] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Found product in memory cache with ID: 1185752
+15452 [pool-7-thread-15] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Adding location info to the list. INFO: LocationInfo{productID=1185752, storageRoom=B, hallway=1, rack=19}
+15452 [pool-7-thread-15] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Location info in the list of CreateOrderMessage: [LocationInfo{productID=1748186, storageRoom=B, hallway=1, rack=13}, LocationInfo{productID=1185752, storageRoom=B, hallway=1, rack=19}]
+15452 [pool-7-thread-15] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Found product in memory cache with ID: 1071435
+15452 [pool-7-thread-15] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Adding location info to the list. INFO: LocationInfo{productID=1071435, storageRoom=B, hallway=3, rack=6}
+15452 [pool-7-thread-15] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Location info in the list of CreateOrderMessage: [LocationInfo{productID=1748186, storageRoom=B, hallway=1, rack=13}, LocationInfo{productID=1185752, storageRoom=B, hallway=1, rack=19}, LocationInfo{productID=1071435, storageRoom=B, hallway=3, rack=6}]
+15452 [pool-7-thread-15] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - COMPLETE ORDER BEFORE SINGLE OPTIMIZATION: CreateOrderMessage{orderId=1000010, customerId=1334084, price=68, items={1748186=3, 1185752=1, 1071435=5}, locationInfo=[LocationInfo{productID=1748186, storageRoom=B, hallway=1, rack=13}, LocationInfo{productID=1185752, storageRoom=B, hallway=1, rack=19}, LocationInfo{productID=1071435, storageRoom=B, hallway=3, rack=6}]}
+15452 [pool-7-thread-15] INFO  be.kdg.se3.warmred.picker.domain.PickingImpl  - locationinfo before sort: [LocationInfo{productID=1748186, storageRoom=B, hallway=1, rack=13}, LocationInfo{productID=1185752, storageRoom=B, hallway=1, rack=19}, LocationInfo{productID=1071435, storageRoom=B, hallway=3, rack=6}]
+15452 [pool-7-thread-15] INFO  be.kdg.se3.warmred.picker.domain.PickingImpl  - locationinfo after sort: [LocationInfo{productID=1748186, storageRoom=B, hallway=1, rack=13}, LocationInfo{productID=1185752, storageRoom=B, hallway=1, rack=19}, LocationInfo{productID=1071435, storageRoom=B, hallway=3, rack=6}]
+15452 [pool-7-thread-15] INFO  be.kdg.se3.warmred.picker.domain.PickingImpl  - items before sort: {1748186=3, 1185752=1, 1071435=5}
+15452 [pool-7-thread-15] INFO  be.kdg.se3.warmred.picker.domain.PickingImpl  - items after sort: {1748186=3, 1185752=1, 1071435=5}
+15452 [pool-7-thread-15] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - COMPLETE ORDER AFTER SINGLE OPTIMIZATION: CreateOrderMessage{orderId=1000010, customerId=1334084, price=68, items={1748186=3, 1185752=1, 1071435=5}, locationInfo=[LocationInfo{productID=1748186, storageRoom=B, hallway=1, rack=13}, LocationInfo{productID=1185752, storageRoom=B, hallway=1, rack=19}, LocationInfo{productID=1071435, storageRoom=B, hallway=3, rack=6}]}
+15582 [pool-7-thread-15] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - RabbitMQ initialized
+15582 [pool-7-thread-15] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Sending a DTO
+15582 [pool-7-thread-15] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - Formatting a DTO to an XML string
+15582 [pool-7-thread-15] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - The message to format is of type:'ExtraCreateOrderMessageDto'
+15587 [pool-7-thread-15] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Pushing message: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<extraCreateOrderMessageDto>
+    <orderId>1000010</orderId>
+    <customerId>1334084</customerId>
+    <price>68</price>
+    <items>
+        <entry>
+            <key>1748186</key>
+            <value>3</value>
+        </entry>
+        <entry>
+            <key>1185752</key>
+            <value>1</value>
+        </entry>
+        <entry>
+            <key>1071435</key>
+            <value>5</value>
+        </entry>
+    </items>
+    <locationInfoList>
+        <productID>1748186</productID>
+        <storageRoom>B</storageRoom>
+        <hallway>1</hallway>
+        <rack>13</rack>
+    </locationInfoList>
+    <locationInfoList>
+        <productID>1185752</productID>
+        <storageRoom>B</storageRoom>
+        <hallway>1</hallway>
+        <rack>19</rack>
+    </locationInfoList>
+    <locationInfoList>
+        <productID>1071435</productID>
+        <storageRoom>B</storageRoom>
+        <hallway>3</hallway>
+        <rack>6</rack>
+    </locationInfoList>
+</extraCreateOrderMessageDto>
+
+15626 [pool-7-thread-15] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Channel and connection from RabbitMQ closed
+15627 [pool-7-thread-15] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - ITEMS IN THE PRODUCT MAP TOO SEE IF CLEAR CACHE ACTUALLY WORKS: [LocationInfo{productID=1020434, storageRoom=C, hallway=2, rack=19}, LocationInfo{productID=1071435, storageRoom=B, hallway=3, rack=6}, LocationInfo{productID=1128673, storageRoom=C, hallway=3, rack=11}, LocationInfo{productID=1155882, storageRoom=C, hallway=1, rack=11}, LocationInfo{productID=1185752, storageRoom=B, hallway=1, rack=19}, LocationInfo{productID=1217883, storageRoom=A, hallway=3, rack=5}, LocationInfo{productID=1374195, storageRoom=C, hallway=3, rack=5}, LocationInfo{productID=1441668, storageRoom=A, hallway=3, rack=8}, LocationInfo{productID=1471495, storageRoom=C, hallway=1, rack=6}, LocationInfo{productID=1597859, storageRoom=A, hallway=3, rack=11}, LocationInfo{productID=1748186, storageRoom=B, hallway=1, rack=13}, LocationInfo{productID=1812061, storageRoom=A, hallway=3, rack=1}, LocationInfo{productID=1821825, storageRoom=C, hallway=2, rack=16}, LocationInfo{productID=1852505, storageRoom=A, hallway=2, rack=10}, LocationInfo{productID=1867982, storageRoom=C, hallway=3, rack=7}, LocationInfo{productID=1973633, storageRoom=C, hallway=3, rack=1}]
+15627 [pool-7-thread-15] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Delivered message to listener
+16614 [pool-7-thread-16] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Received message from RabbitMQ queue Internal: Orders
+16614 [pool-7-thread-16] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - Formatting an XML string to an DTO object
+16614 [pool-7-thread-16] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - The message to format is of type:'CreateOrderMessageDto'
+16617 [pool-7-thread-16] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Calling location service for productId: 1128673
+16617 [pool-7-thread-16] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Found product in memory cache with ID: 1128673
+16617 [pool-7-thread-16] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Adding location info to the list. INFO: LocationInfo{productID=1128673, storageRoom=C, hallway=3, rack=11}
+16617 [pool-7-thread-16] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Location info in the list of CreateOrderMessage: [LocationInfo{productID=1128673, storageRoom=C, hallway=3, rack=11}]
+16617 [pool-7-thread-16] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - COMPLETE ORDER BEFORE SINGLE OPTIMIZATION: CreateOrderMessage{orderId=1000011, customerId=1037879, price=32, items={1128673=2}, locationInfo=[LocationInfo{productID=1128673, storageRoom=C, hallway=3, rack=11}]}
+16617 [pool-7-thread-16] INFO  be.kdg.se3.warmred.picker.domain.PickingImpl  - locationinfo before sort: [LocationInfo{productID=1128673, storageRoom=C, hallway=3, rack=11}]
+16617 [pool-7-thread-16] INFO  be.kdg.se3.warmred.picker.domain.PickingImpl  - locationinfo after sort: [LocationInfo{productID=1128673, storageRoom=C, hallway=3, rack=11}]
+16618 [pool-7-thread-16] INFO  be.kdg.se3.warmred.picker.domain.PickingImpl  - items before sort: {1128673=2}
+16618 [pool-7-thread-16] INFO  be.kdg.se3.warmred.picker.domain.PickingImpl  - items after sort: {1128673=2}
+16618 [pool-7-thread-16] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - COMPLETE ORDER AFTER SINGLE OPTIMIZATION: CreateOrderMessage{orderId=1000011, customerId=1037879, price=32, items={1128673=2}, locationInfo=[LocationInfo{productID=1128673, storageRoom=C, hallway=3, rack=11}]}
+16749 [pool-7-thread-16] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - RabbitMQ initialized
+16749 [pool-7-thread-16] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Sending a DTO
+16749 [pool-7-thread-16] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - Formatting a DTO to an XML string
+16749 [pool-7-thread-16] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - The message to format is of type:'ExtraCreateOrderMessageDto'
+16755 [pool-7-thread-16] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Pushing message: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<extraCreateOrderMessageDto>
+    <orderId>1000011</orderId>
+    <customerId>1037879</customerId>
+    <price>32</price>
+    <items>
+        <entry>
+            <key>1128673</key>
+            <value>2</value>
+        </entry>
+    </items>
+    <locationInfoList>
+        <productID>1128673</productID>
+        <storageRoom>C</storageRoom>
+        <hallway>3</hallway>
+        <rack>11</rack>
+    </locationInfoList>
+</extraCreateOrderMessageDto>
+
+16794 [pool-7-thread-16] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Channel and connection from RabbitMQ closed
+16795 [pool-7-thread-16] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - ITEMS IN THE PRODUCT MAP TOO SEE IF CLEAR CACHE ACTUALLY WORKS: [LocationInfo{productID=1020434, storageRoom=C, hallway=2, rack=19}, LocationInfo{productID=1071435, storageRoom=B, hallway=3, rack=6}, LocationInfo{productID=1128673, storageRoom=C, hallway=3, rack=11}, LocationInfo{productID=1155882, storageRoom=C, hallway=1, rack=11}, LocationInfo{productID=1185752, storageRoom=B, hallway=1, rack=19}, LocationInfo{productID=1217883, storageRoom=A, hallway=3, rack=5}, LocationInfo{productID=1374195, storageRoom=C, hallway=3, rack=5}, LocationInfo{productID=1441668, storageRoom=A, hallway=3, rack=8}, LocationInfo{productID=1471495, storageRoom=C, hallway=1, rack=6}, LocationInfo{productID=1597859, storageRoom=A, hallway=3, rack=11}, LocationInfo{productID=1748186, storageRoom=B, hallway=1, rack=13}, LocationInfo{productID=1812061, storageRoom=A, hallway=3, rack=1}, LocationInfo{productID=1821825, storageRoom=C, hallway=2, rack=16}, LocationInfo{productID=1852505, storageRoom=A, hallway=2, rack=10}, LocationInfo{productID=1867982, storageRoom=C, hallway=3, rack=7}, LocationInfo{productID=1973633, storageRoom=C, hallway=3, rack=1}]
+16795 [pool-7-thread-16] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Delivered message to listener
+17795 [pool-7-thread-17] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Received message from RabbitMQ queue Internal: Orders
+17795 [pool-7-thread-17] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - Formatting an XML string to an DTO object
+17795 [pool-7-thread-17] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - The message to format is of type:'CancelOrderMessageDto'
+17797 [pool-7-thread-17] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Ready to do stuff with CancelOrderMessage with id: 1000009
+17797 [pool-7-thread-17] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Delivered message to listener
+17960 [pool-7-thread-18] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Received message from RabbitMQ queue Internal: Orders
+17960 [pool-7-thread-18] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - Formatting an XML string to an DTO object
+17961 [pool-7-thread-18] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - The message to format is of type:'CreateOrderMessageDto'
+17964 [pool-7-thread-18] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Calling location service for productId: 1128673
+17964 [pool-7-thread-18] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Calling location service for productId: 1441668
+17964 [pool-7-thread-18] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Calling location service for productId: 1155882
+17964 [pool-7-thread-18] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Found product in memory cache with ID: 1128673
+17964 [pool-7-thread-18] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Adding location info to the list. INFO: LocationInfo{productID=1128673, storageRoom=C, hallway=3, rack=11}
+17964 [pool-7-thread-18] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Location info in the list of CreateOrderMessage: [LocationInfo{productID=1128673, storageRoom=C, hallway=3, rack=11}]
+17964 [pool-7-thread-18] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Found product in memory cache with ID: 1441668
+17964 [pool-7-thread-18] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Adding location info to the list. INFO: LocationInfo{productID=1441668, storageRoom=A, hallway=3, rack=8}
+17964 [pool-7-thread-18] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Location info in the list of CreateOrderMessage: [LocationInfo{productID=1128673, storageRoom=C, hallway=3, rack=11}, LocationInfo{productID=1441668, storageRoom=A, hallway=3, rack=8}]
+17964 [pool-7-thread-18] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Found product in memory cache with ID: 1155882
+17964 [pool-7-thread-18] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Adding location info to the list. INFO: LocationInfo{productID=1155882, storageRoom=C, hallway=1, rack=11}
+17964 [pool-7-thread-18] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Location info in the list of CreateOrderMessage: [LocationInfo{productID=1128673, storageRoom=C, hallway=3, rack=11}, LocationInfo{productID=1441668, storageRoom=A, hallway=3, rack=8}, LocationInfo{productID=1155882, storageRoom=C, hallway=1, rack=11}]
+17964 [pool-7-thread-18] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - COMPLETE ORDER BEFORE SINGLE OPTIMIZATION: CreateOrderMessage{orderId=1000012, customerId=1307481, price=14, items={1128673=5, 1441668=4, 1155882=5}, locationInfo=[LocationInfo{productID=1128673, storageRoom=C, hallway=3, rack=11}, LocationInfo{productID=1441668, storageRoom=A, hallway=3, rack=8}, LocationInfo{productID=1155882, storageRoom=C, hallway=1, rack=11}]}
+17964 [pool-7-thread-18] INFO  be.kdg.se3.warmred.picker.domain.PickingImpl  - locationinfo before sort: [LocationInfo{productID=1128673, storageRoom=C, hallway=3, rack=11}, LocationInfo{productID=1441668, storageRoom=A, hallway=3, rack=8}, LocationInfo{productID=1155882, storageRoom=C, hallway=1, rack=11}]
+17964 [pool-7-thread-18] INFO  be.kdg.se3.warmred.picker.domain.PickingImpl  - locationinfo after sort: [LocationInfo{productID=1441668, storageRoom=A, hallway=3, rack=8}, LocationInfo{productID=1155882, storageRoom=C, hallway=1, rack=11}, LocationInfo{productID=1128673, storageRoom=C, hallway=3, rack=11}]
+17964 [pool-7-thread-18] INFO  be.kdg.se3.warmred.picker.domain.PickingImpl  - items before sort: {1128673=5, 1441668=4, 1155882=5}
+17964 [pool-7-thread-18] INFO  be.kdg.se3.warmred.picker.domain.PickingImpl  - items after sort: {1441668=4, 1155882=5, 1128673=5}
+17964 [pool-7-thread-18] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - COMPLETE ORDER AFTER SINGLE OPTIMIZATION: CreateOrderMessage{orderId=1000012, customerId=1307481, price=14, items={1441668=4, 1155882=5, 1128673=5}, locationInfo=[LocationInfo{productID=1441668, storageRoom=A, hallway=3, rack=8}, LocationInfo{productID=1155882, storageRoom=C, hallway=1, rack=11}, LocationInfo{productID=1128673, storageRoom=C, hallway=3, rack=11}]}
+18096 [pool-7-thread-18] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - RabbitMQ initialized
+18096 [pool-7-thread-18] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Sending a DTO
+18096 [pool-7-thread-18] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - Formatting a DTO to an XML string
+18096 [pool-7-thread-18] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - The message to format is of type:'ExtraCreateOrderMessageDto'
+18101 [pool-7-thread-18] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Pushing message: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<extraCreateOrderMessageDto>
+    <orderId>1000012</orderId>
+    <customerId>1307481</customerId>
+    <price>14</price>
+    <items>
+        <entry>
+            <key>1441668</key>
+            <value>4</value>
+        </entry>
+        <entry>
+            <key>1155882</key>
+            <value>5</value>
+        </entry>
+        <entry>
+            <key>1128673</key>
+            <value>5</value>
+        </entry>
+    </items>
+    <locationInfoList>
+        <productID>1441668</productID>
+        <storageRoom>A</storageRoom>
+        <hallway>3</hallway>
+        <rack>8</rack>
+    </locationInfoList>
+    <locationInfoList>
+        <productID>1155882</productID>
+        <storageRoom>C</storageRoom>
+        <hallway>1</hallway>
+        <rack>11</rack>
+    </locationInfoList>
+    <locationInfoList>
+        <productID>1128673</productID>
+        <storageRoom>C</storageRoom>
+        <hallway>3</hallway>
+        <rack>11</rack>
+    </locationInfoList>
+</extraCreateOrderMessageDto>
+
+18137 [pool-7-thread-18] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Channel and connection from RabbitMQ closed
+18138 [pool-7-thread-18] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - ITEMS IN THE PRODUCT MAP TOO SEE IF CLEAR CACHE ACTUALLY WORKS: [LocationInfo{productID=1020434, storageRoom=C, hallway=2, rack=19}, LocationInfo{productID=1071435, storageRoom=B, hallway=3, rack=6}, LocationInfo{productID=1128673, storageRoom=C, hallway=3, rack=11}, LocationInfo{productID=1155882, storageRoom=C, hallway=1, rack=11}, LocationInfo{productID=1185752, storageRoom=B, hallway=1, rack=19}, LocationInfo{productID=1217883, storageRoom=A, hallway=3, rack=5}, LocationInfo{productID=1374195, storageRoom=C, hallway=3, rack=5}, LocationInfo{productID=1441668, storageRoom=A, hallway=3, rack=8}, LocationInfo{productID=1471495, storageRoom=C, hallway=1, rack=6}, LocationInfo{productID=1597859, storageRoom=A, hallway=3, rack=11}, LocationInfo{productID=1748186, storageRoom=B, hallway=1, rack=13}, LocationInfo{productID=1812061, storageRoom=A, hallway=3, rack=1}, LocationInfo{productID=1821825, storageRoom=C, hallway=2, rack=16}, LocationInfo{productID=1852505, storageRoom=A, hallway=2, rack=10}, LocationInfo{productID=1867982, storageRoom=C, hallway=3, rack=7}, LocationInfo{productID=1973633, storageRoom=C, hallway=3, rack=1}]
+18138 [pool-7-thread-18] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Delivered message to listener
+19139 [pool-7-thread-19] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Received message from RabbitMQ queue Internal: Orders
+19139 [pool-7-thread-19] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - Formatting an XML string to an DTO object
+19139 [pool-7-thread-19] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - The message to format is of type:'CreateOrderMessageDto'
+19143 [pool-7-thread-19] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Calling location service for productId: 1489218
+19143 [pool-7-thread-19] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Calling location service for productId: 1597859
+19143 [pool-7-thread-19] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Product not found in memory cache, calling api service
+19143 [pool-7-thread-19] INFO  be.kdg.se3.warmred.picker.adapters.LocationServiceApi  - Making a call to www.services4se3.com/locationservice/1489218
+19243 [pool-7-thread-19] INFO  be.kdg.se3.warmred.picker.adapters.LocationServiceApi  - response as json: {"productID":1489218,"storageRoom":"C","hallway":1,"rack":11}
+19243 [pool-7-thread-19] INFO  be.kdg.se3.warmred.picker.adapters.LocationConverter  - Converting location info json to location info object
+19243 [pool-7-thread-19] INFO  be.kdg.se3.warmred.picker.adapters.LocationConverter  - Converted info: LocationInfo{productID=1489218, storageRoom=C, hallway=1, rack=11}
+19243 [pool-7-thread-19] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Adding location info to the list. INFO: LocationInfo{productID=1489218, storageRoom=C, hallway=1, rack=11}
+19243 [pool-7-thread-19] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Location info in the list of CreateOrderMessage: [LocationInfo{productID=1489218, storageRoom=C, hallway=1, rack=11}]
+19243 [pool-7-thread-19] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Found product in memory cache with ID: 1597859
+19243 [pool-7-thread-19] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Adding location info to the list. INFO: LocationInfo{productID=1597859, storageRoom=A, hallway=3, rack=11}
+19243 [pool-7-thread-19] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Location info in the list of CreateOrderMessage: [LocationInfo{productID=1489218, storageRoom=C, hallway=1, rack=11}, LocationInfo{productID=1597859, storageRoom=A, hallway=3, rack=11}]
+19243 [pool-7-thread-19] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - COMPLETE ORDER BEFORE SINGLE OPTIMIZATION: CreateOrderMessage{orderId=1000013, customerId=1736449, price=58, items={1489218=3, 1597859=1}, locationInfo=[LocationInfo{productID=1489218, storageRoom=C, hallway=1, rack=11}, LocationInfo{productID=1597859, storageRoom=A, hallway=3, rack=11}]}
+19243 [pool-7-thread-19] INFO  be.kdg.se3.warmred.picker.domain.PickingImpl  - locationinfo before sort: [LocationInfo{productID=1489218, storageRoom=C, hallway=1, rack=11}, LocationInfo{productID=1597859, storageRoom=A, hallway=3, rack=11}]
+19244 [pool-7-thread-19] INFO  be.kdg.se3.warmred.picker.domain.PickingImpl  - locationinfo after sort: [LocationInfo{productID=1597859, storageRoom=A, hallway=3, rack=11}, LocationInfo{productID=1489218, storageRoom=C, hallway=1, rack=11}]
+19244 [pool-7-thread-19] INFO  be.kdg.se3.warmred.picker.domain.PickingImpl  - items before sort: {1489218=3, 1597859=1}
+19244 [pool-7-thread-19] INFO  be.kdg.se3.warmred.picker.domain.PickingImpl  - items after sort: {1597859=1, 1489218=3}
+19244 [pool-7-thread-19] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - COMPLETE ORDER AFTER SINGLE OPTIMIZATION: CreateOrderMessage{orderId=1000013, customerId=1736449, price=58, items={1597859=1, 1489218=3}, locationInfo=[LocationInfo{productID=1597859, storageRoom=A, hallway=3, rack=11}, LocationInfo{productID=1489218, storageRoom=C, hallway=1, rack=11}]}
+19379 [pool-7-thread-19] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - RabbitMQ initialized
+19379 [pool-7-thread-19] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Sending a DTO
+19379 [pool-7-thread-19] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - Formatting a DTO to an XML string
+19379 [pool-7-thread-19] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - The message to format is of type:'ExtraCreateOrderMessageDto'
+19386 [pool-7-thread-19] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Pushing message: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<extraCreateOrderMessageDto>
+    <orderId>1000013</orderId>
+    <customerId>1736449</customerId>
+    <price>58</price>
+    <items>
+        <entry>
+            <key>1597859</key>
+            <value>1</value>
+        </entry>
+        <entry>
+            <key>1489218</key>
+            <value>3</value>
+        </entry>
+    </items>
+    <locationInfoList>
+        <productID>1597859</productID>
+        <storageRoom>A</storageRoom>
+        <hallway>3</hallway>
+        <rack>11</rack>
+    </locationInfoList>
+    <locationInfoList>
+        <productID>1489218</productID>
+        <storageRoom>C</storageRoom>
+        <hallway>1</hallway>
+        <rack>11</rack>
+    </locationInfoList>
+</extraCreateOrderMessageDto>
+
+19432 [pool-7-thread-19] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Channel and connection from RabbitMQ closed
+19432 [pool-7-thread-19] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - ITEMS IN THE PRODUCT MAP TOO SEE IF CLEAR CACHE ACTUALLY WORKS: [LocationInfo{productID=1020434, storageRoom=C, hallway=2, rack=19}, LocationInfo{productID=1071435, storageRoom=B, hallway=3, rack=6}, LocationInfo{productID=1128673, storageRoom=C, hallway=3, rack=11}, LocationInfo{productID=1155882, storageRoom=C, hallway=1, rack=11}, LocationInfo{productID=1185752, storageRoom=B, hallway=1, rack=19}, LocationInfo{productID=1217883, storageRoom=A, hallway=3, rack=5}, LocationInfo{productID=1374195, storageRoom=C, hallway=3, rack=5}, LocationInfo{productID=1441668, storageRoom=A, hallway=3, rack=8}, LocationInfo{productID=1471495, storageRoom=C, hallway=1, rack=6}, LocationInfo{productID=1489218, storageRoom=C, hallway=1, rack=11}, LocationInfo{productID=1597859, storageRoom=A, hallway=3, rack=11}, LocationInfo{productID=1748186, storageRoom=B, hallway=1, rack=13}, LocationInfo{productID=1812061, storageRoom=A, hallway=3, rack=1}, LocationInfo{productID=1821825, storageRoom=C, hallway=2, rack=16}, LocationInfo{productID=1852505, storageRoom=A, hallway=2, rack=10}, LocationInfo{productID=1867982, storageRoom=C, hallway=3, rack=7}, LocationInfo{productID=1973633, storageRoom=C, hallway=3, rack=1}]
+19432 [pool-7-thread-19] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Delivered message to listener
+20313 [pool-7-thread-20] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Received message from RabbitMQ queue Internal: Orders
+20313 [pool-7-thread-20] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - Formatting an XML string to an DTO object
+20314 [pool-7-thread-20] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - The message to format is of type:'CreateOrderMessageDto'
+20317 [pool-7-thread-20] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Calling location service for productId: 1856938
+20317 [pool-7-thread-20] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Calling location service for productId: 1812061
+20317 [pool-7-thread-20] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Calling location service for productId: 1217883
+20317 [pool-7-thread-20] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Calling location service for productId: 1155882
+20317 [pool-7-thread-20] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Product not found in memory cache, calling api service
+20317 [pool-7-thread-20] INFO  be.kdg.se3.warmred.picker.adapters.LocationServiceApi  - Making a call to www.services4se3.com/locationservice/1856938
+20417 [pool-7-thread-20] INFO  be.kdg.se3.warmred.picker.adapters.LocationServiceApi  - response as json: {"productID":1856938,"storageRoom":"A","hallway":3,"rack":1}
+20417 [pool-7-thread-20] INFO  be.kdg.se3.warmred.picker.adapters.LocationConverter  - Converting location info json to location info object
+20417 [pool-7-thread-20] INFO  be.kdg.se3.warmred.picker.adapters.LocationConverter  - Converted info: LocationInfo{productID=1856938, storageRoom=A, hallway=3, rack=1}
+20417 [pool-7-thread-20] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Adding location info to the list. INFO: LocationInfo{productID=1856938, storageRoom=A, hallway=3, rack=1}
+20417 [pool-7-thread-20] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Location info in the list of CreateOrderMessage: [LocationInfo{productID=1856938, storageRoom=A, hallway=3, rack=1}]
+20417 [pool-7-thread-20] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Found product in memory cache with ID: 1812061
+20417 [pool-7-thread-20] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Adding location info to the list. INFO: LocationInfo{productID=1812061, storageRoom=A, hallway=3, rack=1}
+20417 [pool-7-thread-20] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Location info in the list of CreateOrderMessage: [LocationInfo{productID=1856938, storageRoom=A, hallway=3, rack=1}, LocationInfo{productID=1812061, storageRoom=A, hallway=3, rack=1}]
+20417 [pool-7-thread-20] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Found product in memory cache with ID: 1217883
+20417 [pool-7-thread-20] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Adding location info to the list. INFO: LocationInfo{productID=1217883, storageRoom=A, hallway=3, rack=5}
+20417 [pool-7-thread-20] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Location info in the list of CreateOrderMessage: [LocationInfo{productID=1856938, storageRoom=A, hallway=3, rack=1}, LocationInfo{productID=1812061, storageRoom=A, hallway=3, rack=1}, LocationInfo{productID=1217883, storageRoom=A, hallway=3, rack=5}]
+20417 [pool-7-thread-20] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Found product in memory cache with ID: 1155882
+20417 [pool-7-thread-20] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Adding location info to the list. INFO: LocationInfo{productID=1155882, storageRoom=C, hallway=1, rack=11}
+20417 [pool-7-thread-20] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Location info in the list of CreateOrderMessage: [LocationInfo{productID=1856938, storageRoom=A, hallway=3, rack=1}, LocationInfo{productID=1812061, storageRoom=A, hallway=3, rack=1}, LocationInfo{productID=1217883, storageRoom=A, hallway=3, rack=5}, LocationInfo{productID=1155882, storageRoom=C, hallway=1, rack=11}]
+20417 [pool-7-thread-20] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - COMPLETE ORDER BEFORE SINGLE OPTIMIZATION: CreateOrderMessage{orderId=1000014, customerId=1307481, price=66, items={1856938=4, 1812061=2, 1217883=4, 1155882=4}, locationInfo=[LocationInfo{productID=1856938, storageRoom=A, hallway=3, rack=1}, LocationInfo{productID=1812061, storageRoom=A, hallway=3, rack=1}, LocationInfo{productID=1217883, storageRoom=A, hallway=3, rack=5}, LocationInfo{productID=1155882, storageRoom=C, hallway=1, rack=11}]}
+20417 [pool-7-thread-20] INFO  be.kdg.se3.warmred.picker.domain.PickingImpl  - locationinfo before sort: [LocationInfo{productID=1856938, storageRoom=A, hallway=3, rack=1}, LocationInfo{productID=1812061, storageRoom=A, hallway=3, rack=1}, LocationInfo{productID=1217883, storageRoom=A, hallway=3, rack=5}, LocationInfo{productID=1155882, storageRoom=C, hallway=1, rack=11}]
+20417 [pool-7-thread-20] INFO  be.kdg.se3.warmred.picker.domain.PickingImpl  - locationinfo after sort: [LocationInfo{productID=1856938, storageRoom=A, hallway=3, rack=1}, LocationInfo{productID=1812061, storageRoom=A, hallway=3, rack=1}, LocationInfo{productID=1217883, storageRoom=A, hallway=3, rack=5}, LocationInfo{productID=1155882, storageRoom=C, hallway=1, rack=11}]
+20417 [pool-7-thread-20] INFO  be.kdg.se3.warmred.picker.domain.PickingImpl  - items before sort: {1856938=4, 1812061=2, 1217883=4, 1155882=4}
+20423 [pool-7-thread-20] INFO  be.kdg.se3.warmred.picker.domain.PickingImpl  - items after sort: {1856938=4, 1812061=2, 1217883=4, 1155882=4}
+20423 [pool-7-thread-20] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - COMPLETE ORDER AFTER SINGLE OPTIMIZATION: CreateOrderMessage{orderId=1000014, customerId=1307481, price=66, items={1856938=4, 1812061=2, 1217883=4, 1155882=4}, locationInfo=[LocationInfo{productID=1856938, storageRoom=A, hallway=3, rack=1}, LocationInfo{productID=1812061, storageRoom=A, hallway=3, rack=1}, LocationInfo{productID=1217883, storageRoom=A, hallway=3, rack=5}, LocationInfo{productID=1155882, storageRoom=C, hallway=1, rack=11}]}
+20547 [pool-7-thread-20] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - RabbitMQ initialized
+20547 [pool-7-thread-20] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Sending a DTO
+20547 [pool-7-thread-20] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - Formatting a DTO to an XML string
+20547 [pool-7-thread-20] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - The message to format is of type:'ExtraCreateOrderMessageDto'
+20553 [pool-7-thread-20] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Pushing message: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<extraCreateOrderMessageDto>
+    <orderId>1000014</orderId>
+    <customerId>1307481</customerId>
+    <price>66</price>
+    <items>
+        <entry>
+            <key>1856938</key>
+            <value>4</value>
+        </entry>
+        <entry>
+            <key>1812061</key>
+            <value>2</value>
+        </entry>
+        <entry>
+            <key>1217883</key>
+            <value>4</value>
+        </entry>
+        <entry>
+            <key>1155882</key>
+            <value>4</value>
+        </entry>
+    </items>
+    <locationInfoList>
+        <productID>1856938</productID>
+        <storageRoom>A</storageRoom>
+        <hallway>3</hallway>
+        <rack>1</rack>
+    </locationInfoList>
+    <locationInfoList>
+        <productID>1812061</productID>
+        <storageRoom>A</storageRoom>
+        <hallway>3</hallway>
+        <rack>1</rack>
+    </locationInfoList>
+    <locationInfoList>
+        <productID>1217883</productID>
+        <storageRoom>A</storageRoom>
+        <hallway>3</hallway>
+        <rack>5</rack>
+    </locationInfoList>
+    <locationInfoList>
+        <productID>1155882</productID>
+        <storageRoom>C</storageRoom>
+        <hallway>1</hallway>
+        <rack>11</rack>
+    </locationInfoList>
+</extraCreateOrderMessageDto>
+
+20589 [pool-7-thread-20] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Channel and connection from RabbitMQ closed
+20589 [pool-7-thread-20] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - ITEMS IN THE PRODUCT MAP TOO SEE IF CLEAR CACHE ACTUALLY WORKS: [LocationInfo{productID=1020434, storageRoom=C, hallway=2, rack=19}, LocationInfo{productID=1071435, storageRoom=B, hallway=3, rack=6}, LocationInfo{productID=1128673, storageRoom=C, hallway=3, rack=11}, LocationInfo{productID=1155882, storageRoom=C, hallway=1, rack=11}, LocationInfo{productID=1185752, storageRoom=B, hallway=1, rack=19}, LocationInfo{productID=1217883, storageRoom=A, hallway=3, rack=5}, LocationInfo{productID=1374195, storageRoom=C, hallway=3, rack=5}, LocationInfo{productID=1441668, storageRoom=A, hallway=3, rack=8}, LocationInfo{productID=1471495, storageRoom=C, hallway=1, rack=6}, LocationInfo{productID=1489218, storageRoom=C, hallway=1, rack=11}, LocationInfo{productID=1597859, storageRoom=A, hallway=3, rack=11}, LocationInfo{productID=1748186, storageRoom=B, hallway=1, rack=13}, LocationInfo{productID=1812061, storageRoom=A, hallway=3, rack=1}, LocationInfo{productID=1821825, storageRoom=C, hallway=2, rack=16}, LocationInfo{productID=1852505, storageRoom=A, hallway=2, rack=10}, LocationInfo{productID=1856938, storageRoom=A, hallway=3, rack=1}, LocationInfo{productID=1867982, storageRoom=C, hallway=3, rack=7}, LocationInfo{productID=1973633, storageRoom=C, hallway=3, rack=1}]
+20589 [pool-7-thread-20] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Delivered message to listener
+21496 [pool-7-thread-21] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Received message from RabbitMQ queue Internal: Orders
+21496 [pool-7-thread-21] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - Formatting an XML string to an DTO object
+21497 [pool-7-thread-21] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - The message to format is of type:'CancelOrderMessageDto'
+21499 [pool-7-thread-21] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Ready to do stuff with CancelOrderMessage with id: 1000003
+21499 [pool-7-thread-21] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Delivered message to listener
+21671 [pool-7-thread-22] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Received message from RabbitMQ queue Internal: Orders
+21671 [pool-7-thread-22] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - Formatting an XML string to an DTO object
+21671 [pool-7-thread-22] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - The message to format is of type:'CreateOrderMessageDto'
+21676 [pool-7-thread-22] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Calling location service for productId: 1852505
+21676 [pool-7-thread-22] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Calling location service for productId: 1217883
+21676 [pool-7-thread-22] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Found product in memory cache with ID: 1852505
+21676 [pool-7-thread-22] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Adding location info to the list. INFO: LocationInfo{productID=1852505, storageRoom=A, hallway=2, rack=10}
+21676 [pool-7-thread-22] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Location info in the list of CreateOrderMessage: [LocationInfo{productID=1852505, storageRoom=A, hallway=2, rack=10}]
+21676 [pool-7-thread-22] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Found product in memory cache with ID: 1217883
+21676 [pool-7-thread-22] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Adding location info to the list. INFO: LocationInfo{productID=1217883, storageRoom=A, hallway=3, rack=5}
+21676 [pool-7-thread-22] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Location info in the list of CreateOrderMessage: [LocationInfo{productID=1852505, storageRoom=A, hallway=2, rack=10}, LocationInfo{productID=1217883, storageRoom=A, hallway=3, rack=5}]
+21676 [pool-7-thread-22] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - COMPLETE ORDER BEFORE SINGLE OPTIMIZATION: CreateOrderMessage{orderId=1000015, customerId=1508709, price=38, items={1852505=5, 1217883=1}, locationInfo=[LocationInfo{productID=1852505, storageRoom=A, hallway=2, rack=10}, LocationInfo{productID=1217883, storageRoom=A, hallway=3, rack=5}]}
+21676 [pool-7-thread-22] INFO  be.kdg.se3.warmred.picker.domain.PickingImpl  - locationinfo before sort: [LocationInfo{productID=1852505, storageRoom=A, hallway=2, rack=10}, LocationInfo{productID=1217883, storageRoom=A, hallway=3, rack=5}]
+21676 [pool-7-thread-22] INFO  be.kdg.se3.warmred.picker.domain.PickingImpl  - locationinfo after sort: [LocationInfo{productID=1852505, storageRoom=A, hallway=2, rack=10}, LocationInfo{productID=1217883, storageRoom=A, hallway=3, rack=5}]
+21676 [pool-7-thread-22] INFO  be.kdg.se3.warmred.picker.domain.PickingImpl  - items before sort: {1852505=5, 1217883=1}
+21676 [pool-7-thread-22] INFO  be.kdg.se3.warmred.picker.domain.PickingImpl  - items after sort: {1852505=5, 1217883=1}
+21676 [pool-7-thread-22] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - COMPLETE ORDER AFTER SINGLE OPTIMIZATION: CreateOrderMessage{orderId=1000015, customerId=1508709, price=38, items={1852505=5, 1217883=1}, locationInfo=[LocationInfo{productID=1852505, storageRoom=A, hallway=2, rack=10}, LocationInfo{productID=1217883, storageRoom=A, hallway=3, rack=5}]}
+21816 [pool-7-thread-22] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - RabbitMQ initialized
+21816 [pool-7-thread-22] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Sending a DTO
+21816 [pool-7-thread-22] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - Formatting a DTO to an XML string
+21816 [pool-7-thread-22] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - The message to format is of type:'ExtraCreateOrderMessageDto'
+21823 [pool-7-thread-22] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Pushing message: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<extraCreateOrderMessageDto>
+    <orderId>1000015</orderId>
+    <customerId>1508709</customerId>
+    <price>38</price>
+    <items>
+        <entry>
+            <key>1852505</key>
+            <value>5</value>
+        </entry>
+        <entry>
+            <key>1217883</key>
+            <value>1</value>
+        </entry>
+    </items>
+    <locationInfoList>
+        <productID>1852505</productID>
+        <storageRoom>A</storageRoom>
+        <hallway>2</hallway>
+        <rack>10</rack>
+    </locationInfoList>
+    <locationInfoList>
+        <productID>1217883</productID>
+        <storageRoom>A</storageRoom>
+        <hallway>3</hallway>
+        <rack>5</rack>
+    </locationInfoList>
+</extraCreateOrderMessageDto>
+
+21865 [pool-7-thread-22] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Channel and connection from RabbitMQ closed
+21865 [pool-7-thread-22] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - ITEMS IN THE PRODUCT MAP TOO SEE IF CLEAR CACHE ACTUALLY WORKS: [LocationInfo{productID=1020434, storageRoom=C, hallway=2, rack=19}, LocationInfo{productID=1071435, storageRoom=B, hallway=3, rack=6}, LocationInfo{productID=1128673, storageRoom=C, hallway=3, rack=11}, LocationInfo{productID=1155882, storageRoom=C, hallway=1, rack=11}, LocationInfo{productID=1185752, storageRoom=B, hallway=1, rack=19}, LocationInfo{productID=1217883, storageRoom=A, hallway=3, rack=5}, LocationInfo{productID=1374195, storageRoom=C, hallway=3, rack=5}, LocationInfo{productID=1441668, storageRoom=A, hallway=3, rack=8}, LocationInfo{productID=1471495, storageRoom=C, hallway=1, rack=6}, LocationInfo{productID=1489218, storageRoom=C, hallway=1, rack=11}, LocationInfo{productID=1597859, storageRoom=A, hallway=3, rack=11}, LocationInfo{productID=1748186, storageRoom=B, hallway=1, rack=13}, LocationInfo{productID=1812061, storageRoom=A, hallway=3, rack=1}, LocationInfo{productID=1821825, storageRoom=C, hallway=2, rack=16}, LocationInfo{productID=1852505, storageRoom=A, hallway=2, rack=10}, LocationInfo{productID=1856938, storageRoom=A, hallway=3, rack=1}, LocationInfo{productID=1867982, storageRoom=C, hallway=3, rack=7}, LocationInfo{productID=1973633, storageRoom=C, hallway=3, rack=1}]
+21865 [pool-7-thread-22] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Delivered message to listener
+22844 [pool-7-thread-23] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Received message from RabbitMQ queue Internal: Orders
+22844 [pool-7-thread-23] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - Formatting an XML string to an DTO object
+22845 [pool-7-thread-23] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - The message to format is of type:'CreateOrderMessageDto'
+22848 [pool-7-thread-23] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Calling location service for productId: 1812061
+22848 [pool-7-thread-23] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Found product in memory cache with ID: 1812061
+22848 [pool-7-thread-23] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Adding location info to the list. INFO: LocationInfo{productID=1812061, storageRoom=A, hallway=3, rack=1}
+22848 [pool-7-thread-23] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Location info in the list of CreateOrderMessage: [LocationInfo{productID=1812061, storageRoom=A, hallway=3, rack=1}]
+22848 [pool-7-thread-23] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - COMPLETE ORDER BEFORE SINGLE OPTIMIZATION: CreateOrderMessage{orderId=1000016, customerId=1208177, price=43, items={1812061=4}, locationInfo=[LocationInfo{productID=1812061, storageRoom=A, hallway=3, rack=1}]}
+22848 [pool-7-thread-23] INFO  be.kdg.se3.warmred.picker.domain.PickingImpl  - locationinfo before sort: [LocationInfo{productID=1812061, storageRoom=A, hallway=3, rack=1}]
+22848 [pool-7-thread-23] INFO  be.kdg.se3.warmred.picker.domain.PickingImpl  - locationinfo after sort: [LocationInfo{productID=1812061, storageRoom=A, hallway=3, rack=1}]
+22849 [pool-7-thread-23] INFO  be.kdg.se3.warmred.picker.domain.PickingImpl  - items before sort: {1812061=4}
+22849 [pool-7-thread-23] INFO  be.kdg.se3.warmred.picker.domain.PickingImpl  - items after sort: {1812061=4}
+22849 [pool-7-thread-23] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - COMPLETE ORDER AFTER SINGLE OPTIMIZATION: CreateOrderMessage{orderId=1000016, customerId=1208177, price=43, items={1812061=4}, locationInfo=[LocationInfo{productID=1812061, storageRoom=A, hallway=3, rack=1}]}
+22984 [pool-7-thread-23] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - RabbitMQ initialized
+22984 [pool-7-thread-23] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Sending a DTO
+22984 [pool-7-thread-23] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - Formatting a DTO to an XML string
+22984 [pool-7-thread-23] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - The message to format is of type:'ExtraCreateOrderMessageDto'
+22994 [pool-7-thread-23] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Pushing message: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<extraCreateOrderMessageDto>
+    <orderId>1000016</orderId>
+    <customerId>1208177</customerId>
+    <price>43</price>
+    <items>
+        <entry>
+            <key>1812061</key>
+            <value>4</value>
+        </entry>
+    </items>
+    <locationInfoList>
+        <productID>1812061</productID>
+        <storageRoom>A</storageRoom>
+        <hallway>3</hallway>
+        <rack>1</rack>
+    </locationInfoList>
+</extraCreateOrderMessageDto>
+
+23033 [pool-7-thread-23] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Channel and connection from RabbitMQ closed
+23033 [pool-7-thread-23] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - ITEMS IN THE PRODUCT MAP TOO SEE IF CLEAR CACHE ACTUALLY WORKS: [LocationInfo{productID=1020434, storageRoom=C, hallway=2, rack=19}, LocationInfo{productID=1071435, storageRoom=B, hallway=3, rack=6}, LocationInfo{productID=1128673, storageRoom=C, hallway=3, rack=11}, LocationInfo{productID=1155882, storageRoom=C, hallway=1, rack=11}, LocationInfo{productID=1185752, storageRoom=B, hallway=1, rack=19}, LocationInfo{productID=1217883, storageRoom=A, hallway=3, rack=5}, LocationInfo{productID=1374195, storageRoom=C, hallway=3, rack=5}, LocationInfo{productID=1441668, storageRoom=A, hallway=3, rack=8}, LocationInfo{productID=1471495, storageRoom=C, hallway=1, rack=6}, LocationInfo{productID=1489218, storageRoom=C, hallway=1, rack=11}, LocationInfo{productID=1597859, storageRoom=A, hallway=3, rack=11}, LocationInfo{productID=1748186, storageRoom=B, hallway=1, rack=13}, LocationInfo{productID=1812061, storageRoom=A, hallway=3, rack=1}, LocationInfo{productID=1821825, storageRoom=C, hallway=2, rack=16}, LocationInfo{productID=1852505, storageRoom=A, hallway=2, rack=10}, LocationInfo{productID=1856938, storageRoom=A, hallway=3, rack=1}, LocationInfo{productID=1867982, storageRoom=C, hallway=3, rack=7}, LocationInfo{productID=1973633, storageRoom=C, hallway=3, rack=1}]
+23033 [pool-7-thread-23] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Delivered message to listener
+24019 [pool-7-thread-24] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Received message from RabbitMQ queue Internal: Orders
+24020 [pool-7-thread-24] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - Formatting an XML string to an DTO object
+24022 [pool-7-thread-24] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - The message to format is of type:'CreateOrderMessageDto'
+24027 [pool-7-thread-24] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Calling location service for productId: 1471495
+24027 [pool-7-thread-24] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Calling location service for productId: 1856938
+24027 [pool-7-thread-24] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Found product in memory cache with ID: 1471495
+24028 [pool-7-thread-24] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Adding location info to the list. INFO: LocationInfo{productID=1471495, storageRoom=C, hallway=1, rack=6}
+24028 [pool-7-thread-24] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Location info in the list of CreateOrderMessage: [LocationInfo{productID=1471495, storageRoom=C, hallway=1, rack=6}]
+24028 [pool-7-thread-24] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Found product in memory cache with ID: 1856938
+24028 [pool-7-thread-24] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Adding location info to the list. INFO: LocationInfo{productID=1856938, storageRoom=A, hallway=3, rack=1}
+24028 [pool-7-thread-24] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Location info in the list of CreateOrderMessage: [LocationInfo{productID=1471495, storageRoom=C, hallway=1, rack=6}, LocationInfo{productID=1856938, storageRoom=A, hallway=3, rack=1}]
+24028 [pool-7-thread-24] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - COMPLETE ORDER BEFORE SINGLE OPTIMIZATION: CreateOrderMessage{orderId=1000017, customerId=1037879, price=16, items={1471495=1, 1856938=2}, locationInfo=[LocationInfo{productID=1471495, storageRoom=C, hallway=1, rack=6}, LocationInfo{productID=1856938, storageRoom=A, hallway=3, rack=1}]}
+24028 [pool-7-thread-24] INFO  be.kdg.se3.warmred.picker.domain.PickingImpl  - locationinfo before sort: [LocationInfo{productID=1471495, storageRoom=C, hallway=1, rack=6}, LocationInfo{productID=1856938, storageRoom=A, hallway=3, rack=1}]
+24028 [pool-7-thread-24] INFO  be.kdg.se3.warmred.picker.domain.PickingImpl  - locationinfo after sort: [LocationInfo{productID=1856938, storageRoom=A, hallway=3, rack=1}, LocationInfo{productID=1471495, storageRoom=C, hallway=1, rack=6}]
+24028 [pool-7-thread-24] INFO  be.kdg.se3.warmred.picker.domain.PickingImpl  - items before sort: {1471495=1, 1856938=2}
+24028 [pool-7-thread-24] INFO  be.kdg.se3.warmred.picker.domain.PickingImpl  - items after sort: {1856938=2, 1471495=1}
+24028 [pool-7-thread-24] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - COMPLETE ORDER AFTER SINGLE OPTIMIZATION: CreateOrderMessage{orderId=1000017, customerId=1037879, price=16, items={1856938=2, 1471495=1}, locationInfo=[LocationInfo{productID=1856938, storageRoom=A, hallway=3, rack=1}, LocationInfo{productID=1471495, storageRoom=C, hallway=1, rack=6}]}
+24154 [pool-7-thread-24] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - RabbitMQ initialized
+24154 [pool-7-thread-24] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Sending a DTO
+24154 [pool-7-thread-24] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - Formatting a DTO to an XML string
+24154 [pool-7-thread-24] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - The message to format is of type:'ExtraCreateOrderMessageDto'
+24167 [pool-7-thread-24] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Pushing message: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<extraCreateOrderMessageDto>
+    <orderId>1000017</orderId>
+    <customerId>1037879</customerId>
+    <price>16</price>
+    <items>
+        <entry>
+            <key>1856938</key>
+            <value>2</value>
+        </entry>
+        <entry>
+            <key>1471495</key>
+            <value>1</value>
+        </entry>
+    </items>
+    <locationInfoList>
+        <productID>1856938</productID>
+        <storageRoom>A</storageRoom>
+        <hallway>3</hallway>
+        <rack>1</rack>
+    </locationInfoList>
+    <locationInfoList>
+        <productID>1471495</productID>
+        <storageRoom>C</storageRoom>
+        <hallway>1</hallway>
+        <rack>6</rack>
+    </locationInfoList>
+</extraCreateOrderMessageDto>
+
+24208 [pool-7-thread-24] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Channel and connection from RabbitMQ closed
+24209 [pool-7-thread-24] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - ITEMS IN THE PRODUCT MAP TOO SEE IF CLEAR CACHE ACTUALLY WORKS: [LocationInfo{productID=1020434, storageRoom=C, hallway=2, rack=19}, LocationInfo{productID=1071435, storageRoom=B, hallway=3, rack=6}, LocationInfo{productID=1128673, storageRoom=C, hallway=3, rack=11}, LocationInfo{productID=1155882, storageRoom=C, hallway=1, rack=11}, LocationInfo{productID=1185752, storageRoom=B, hallway=1, rack=19}, LocationInfo{productID=1217883, storageRoom=A, hallway=3, rack=5}, LocationInfo{productID=1374195, storageRoom=C, hallway=3, rack=5}, LocationInfo{productID=1441668, storageRoom=A, hallway=3, rack=8}, LocationInfo{productID=1471495, storageRoom=C, hallway=1, rack=6}, LocationInfo{productID=1489218, storageRoom=C, hallway=1, rack=11}, LocationInfo{productID=1597859, storageRoom=A, hallway=3, rack=11}, LocationInfo{productID=1748186, storageRoom=B, hallway=1, rack=13}, LocationInfo{productID=1812061, storageRoom=A, hallway=3, rack=1}, LocationInfo{productID=1821825, storageRoom=C, hallway=2, rack=16}, LocationInfo{productID=1852505, storageRoom=A, hallway=2, rack=10}, LocationInfo{productID=1856938, storageRoom=A, hallway=3, rack=1}, LocationInfo{productID=1867982, storageRoom=C, hallway=3, rack=7}, LocationInfo{productID=1973633, storageRoom=C, hallway=3, rack=1}]
+24209 [pool-7-thread-24] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Delivered message to listener
+25201 [pool-7-thread-25] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Received message from RabbitMQ queue Internal: Orders
+25202 [pool-7-thread-25] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - Formatting an XML string to an DTO object
+25202 [pool-7-thread-25] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - The message to format is of type:'CreateOrderMessageDto'
+25205 [pool-7-thread-25] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Calling location service for productId: 1410361
+25205 [pool-7-thread-25] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Calling location service for productId: 1020434
+25205 [pool-7-thread-25] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Product not found in memory cache, calling api service
+25205 [pool-7-thread-25] INFO  be.kdg.se3.warmred.picker.adapters.LocationServiceApi  - Making a call to www.services4se3.com/locationservice/1410361
+25306 [pool-7-thread-25] INFO  be.kdg.se3.warmred.picker.adapters.LocationServiceApi  - response as json: {"productID":1410361,"storageRoom":"C","hallway":2,"rack":16}
+25306 [pool-7-thread-25] INFO  be.kdg.se3.warmred.picker.adapters.LocationConverter  - Converting location info json to location info object
+25306 [pool-7-thread-25] INFO  be.kdg.se3.warmred.picker.adapters.LocationConverter  - Converted info: LocationInfo{productID=1410361, storageRoom=C, hallway=2, rack=16}
+25306 [pool-7-thread-25] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Adding location info to the list. INFO: LocationInfo{productID=1410361, storageRoom=C, hallway=2, rack=16}
+25306 [pool-7-thread-25] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Location info in the list of CreateOrderMessage: [LocationInfo{productID=1410361, storageRoom=C, hallway=2, rack=16}]
+25307 [pool-7-thread-25] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Found product in memory cache with ID: 1020434
+25307 [pool-7-thread-25] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Adding location info to the list. INFO: LocationInfo{productID=1020434, storageRoom=C, hallway=2, rack=19}
+25307 [pool-7-thread-25] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Location info in the list of CreateOrderMessage: [LocationInfo{productID=1410361, storageRoom=C, hallway=2, rack=16}, LocationInfo{productID=1020434, storageRoom=C, hallway=2, rack=19}]
+25307 [pool-7-thread-25] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - COMPLETE ORDER BEFORE SINGLE OPTIMIZATION: CreateOrderMessage{orderId=1000018, customerId=1464787, price=75, items={1410361=5, 1020434=2}, locationInfo=[LocationInfo{productID=1410361, storageRoom=C, hallway=2, rack=16}, LocationInfo{productID=1020434, storageRoom=C, hallway=2, rack=19}]}
+25307 [pool-7-thread-25] INFO  be.kdg.se3.warmred.picker.domain.PickingImpl  - locationinfo before sort: [LocationInfo{productID=1410361, storageRoom=C, hallway=2, rack=16}, LocationInfo{productID=1020434, storageRoom=C, hallway=2, rack=19}]
+25307 [pool-7-thread-25] INFO  be.kdg.se3.warmred.picker.domain.PickingImpl  - locationinfo after sort: [LocationInfo{productID=1410361, storageRoom=C, hallway=2, rack=16}, LocationInfo{productID=1020434, storageRoom=C, hallway=2, rack=19}]
+25307 [pool-7-thread-25] INFO  be.kdg.se3.warmred.picker.domain.PickingImpl  - items before sort: {1410361=5, 1020434=2}
+25307 [pool-7-thread-25] INFO  be.kdg.se3.warmred.picker.domain.PickingImpl  - items after sort: {1410361=5, 1020434=2}
+25307 [pool-7-thread-25] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - COMPLETE ORDER AFTER SINGLE OPTIMIZATION: CreateOrderMessage{orderId=1000018, customerId=1464787, price=75, items={1410361=5, 1020434=2}, locationInfo=[LocationInfo{productID=1410361, storageRoom=C, hallway=2, rack=16}, LocationInfo{productID=1020434, storageRoom=C, hallway=2, rack=19}]}
+25444 [pool-7-thread-25] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - RabbitMQ initialized
+25444 [pool-7-thread-25] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Sending a DTO
+25444 [pool-7-thread-25] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - Formatting a DTO to an XML string
+25444 [pool-7-thread-25] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - The message to format is of type:'ExtraCreateOrderMessageDto'
+25451 [pool-7-thread-25] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Pushing message: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<extraCreateOrderMessageDto>
+    <orderId>1000018</orderId>
+    <customerId>1464787</customerId>
+    <price>75</price>
+    <items>
+        <entry>
+            <key>1410361</key>
+            <value>5</value>
+        </entry>
+        <entry>
+            <key>1020434</key>
+            <value>2</value>
+        </entry>
+    </items>
+    <locationInfoList>
+        <productID>1410361</productID>
+        <storageRoom>C</storageRoom>
+        <hallway>2</hallway>
+        <rack>16</rack>
+    </locationInfoList>
+    <locationInfoList>
+        <productID>1020434</productID>
+        <storageRoom>C</storageRoom>
+        <hallway>2</hallway>
+        <rack>19</rack>
+    </locationInfoList>
+</extraCreateOrderMessageDto>
+
+25486 [pool-7-thread-25] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Channel and connection from RabbitMQ closed
+25487 [pool-7-thread-25] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - ITEMS IN THE PRODUCT MAP TOO SEE IF CLEAR CACHE ACTUALLY WORKS: [LocationInfo{productID=1020434, storageRoom=C, hallway=2, rack=19}, LocationInfo{productID=1071435, storageRoom=B, hallway=3, rack=6}, LocationInfo{productID=1128673, storageRoom=C, hallway=3, rack=11}, LocationInfo{productID=1155882, storageRoom=C, hallway=1, rack=11}, LocationInfo{productID=1185752, storageRoom=B, hallway=1, rack=19}, LocationInfo{productID=1217883, storageRoom=A, hallway=3, rack=5}, LocationInfo{productID=1374195, storageRoom=C, hallway=3, rack=5}, LocationInfo{productID=1410361, storageRoom=C, hallway=2, rack=16}, LocationInfo{productID=1441668, storageRoom=A, hallway=3, rack=8}, LocationInfo{productID=1471495, storageRoom=C, hallway=1, rack=6}, LocationInfo{productID=1489218, storageRoom=C, hallway=1, rack=11}, LocationInfo{productID=1597859, storageRoom=A, hallway=3, rack=11}, LocationInfo{productID=1748186, storageRoom=B, hallway=1, rack=13}, LocationInfo{productID=1812061, storageRoom=A, hallway=3, rack=1}, LocationInfo{productID=1821825, storageRoom=C, hallway=2, rack=16}, LocationInfo{productID=1852505, storageRoom=A, hallway=2, rack=10}, LocationInfo{productID=1856938, storageRoom=A, hallway=3, rack=1}, LocationInfo{productID=1867982, storageRoom=C, hallway=3, rack=7}, LocationInfo{productID=1973633, storageRoom=C, hallway=3, rack=1}]
+25487 [pool-7-thread-25] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Delivered message to listener
+26389 [pool-7-thread-26] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Received message from RabbitMQ queue Internal: Orders
+26389 [pool-7-thread-26] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - Formatting an XML string to an DTO object
+26390 [pool-7-thread-26] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - The message to format is of type:'CreateOrderMessageDto'
+26393 [pool-7-thread-26] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Calling location service for productId: 1597859
+26393 [pool-7-thread-26] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Calling location service for productId: 1155882
+26393 [pool-7-thread-26] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Found product in memory cache with ID: 1597859
+26393 [pool-7-thread-26] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Adding location info to the list. INFO: LocationInfo{productID=1597859, storageRoom=A, hallway=3, rack=11}
+26393 [pool-7-thread-26] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Location info in the list of CreateOrderMessage: [LocationInfo{productID=1597859, storageRoom=A, hallway=3, rack=11}]
+26393 [pool-7-thread-26] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Found product in memory cache with ID: 1155882
+26393 [pool-7-thread-26] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Adding location info to the list. INFO: LocationInfo{productID=1155882, storageRoom=C, hallway=1, rack=11}
+26393 [pool-7-thread-26] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Location info in the list of CreateOrderMessage: [LocationInfo{productID=1597859, storageRoom=A, hallway=3, rack=11}, LocationInfo{productID=1155882, storageRoom=C, hallway=1, rack=11}]
+26393 [pool-7-thread-26] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - COMPLETE ORDER BEFORE SINGLE OPTIMIZATION: CreateOrderMessage{orderId=1000019, customerId=1337893, price=27, items={1597859=1, 1155882=3}, locationInfo=[LocationInfo{productID=1597859, storageRoom=A, hallway=3, rack=11}, LocationInfo{productID=1155882, storageRoom=C, hallway=1, rack=11}]}
+26393 [pool-7-thread-26] INFO  be.kdg.se3.warmred.picker.domain.PickingImpl  - locationinfo before sort: [LocationInfo{productID=1597859, storageRoom=A, hallway=3, rack=11}, LocationInfo{productID=1155882, storageRoom=C, hallway=1, rack=11}]
+26393 [pool-7-thread-26] INFO  be.kdg.se3.warmred.picker.domain.PickingImpl  - locationinfo after sort: [LocationInfo{productID=1597859, storageRoom=A, hallway=3, rack=11}, LocationInfo{productID=1155882, storageRoom=C, hallway=1, rack=11}]
+26393 [pool-7-thread-26] INFO  be.kdg.se3.warmred.picker.domain.PickingImpl  - items before sort: {1597859=1, 1155882=3}
+26393 [pool-7-thread-26] INFO  be.kdg.se3.warmred.picker.domain.PickingImpl  - items after sort: {1597859=1, 1155882=3}
+26393 [pool-7-thread-26] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - COMPLETE ORDER AFTER SINGLE OPTIMIZATION: CreateOrderMessage{orderId=1000019, customerId=1337893, price=27, items={1597859=1, 1155882=3}, locationInfo=[LocationInfo{productID=1597859, storageRoom=A, hallway=3, rack=11}, LocationInfo{productID=1155882, storageRoom=C, hallway=1, rack=11}]}
+26520 [pool-7-thread-26] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - RabbitMQ initialized
+26520 [pool-7-thread-26] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Sending a DTO
+26520 [pool-7-thread-26] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - Formatting a DTO to an XML string
+26520 [pool-7-thread-26] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - The message to format is of type:'ExtraCreateOrderMessageDto'
+26527 [pool-7-thread-26] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Pushing message: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<extraCreateOrderMessageDto>
+    <orderId>1000019</orderId>
+    <customerId>1337893</customerId>
+    <price>27</price>
+    <items>
+        <entry>
+            <key>1597859</key>
+            <value>1</value>
+        </entry>
+        <entry>
+            <key>1155882</key>
+            <value>3</value>
+        </entry>
+    </items>
+    <locationInfoList>
+        <productID>1597859</productID>
+        <storageRoom>A</storageRoom>
+        <hallway>3</hallway>
+        <rack>11</rack>
+    </locationInfoList>
+    <locationInfoList>
+        <productID>1155882</productID>
+        <storageRoom>C</storageRoom>
+        <hallway>1</hallway>
+        <rack>11</rack>
+    </locationInfoList>
+</extraCreateOrderMessageDto>
+
+26563 [pool-7-thread-26] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Channel and connection from RabbitMQ closed
+26564 [pool-7-thread-26] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - ITEMS IN THE PRODUCT MAP TOO SEE IF CLEAR CACHE ACTUALLY WORKS: [LocationInfo{productID=1020434, storageRoom=C, hallway=2, rack=19}, LocationInfo{productID=1071435, storageRoom=B, hallway=3, rack=6}, LocationInfo{productID=1128673, storageRoom=C, hallway=3, rack=11}, LocationInfo{productID=1155882, storageRoom=C, hallway=1, rack=11}, LocationInfo{productID=1185752, storageRoom=B, hallway=1, rack=19}, LocationInfo{productID=1217883, storageRoom=A, hallway=3, rack=5}, LocationInfo{productID=1374195, storageRoom=C, hallway=3, rack=5}, LocationInfo{productID=1410361, storageRoom=C, hallway=2, rack=16}, LocationInfo{productID=1441668, storageRoom=A, hallway=3, rack=8}, LocationInfo{productID=1471495, storageRoom=C, hallway=1, rack=6}, LocationInfo{productID=1489218, storageRoom=C, hallway=1, rack=11}, LocationInfo{productID=1597859, storageRoom=A, hallway=3, rack=11}, LocationInfo{productID=1748186, storageRoom=B, hallway=1, rack=13}, LocationInfo{productID=1812061, storageRoom=A, hallway=3, rack=1}, LocationInfo{productID=1821825, storageRoom=C, hallway=2, rack=16}, LocationInfo{productID=1852505, storageRoom=A, hallway=2, rack=10}, LocationInfo{productID=1856938, storageRoom=A, hallway=3, rack=1}, LocationInfo{productID=1867982, storageRoom=C, hallway=3, rack=7}, LocationInfo{productID=1973633, storageRoom=C, hallway=3, rack=1}]
+26564 [pool-7-thread-26] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Delivered message to listener
+0    [main] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - RabbitMQ initialized
+131  [main] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - RabbitMQ initialized
+131  [main] INFO  be.kdg.se3.warmred.picker.domain.TaskScheduler  - Running runnable be.kdg.se3.warmred.picker.domain.MessageHandler$$Lambda$1/2096057945@5b464ce8 at a fixed rate of 60 seconds
+132  [main] INFO  be.kdg.se3.warmred.picker.domain.TaskScheduler  - Running runnable be.kdg.se3.warmred.picker.domain.MessageHandler$$Lambda$2/977993101@19dfb72a at a fixed rate of 120 seconds
+256  [main] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - RabbitMQ initialized
+280  [pool-7-thread-4] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Received message from RabbitMQ queue Internal: Orders
+280  [pool-7-thread-4] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - Formatting an XML string to an DTO object
+296  [pool-7-thread-4] INFO  be.kdg.se3.warmred.picker.adapters.XmlMessageFormatter  - The message to format is of type:'CreateOrderMessageDto'
+331  [pool-7-thread-4] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Calling location service for productId: 999999
+332  [pool-7-thread-4] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Calling location service for productId: 1111111
+332  [pool-7-thread-4] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Calling location service for productId: 10000000
+332  [pool-7-thread-4] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Calling location service for productId: 2222222
+333  [pool-7-thread-4] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Product not found in memory cache, calling api service
+333  [pool-7-thread-4] INFO  be.kdg.se3.warmred.picker.adapters.LocationServiceApi  - Making a call to www.services4se3.com/locationservice/999999
+341  [pool-7-thread-4] INFO  be.kdg.se3.warmred.picker.adapters.LocationServiceApi  - response as json: {"error":"Unknown productID","description":"Wrong productID format (< 1000000)"}
+341  [pool-7-thread-4] INFO  be.kdg.se3.warmred.picker.adapters.LocationConverter  - Converting location info json to location info object
+344  [pool-7-thread-4] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Error in the conversion. 
+344  [pool-7-thread-4] WARN  be.kdg.se3.warmred.picker.domain.MessageHandler  - Added order with ID: 1000000 to the list of unprocessed orders
+344  [pool-7-thread-4] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Product not found in memory cache, calling api service
+344  [pool-7-thread-4] INFO  be.kdg.se3.warmred.picker.adapters.LocationServiceApi  - Making a call to www.services4se3.com/locationservice/1111111
+344  [pool-7-thread-4] INFO  be.kdg.se3.warmred.picker.adapters.LocationServiceApi  - response as json: {"error":"Unknown productID","description":"ID 1111111 forced an unknown productID response for testing purposes"}
+344  [pool-7-thread-4] INFO  be.kdg.se3.warmred.picker.adapters.LocationConverter  - Converting location info json to location info object
+344  [pool-7-thread-4] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Error in the conversion. 
+344  [pool-7-thread-4] WARN  be.kdg.se3.warmred.picker.domain.MessageHandler  - Added order with ID: 1000000 to the list of unprocessed orders
+344  [pool-7-thread-4] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Product not found in memory cache, calling api service
+344  [pool-7-thread-4] INFO  be.kdg.se3.warmred.picker.adapters.LocationServiceApi  - Making a call to www.services4se3.com/locationservice/10000000
+344  [pool-7-thread-4] INFO  be.kdg.se3.warmred.picker.adapters.LocationServiceApi  - response as json: {"error":"Unknown productID","description":"Wrong productID format (> 9999999)"}
+344  [pool-7-thread-4] INFO  be.kdg.se3.warmred.picker.adapters.LocationConverter  - Converting location info json to location info object
+344  [pool-7-thread-4] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Error in the conversion. 
+345  [pool-7-thread-4] WARN  be.kdg.se3.warmred.picker.domain.MessageHandler  - Added order with ID: 1000000 to the list of unprocessed orders
+345  [pool-7-thread-4] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - Product not found in memory cache, calling api service
+345  [pool-7-thread-4] INFO  be.kdg.se3.warmred.picker.adapters.LocationServiceApi  - Making a call to www.services4se3.com/locationservice/2222222
+345  [pool-7-thread-4] ERROR be.kdg.se3.warmred.picker.adapters.LocationServiceApi  - Could not reach the LocationServiceProxy
+345  [pool-7-thread-4] ERROR be.kdg.se3.warmred.picker.domain.MessageHandler  - Could not reach the api service. 
+345  [pool-7-thread-4] WARN  be.kdg.se3.warmred.picker.domain.MessageHandler  - Added order with ID: 1000000 to the list of unprocessed orders
+345  [pool-7-thread-4] WARN  be.kdg.se3.warmred.picker.domain.MessageHandler  - Order is inside the unprocessed order list
+345  [pool-7-thread-4] INFO  be.kdg.se3.warmred.picker.domain.MessageHandler  - ITEMS IN THE PRODUCT MAP TOO SEE IF CLEAR CACHE ACTUALLY WORKS: []
+345  [pool-7-thread-4] INFO  be.kdg.se3.warmred.picker.adapters.RabbitMQ  - Delivered message to listener

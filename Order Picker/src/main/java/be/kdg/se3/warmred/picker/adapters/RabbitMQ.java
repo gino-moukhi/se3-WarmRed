@@ -1,7 +1,9 @@
 package be.kdg.se3.warmred.picker.adapters;
 
 import be.kdg.se3.warmred.picker.domain.*;
-import be.kdg.se3.warmred.picker.domain.dto.Dto;
+import be.kdg.se3.warmred.picker.domain.dto.MessageDto;
+import be.kdg.se3.warmred.picker.exceptions.CommunicationException;
+import be.kdg.se3.warmred.picker.exceptions.FormatterException;
 import com.rabbitmq.client.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -12,6 +14,14 @@ import java.security.KeyManagementException;
 import java.security.NoSuchAlgorithmException;
 import java.util.concurrent.TimeoutException;
 
+/**
+ * This class is designed to be used with the RabbitMQ message broker and implements both the {@link MessageInputService}
+ * as the {@link MessageOutputService} because the order picker receives messages from the queue "Internal: Orders" and sends
+ * messages to the queue "Internal: Logistics"
+ *
+ * @author Gino Moukhi
+ * @version 1.0.0
+ */
 public class RabbitMQ implements MessageOutputService, MessageInputService {
     private final Logger logger = LoggerFactory.getLogger(RabbitMQ.class);
     private final String connectionString;
@@ -76,6 +86,12 @@ public class RabbitMQ implements MessageOutputService, MessageInputService {
         }
     }
 
+    /**
+     * Method that handles the reading of the xml messages from the queue and calls the formatter before sending them to the listener
+     *
+     * @param listener A class that handles all incoming messages, this will be a {@link MessageHandler}
+     * @throws CommunicationException
+     */
     @Override
     public void declareConsumer(MessageListener listener) throws CommunicationException {
         initialize();
@@ -103,12 +119,12 @@ public class RabbitMQ implements MessageOutputService, MessageInputService {
     }
 
     @Override
-    public void sendMessage(Dto dto) throws CommunicationException {
+    public void sendMessage(MessageDto messageDto) throws CommunicationException {
+        initialize();
         String formattedMessage;
         try {
-            initialize();
             logger.info("Sending a DTO");
-            formattedMessage = messageFormatter.format(dto);
+            formattedMessage = messageFormatter.format(messageDto);
             logger.info("Pushing message: " + formattedMessage);
             channel.basicPublish("", queueName, null, formattedMessage.getBytes());
             shutdown();
@@ -120,13 +136,4 @@ public class RabbitMQ implements MessageOutputService, MessageInputService {
         }
     }
 
-    public void sendBasicMessage(String body) {
-        try {
-            initialize();
-            channel.basicPublish("", queueName, null, body.getBytes());
-            shutdown();
-        } catch (CommunicationException | IOException e) {
-            e.printStackTrace();
-        }
-    }
 }

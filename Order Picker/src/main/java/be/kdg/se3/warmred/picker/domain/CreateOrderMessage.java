@@ -10,6 +10,12 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * A business entity that represents a create order message
+ *
+ * @author Gino Moukhi
+ * @version 1.0.0
+ */
 @XmlType(propOrder = {"orderId", "customerId", "price", "items", "locationInfoList"})
 @XmlRootElement
 public class CreateOrderMessage implements Message{

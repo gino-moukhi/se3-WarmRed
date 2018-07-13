@@ -1,5 +1,10 @@
 package be.kdg.se3.warmred.picker.domain;
 
-public interface Message {
-
+/**
+ * An empty marker interface
+ *
+ * @author Gino Moukhi
+ * @version 1.0.0
+ */
+interface Message {
 }

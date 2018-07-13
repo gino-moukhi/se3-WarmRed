@@ -1,7 +1,6 @@
 package be.kdg.se3.warmred.generator.adapters;
 
 import be.kdg.se3.warmred.generator.domain.CommunicationException;
-import be.kdg.se3.warmred.generator.domain.Message;
 import be.kdg.se3.warmred.generator.domain.MessageOutputService;
 import be.kdg.se3.warmred.generator.domain.dto.Dto;
 import com.rabbitmq.client.Channel;
@@ -16,6 +15,13 @@ import java.security.KeyManagementException;
 import java.security.NoSuchAlgorithmException;
 import java.util.concurrent.TimeoutException;
 
+/**
+ * This class is designed to be used with the RabbitMQ message broker and implements the {@link MessageOutputService}
+ * because the order picker sends messages to the queue "Internal: Orders"
+ *
+ * @author Gino Moukhi
+ * @version 1.0.0
+ */
 public class RabbitMQ implements MessageOutputService {
     private final Logger logger = LoggerFactory.getLogger(RabbitMQ.class);
     private final String connectionString;
@@ -77,24 +83,6 @@ public class RabbitMQ implements MessageOutputService {
         } catch (IOException e) {
             logger.error("RabbitMQ shutdown failed because of an 'IOException' ");
             throw new CommunicationException("Could not close connection to RabbitMQ", e);
-        }
-    }
-
-    @Override
-    public void sendMessage(Message message) throws CommunicationException {
-        String formattedMessage;
-        try {
-            initialize();
-            logger.info("Sending a Message object");
-            formattedMessage = messageFormatter.format(message);
-            logger.info("Pushing message: " + formattedMessage);
-            channel.basicPublish("", queueName, null, formattedMessage.getBytes());
-            shutdown();
-        } catch (IOException e) {
-            logger.error("Failed to send message to the queue");
-            throw new CommunicationException("Could not send message to queue", e);
-        } catch (FormatterException e) {
-            logger.error("Could not send the message because an error occurred while formatting the message");
         }
     }
 
