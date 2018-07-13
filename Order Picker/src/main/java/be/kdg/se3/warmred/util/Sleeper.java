@@ -3,13 +3,19 @@ package be.kdg.se3.warmred.util;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class Sleeper {
+/**
+ * Class that uses a sleep function and keeps track of the amount of time slept (mainly used in the generator)
+ *
+ * @author Gino Moukhi
+ * @version 1.0.0
+ */
+class Sleeper {
     private final Logger logger = LoggerFactory.getLogger(Sleeper.class);
-    private int amountSleptInMiliseconds = 0;
+    private int amountSleptInMilliseconds = 0;
 
     public void sleep(int duration) {
         try {
-            amountSleptInMiliseconds += duration;
+            amountSleptInMilliseconds += duration;
             Thread.sleep(duration);
 
         } catch (InterruptedException e) {
@@ -17,8 +23,8 @@ public class Sleeper {
         }
     }
 
-    public int getAmountSleptInMiliseconds() {
-        return amountSleptInMiliseconds;
+    public int getAmountSleptInMilliseconds() {
+        return amountSleptInMilliseconds;
     }
 
 }

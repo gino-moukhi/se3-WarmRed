@@ -1,9 +1,9 @@
 package be.kdg.se3.warmred.picker.adapters;
 
-import be.kdg.se3.warmred.picker.domain.dto.CancelOrderMessageDto;
-import be.kdg.se3.warmred.picker.domain.dto.CreateOrderMessageDto;
-import be.kdg.se3.warmred.picker.domain.dto.Dto;
+import be.kdg.se3.warmred.picker.domain.dto.*;
 import be.kdg.se3.warmred.picker.domain.dto.ExtraCreateOrderMessageDto;
+import be.kdg.se3.warmred.picker.domain.dto.MessageDto;
+import be.kdg.se3.warmred.picker.exceptions.FormatterException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
@@ -19,24 +19,35 @@ import java.io.Reader;
 import java.io.StringReader;
 import java.io.StringWriter;
 
+/**
+ * A class that formats messages to their appropriate type for the message broker
+ *
+ * @author Gino Moukhi
+ * @version 1.0.0
+ */
 public class XmlMessageFormatter implements MessageFormatter {
     private final Logger logger = LoggerFactory.getLogger(XmlMessageFormatter.class);
     private JAXBContext context;
 
+    /**
+     * This method is for sending an XML string to the message broker
+     * @param messageDto
+     * @return
+     */
     @Override
-    public String format(Dto dto) throws FormatterException {
+    public String format(MessageDto messageDto) {
         String xmlResult = "Default xml result";
         try {
             Marshaller marshaller;
             StringWriter stringWriter = new StringWriter();
             logger.info("Formatting a DTO to an XML string");
-            if (dto instanceof CreateOrderMessageDto) {
+            if (messageDto instanceof CreateOrderMessageDto) {
                 logger.info("The message to format is of type:'CreateOrderMessageDto'");
                 context = JAXBContext.newInstance(CreateOrderMessageDto.class);
-            } else if (dto instanceof CancelOrderMessageDto) {
+            } else if (messageDto instanceof CancelOrderMessageDto) {
                 logger.info("The message to format is of type:'CancelOrderMessageDto'");
                 context = JAXBContext.newInstance(CancelOrderMessageDto.class);
-            } else if (dto instanceof ExtraCreateOrderMessageDto) {
+            } else if (messageDto instanceof ExtraCreateOrderMessageDto) {
                 logger.info("The message to format is of type:'ExtraCreateOrderMessageDto'");
                 context = JAXBContext.newInstance(ExtraCreateOrderMessageDto.class);
             }else {
@@ -45,18 +56,23 @@ public class XmlMessageFormatter implements MessageFormatter {
 
             marshaller = context.createMarshaller();
             marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
-            marshaller.marshal(dto, stringWriter);
+            marshaller.marshal(messageDto, stringWriter);
             xmlResult = stringWriter.toString();
         } catch (JAXBException e) {
-            logger.error("Something went wrong with the conversion from dto to xml, a JAXB exception occurred " , e);
+            logger.error("Something went wrong with the conversion from messageDto to xml, a JAXB exception occurred " , e);
         } catch (FormatterException e) {
             logger.error("The given instance has not been added to the XmlMessageFormatter");
         }
         return xmlResult;
     }
 
+    /**
+     * This method is for receiving an XML string from the message broker
+     * @param xmlText
+     * @return
+     */
     @Override
-    public Dto format(String xmlText) throws FormatterException {
+    public MessageDto format(String xmlText) throws FormatterException {
         Document xmlDocument;
         try {
             logger.info("Formatting an XML string to an DTO object");
@@ -69,7 +85,7 @@ public class XmlMessageFormatter implements MessageFormatter {
         }
 
         String rootName = xmlDocument.getDocumentElement().getTagName();
-        Dto output;
+        MessageDto output;
 
         try {
             Unmarshaller unmarshaller;

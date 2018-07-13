@@ -1,4 +1,4 @@
-package be.kdg.se3.warmred.picker.domain;
+package be.kdg.se3.warmred.picker.domain.dto;
 
 /**
  * An empty marker interface
@@ -6,5 +6,5 @@ package be.kdg.se3.warmred.picker.domain;
  * @author Gino Moukhi
  * @version 1.0.0
  */
-interface Message {
+public interface MessageDto {
 }

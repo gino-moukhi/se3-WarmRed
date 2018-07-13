@@ -1,11 +1,17 @@
 package be.kdg.se3.warmred.picker.adapters;
 
 import be.kdg.se3.warmred.picker.domain.LocationInfo;
+import be.kdg.se3.warmred.picker.exceptions.ConverterException;
 import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * The class that is responsible for the conversion of the json String to the locationInfo (see interface {@link Converter})
+ *
+ * @author Gino Moukhi
+ * @version 1.0.0
+ */
 public class LocationConverter implements Converter {
     private final Logger logger = LoggerFactory.getLogger(LocationConverter.class);
     private final Gson gson;

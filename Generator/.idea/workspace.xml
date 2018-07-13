@@ -2,23 +2,42 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f9609cb0-e1a5-4663-a3b2-98dfdf48177b" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/../Order Picker/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Order Picker/src/main/java/be/kdg/se3/warmred/picker/domain/CharacterAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Order Picker/src/main/java/be/kdg/se3/warmred/picker/domain/PickingException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Order Picker/src/main/java/be/kdg/se3/warmred/picker/domain/PickingImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Order Picker/src/main/java/be/kdg/se3/warmred/picker/domain/PickingService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Order Picker/src/main/java/be/kdg/se3/warmred/picker/domain/PickingType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Order Picker/src/main/java/be/kdg/se3/warmred/picker/domain/TaskScheduler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logging/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/logging/log.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/test/classes/be/kdg/se3/warmred/generator/TestGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/be/kdg/se3/warmred/generator/TestGenerator.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/be/kdg/se3/warmred/generator/TestGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/be/kdg/se3/warmred/generator/TestGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Order Picker/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Order Picker/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Order Picker/logging/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Order Picker/logging/log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Order Picker/src/main/java/be/kdg/se3/warmred/picker/adapters/ApiService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Order Picker/src/main/java/be/kdg/se3/warmred/picker/adapters/ApiService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Order Picker/src/main/java/be/kdg/se3/warmred/picker/adapters/Converter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Order Picker/src/main/java/be/kdg/se3/warmred/picker/adapters/Converter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Order Picker/src/main/java/be/kdg/se3/warmred/picker/adapters/ConverterException.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Order Picker/src/main/java/be/kdg/se3/warmred/picker/exceptions/ConverterException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Order Picker/src/main/java/be/kdg/se3/warmred/picker/adapters/FormatterException.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Order Picker/src/main/java/be/kdg/se3/warmred/picker/exceptions/FormatterException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Order Picker/src/main/java/be/kdg/se3/warmred/picker/adapters/LocationConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Order Picker/src/main/java/be/kdg/se3/warmred/picker/adapters/LocationConverter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Order Picker/src/main/java/be/kdg/se3/warmred/picker/adapters/LocationServiceApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Order Picker/src/main/java/be/kdg/se3/warmred/picker/adapters/LocationServiceApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Order Picker/src/main/java/be/kdg/se3/warmred/picker/adapters/MessageFormatter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Order Picker/src/main/java/be/kdg/se3/warmred/picker/adapters/MessageFormatter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Order Picker/src/main/java/be/kdg/se3/warmred/picker/adapters/RabbitMQ.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Order Picker/src/main/java/be/kdg/se3/warmred/picker/adapters/RabbitMQ.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Order Picker/src/main/java/be/kdg/se3/warmred/picker/adapters/XmlMessageFormatter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Order Picker/src/main/java/be/kdg/se3/warmred/picker/adapters/XmlMessageFormatter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Order Picker/src/main/java/be/kdg/se3/warmred/picker/domain/AdapterException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Order Picker/src/main/java/be/kdg/se3/warmred/picker/domain/CancelOrderMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Order Picker/src/main/java/be/kdg/se3/warmred/picker/domain/CancelOrderMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Order Picker/src/main/java/be/kdg/se3/warmred/picker/domain/CharacterAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Order Picker/src/main/java/be/kdg/se3/warmred/picker/domain/CharacterAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Order Picker/src/main/java/be/kdg/se3/warmred/picker/domain/CommunicationException.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Order Picker/src/main/java/be/kdg/se3/warmred/picker/exceptions/CommunicationException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Order Picker/src/main/java/be/kdg/se3/warmred/picker/domain/CreateOrderMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Order Picker/src/main/java/be/kdg/se3/warmred/picker/domain/CreateOrderMessage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Order Picker/src/main/java/be/kdg/se3/warmred/picker/domain/LocationInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Order Picker/src/main/java/be/kdg/se3/warmred/picker/domain/LocationInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Order Picker/src/main/java/be/kdg/se3/warmred/picker/domain/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Order Picker/src/main/java/be/kdg/se3/warmred/picker/domain/Message.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Order Picker/src/main/java/be/kdg/se3/warmred/picker/domain/MessageHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Order Picker/src/main/java/be/kdg/se3/warmred/picker/domain/MessageHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Order Picker/src/main/java/be/kdg/se3/warmred/picker/domain/MessageInputService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Order Picker/src/main/java/be/kdg/se3/warmred/picker/domain/MessageInputService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Order Picker/src/main/java/be/kdg/se3/warmred/picker/domain/MessageListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Order Picker/src/main/java/be/kdg/se3/warmred/picker/domain/MessageListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Order Picker/src/main/java/be/kdg/se3/warmred/picker/domain/MessageOutputService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Order Picker/src/main/java/be/kdg/se3/warmred/picker/domain/MessageOutputService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Order Picker/src/main/java/be/kdg/se3/warmred/picker/domain/PickingException.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Order Picker/src/main/java/be/kdg/se3/warmred/picker/exceptions/PickingException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Order Picker/src/main/java/be/kdg/se3/warmred/picker/domain/PickingImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Order Picker/src/main/java/be/kdg/se3/warmred/picker/domain/PickingImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Order Picker/src/main/java/be/kdg/se3/warmred/picker/domain/PickingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Order Picker/src/main/java/be/kdg/se3/warmred/picker/domain/PickingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Order Picker/src/main/java/be/kdg/se3/warmred/picker/domain/PickingType.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Order Picker/src/main/java/be/kdg/se3/warmred/picker/domain/PickingType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Order Picker/src/main/java/be/kdg/se3/warmred/picker/domain/dto/CancelOrderMessageDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Order Picker/src/main/java/be/kdg/se3/warmred/picker/domain/dto/CancelOrderMessageDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Order Picker/src/main/java/be/kdg/se3/warmred/picker/domain/dto/CreateOrderMessageDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Order Picker/src/main/java/be/kdg/se3/warmred/picker/domain/dto/CreateOrderMessageDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Order Picker/src/main/java/be/kdg/se3/warmred/picker/domain/dto/Dto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Order Picker/src/main/java/be/kdg/se3/warmred/picker/domain/dto/MessageDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Order Picker/src/main/java/be/kdg/se3/warmred/picker/domain/dto/ExtraCreateOrderMessageDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Order Picker/src/main/java/be/kdg/se3/warmred/picker/domain/dto/ExtraCreateOrderMessageDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Order Picker/src/main/java/be/kdg/se3/warmred/util/Sleeper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Order Picker/src/main/java/be/kdg/se3/warmred/util/Sleeper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Order Picker/src/test/java/be/kdg/se3/warmred/picker/TestPicker.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Order Picker/src/test/java/be/kdg/se3/warmred/picker/TestPicker.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -72,12 +91,8 @@
       <file leaf-file-name="TestGenerator.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/be/kdg/se3/warmred/generator/TestGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="387">
-              <caret line="140" column="30" selection-start-line="140" selection-start-column="30" selection-end-line="140" selection-end-column="30" />
-              <folding>
-                <element signature="e#7290#7291#0" expanded="true" />
-                <element signature="e#7353#7354#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="1016">
+              <caret line="186" column="37" lean-forward="true" selection-start-line="186" selection-start-column="37" selection-end-line="186" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -126,6 +141,7 @@
       <find>1087</find>
       <find>1067</find>
       <find>1943</find>
+      <find>cancel</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -534,7 +550,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-7" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
@@ -547,8 +563,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -653,6 +667,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope">
         <subPane subId="Tests">
           <expand>
@@ -682,6 +697,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -882,10 +898,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.TestGenerator.TestFullGenerator" />
-        <item itemvalue="JUnit.TestGenerator.testCancelOrderMessageDtoSend" />
         <item itemvalue="JUnit.TestGenerator.testSendErrorId" />
-        <item itemvalue="JUnit.TestGenerator.testCreateAndCancelLoop" />
         <item itemvalue="JUnit.TestGenerator.testCreateOrderMessageDtoSend" />
+        <item itemvalue="JUnit.TestGenerator.testCancelOrderMessageDtoSend" />
+        <item itemvalue="JUnit.TestGenerator.testCreateAndCancelLoop" />
       </list>
     </recent_temporary>
   </component>
@@ -909,6 +925,7 @@
       <workItem from="1531164201247" duration="1375000" />
       <workItem from="1531232888300" duration="6881000" />
       <workItem from="1531320218103" duration="6540000" />
+      <workItem from="1531484423301" duration="4660000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit with partial package structure, required library and necessary gradle dependencies">
       <created>1530885198683</created>
@@ -963,42 +980,43 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestGenerator_testSendErrorId - 2018.07.11 at 20h 10m 39s.xml">
+    <history-entry file="TestGenerator_testCreateOrderMessageDtoSend - 2018.07.13 at 14h 51m 43s.xml">
+      <configuration name="TestGenerator.testCreateOrderMessageDtoSend" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestGenerator_testCreateOrderMessageDtoSend - 2018.07.13 at 14h 51m 45s.xml">
+      <configuration name="TestGenerator.testCreateOrderMessageDtoSend" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestGenerator_TestFullGenerator - 2018.07.13 at 14h 52m 33s.xml">
+      <configuration name="TestGenerator.TestFullGenerator" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestGenerator_testCreateOrderMessageDtoSend - 2018.07.13 at 14h 52m 52s.xml">
+      <configuration name="TestGenerator.testCreateOrderMessageDtoSend" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestGenerator_TestFullGenerator - 2018.07.13 at 15h 04m 55s.xml">
+      <configuration name="TestGenerator.TestFullGenerator" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestGenerator_testSendErrorId - 2018.07.13 at 15h 14m 31s.xml">
       <configuration name="TestGenerator.testSendErrorId" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestGenerator_testSendErrorId - 2018.07.11 at 20h 12m 07s.xml">
+    <history-entry file="TestGenerator_testSendErrorId - 2018.07.13 at 15h 16m 28s.xml">
       <configuration name="TestGenerator.testSendErrorId" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestGenerator_testSendErrorId - 2018.07.11 at 20h 12m 24s.xml">
-      <configuration name="TestGenerator.testSendErrorId" configurationId="JUnit" />
+    <history-entry file="TestGenerator_TestFullGenerator - 2018.07.13 at 16h 39m 15s.xml">
+      <configuration name="TestGenerator.TestFullGenerator" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestGenerator_testSendErrorId - 2018.07.11 at 20h 12m 44s.xml">
-      <configuration name="TestGenerator.testSendErrorId" configurationId="JUnit" />
+    <history-entry file="TestGenerator_TestFullGenerator - 2018.07.13 at 16h 42m 05s.xml">
+      <configuration name="TestGenerator.TestFullGenerator" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestGenerator_testCancelOrderMessageDtoSend - 2018.07.11 at 20h 14m 04s.xml">
-      <configuration name="TestGenerator.testCancelOrderMessageDtoSend" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestGenerator_testSendErrorId - 2018.07.11 at 20h 15m 40s.xml">
-      <configuration name="TestGenerator.testSendErrorId" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestGenerator_testSendErrorId - 2018.07.11 at 20h 15m 56s.xml">
-      <configuration name="TestGenerator.testSendErrorId" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestGenerator_testSendErrorId - 2018.07.11 at 20h 16m 08s.xml">
-      <configuration name="TestGenerator.testSendErrorId" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestGenerator_testCancelOrderMessageDtoSend - 2018.07.11 at 20h 16m 17s.xml">
-      <configuration name="TestGenerator.testCancelOrderMessageDtoSend" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestGenerator_TestFullGenerator - 2018.07.11 at 20h 20m 37s.xml">
+    <history-entry file="TestGenerator_TestFullGenerator - 2018.07.13 at 16h 42m 53s.xml">
       <configuration name="TestGenerator.TestFullGenerator" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58146000" />
+    <option name="totallyTimeSpent" value="62806000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -1014,7 +1032,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15052083" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18541667" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="right" id="Gradle" order="3" weight="0.17447917" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -1398,12 +1416,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/be/kdg/se3/warmred/generator/TestGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="140" column="30" selection-start-line="140" selection-start-column="30" selection-end-line="140" selection-end-column="30" />
-          <folding>
-            <element signature="e#7290#7291#0" expanded="true" />
-            <element signature="e#7353#7354#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="1016">
+          <caret line="186" column="37" lean-forward="true" selection-start-line="186" selection-start-column="37" selection-end-line="186" selection-end-column="37" />
         </state>
       </provider>
     </entry>
